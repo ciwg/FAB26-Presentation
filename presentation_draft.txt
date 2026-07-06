@@ -1,0 +1,213 @@
+Democratised, Decentralised & Distributed Manufacturing
+
+Working draft for show & tell presentation
+
+Communication job
+
+By the end, this audience should understand how CSWG's infrastructure work, especially PromiseGrid, fits into the shift toward distributed manufacturing because resilient local production needs shared technical systems for coordination, governance, and trust.
+
+Audience assumptions
+
+- They likely already believe centralized manufacturing has serious limits.
+- They may know distributed production as a social or economic idea more than as a systems-design problem.
+- They may not know CSWG, PromiseGrid, or why computing architecture matters to manufacturing communities.
+
+Suggested narrative arc
+
+Context -> coordination gap -> CSWG response -> PromiseGrid technical model -> prototypes and implications
+
+Suggested slide count
+
+8 to 10 slides for a short show & tell
+
+Slide 1
+
+Title
+Distributed manufacturing needs distributed infrastructure
+
+Visible copy
+
+- Community Systems Working Group
+- PromiseGrid as an experiment in shared coordination
+- Show & Tell: Democratised, Decentralised & Distributed Manufacturing
+
+Talk track
+
+This talk is not just about making things locally. It is about the less visible infrastructure that lets communities coordinate production, share resources, and govern systems together without recreating centralized dependencies.
+
+Slide 2
+
+Title
+The manufacturing shift is also an infrastructure shift
+
+Visible copy
+
+- We are moving away from closed, centralized, scale-driven production models
+- Emerging alternatives depend on local capacity, shared knowledge, and flexible networks
+- That creates a new question: how do communities coordinate without defaulting back to centralized platforms?
+
+Talk track
+
+This slide connects your talk to the workshop framing and to the other presenters. It helps the audience see that your contribution is the infrastructure layer beneath the production layer.
+
+Slide 3
+
+Title
+CSWG started with a simple problem: communities burn out on infrastructure
+
+Visible copy
+
+- CSWG builds open-source infrastructure for decentralized organizations and communities
+- Focus areas include makerspaces, non-profits, open-source projects, and small to medium enterprises
+- Goal: reduce workload and increase resiliency so people can focus on the work they care about
+
+Source note
+
+Based on CSWG About Us and Goals pages.
+
+Talk track
+
+You can name the recurring pattern: too much hidden coordination work, too much reliance on admins, too many brittle tools, too much lock-in.
+
+Slide 4
+
+Title
+The bottleneck is not just production capacity. It is coordination capacity.
+
+Visible copy
+
+- Shared work depends on managing access, commitments, decisions, and conflict
+- Traditional infrastructure creates silos, fragility, and dependence on a few key operators
+- In community production systems, those bottlenecks become governance problems as much as technical ones
+
+Talk track
+
+This is the pivot slide. It moves the audience from "why infrastructure matters" to "why PromiseGrid exists."
+
+Slide 5
+
+Title
+PromiseGrid asks what a decentralized computer for communities could look like
+
+Visible copy
+
+- PromiseGrid is a consensus-based computing, communications, and governance system
+- It is designed for collaborative work and leadership in organizations and communities
+- Core idea: users own and operate the grid rather than depending on one hosting entity
+
+Source note
+
+Based on the PromiseGrid README.
+
+Talk track
+
+Use the line that PromiseGrid aims to be to computation what the internet is to communication, but paraphrase it in your own voice rather than leaning on it as a slogan.
+
+Slide 6
+
+Title
+The technical model combines portability, capabilities, and consensus
+
+Visible copy
+
+- Built around WASI for portability across devices and operating systems
+- Uses capability-based security for fine-grained access and trust
+- Exposes consensus and governance mechanisms as system-level building blocks
+- Small nodes can participate, from browser tabs to phones to Raspberry Pis
+
+Talk track
+
+This is the slide for technically curious people in the room. Keep it high-level and legible. The point is not to explain every mechanism, but to show that the architecture is intentionally aligned with decentralization.
+
+Slide 7
+
+Title
+The experiment is to make governance part of the runtime, not an afterthought
+
+Visible copy
+
+- The same mechanisms used to manage the grid can be used by applications and communities on the grid
+- That means coordination rules can become inspectable, shareable, and adaptable infrastructure
+- PromiseGrid is aimed at tragedy-of-the-commons type problems in shared systems
+
+Talk track
+
+This is probably your most distinctive idea. Slow down here. The audience should feel the jump from ordinary software hosting to computational governance.
+
+Slide 8
+
+Title
+What CSWG has been doing over the last couple of years
+
+Visible copy
+
+- Building and refining the conceptual model
+- Developing prototype code and related tooling
+- Testing how decentralized coordination, consensus, and capability models might work in practice
+- Learning what kinds of community infrastructure are actually needed
+
+Talk track
+
+If you have 2 to 4 concrete examples, put them here. If not, keep this slide modest and honest: experiments, prototypes, design work, and lessons learned.
+
+Slide 9
+
+Title
+If this works, it changes what local production networks can rely on
+
+Visible copy
+
+- Less dependence on centralized SaaS and fragile gatekeepers
+- More resilient coordination across organizations, tools, and devices
+- Better support for community ownership, shared stewardship, and adaptable governance
+- A stronger digital foundation for production ecosystems that need to stay local but cooperate broadly
+
+Talk track
+
+This slide links your talk back to the wider workshop. It is where you connect to Internet of Production and Mechanisms Community without trying to duplicate their focus.
+
+Slide 10
+
+Title
+The open question is how we build production infrastructure that communities can actually govern
+
+Visible copy
+
+- Distributed manufacturing is not only a fabrication challenge
+- It is also a coordination and governance challenge
+- CSWG and PromiseGrid are one attempt to make that layer more open, resilient, and community-operated
+
+Talk track
+
+End on a question or invitation rather than a hard sell. This fits the exploratory feel of a show & tell.
+
+Positioning relative to the other presenters
+
+- Internet of Production can speak to networked production ecosystems at the macro level.
+- Mechanisms Community can speak to community-centered production ecosystems, values, and local resilience.
+- Your lane can be the infrastructure substrate: what kinds of digital systems make those ecosystems viable without reproducing centralized control.
+
+Useful transitions
+
+- "What interests us is the layer underneath the visible production network."
+- "Once you try to run these systems in practice, coordination becomes the hard part."
+- "That is the gap CSWG has been exploring."
+- "PromiseGrid is one technical answer to that question."
+- "The point is not decentralization for its own sake. It is governable resilience."
+
+Editing guidance for delivery
+
+- Keep the PromiseGrid slides concrete and human-readable.
+- Avoid sounding like the project is finished if it is still experimental.
+- Do not overclaim manufacturing impact. Frame it as enabling infrastructure.
+- Use "community-operated," "shared coordination," and "governable infrastructure" more than abstract decentralization language.
+- If time is tight, cut Slide 8 before cutting Slides 4 through 7.
+
+Optional shorter 6-slide version
+
+1. Distributed manufacturing needs distributed infrastructure
+2. The hard problem is coordination, not only fabrication
+3. CSWG exists to reduce infrastructure burden and fragility
+4. PromiseGrid is a decentralized computing and governance experiment
+5. The technical model: portability, capabilities, consensus
+6. Why this could matter for production ecosystems
