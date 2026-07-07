@@ -177,7 +177,9 @@ For readers who want to go deeper, the accompanying presentation can be read alo
 3. PromiseGrid architecture concept for communities, applications, and devices
 4. Governance flow for a machine booking or maintenance example
 5. Multi-site fablab network sketch with shared but non-centralized coordination
-6. Demo comparison graphic: ad hoc workflow versus governable shared workflow
+6. Message envelope explainer showing `grid([42(pCID), ...])` with labeled slots
+7. Collaboration flow sketch showing retrieval, review, and retention across several peers
+8. Demo comparison graphic: ad hoc workflow versus governable shared workflow
 
 ## Suggested Tiny Demos
 
@@ -185,4 +187,5 @@ For readers who want to go deeper, the accompanying presentation can be read alo
 2. Maintenance stewardship workflow with changing machine availability
 3. Shared inventory reservation across two or more small sites
 4. Distributed work order handoff between partner workshops
-5. Visitor or trainee capability grant with narrow time-bounded permissions
+5. Shared design and review flow across multiple sites
+6. Visitor or trainee capability grant with narrow time-bounded permissions

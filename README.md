@@ -19,20 +19,13 @@ research basis, repo notes, working assumptions, and demo-development notes.
 - `whitepaper_draft.md`: cleaner external-audience draft
 - `presentation_draft.txt`: slide narrative draft
 - `wire-lab-main/`: local clone of `promisegrid/wire-lab` `main`
-- `wire-lab-ppx-main/`: local clone of `promisegrid/wire-lab` `ppx/main`
 
 ## Working Interpretation
 
 The older top-level PromiseGrid README is useful for broad framing, but the
 current working understanding for this presentation comes mainly from the more
-recent activity in `promisegrid/wire-lab`, especially the `main` branch.
-
-Key conclusion from local review:
-
-- `main` appears to contain the latest substantive work.
-- `ppx/main` appears more guide- and provenance-oriented.
-- The README statement that `ppx/main` is the active branch appears stale
-  relative to the actual commit history we inspected.
+recent activity in `promisegrid/wire-lab` `main`, which is now treated here as
+the current source of truth.
 
 ## What Changed Our Framing
 
@@ -86,6 +79,10 @@ Why it matters:
 - This appears to be the longer-term knowledge-sharing and collaboration
   substrate direction: sparse CAS, versioned reference sets, and Git as a
   bridge rather than the native center.
+- As of the 2026-07-07 update, this line is materially more concrete:
+  POC18 now includes continuous peer DAG sync, TCP-based inter-agent exchange,
+  storage payment tokens, retention promises, retrieval capability flow,
+  Dockerized peer interaction, and a real Git bridge path.
 
 ## External White Paper Cleanup Rules
 
