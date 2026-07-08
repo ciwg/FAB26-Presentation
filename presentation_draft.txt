@@ -9,7 +9,7 @@ By the end, this audience should understand how CSWG's infrastructure work, espe
 Audience assumptions
 
 - They likely already believe centralized manufacturing and brittle supply chains have serious limits.
-- They may know distributed production as a social, economic, or workshop practice more than as a systems-design problem.
+- They may know distributed production as a social, economic, or shop practice more than as a systems-design problem.
 - They may not know CSWG, Promise Theory, PromiseGrid, or why computing architecture matters to manufacturing communities.
 - They will respond best to concrete examples from fablabs, makerspaces, shared equipment, maintenance, inventory, and cross-site collaboration.
 
@@ -34,7 +34,7 @@ Visible copy
 
 Talk track
 
-This talk is not just about making things locally. It is about the less visible infrastructure that lets communities coordinate production, share resources, and govern systems together without recreating centralized dependencies. Fablabs already know that a workshop is more than machines. It is schedules, training, maintenance, trust, access, handoffs, and the quiet work of keeping everything usable.
+This talk is not just about making things locally. It is about the less visible infrastructure that lets communities coordinate production, share resources, and govern systems together without recreating centralized dependencies. Fablabs already know that a lab is more than machines. It is schedules, training, maintenance, trust, access, handoffs, and the quiet work of keeping everything usable.
 
 Slide 2
 
@@ -68,7 +68,7 @@ Based on CSWG About Us and Goals pages.
 
 Talk track
 
-Keep this grounded. CSWG did not start from an abstract fascination with decentralization. It started from a familiar pattern: too much hidden coordination work, too much reliance on admins, too many brittle tools, too much lock-in, and too many important responsibilities living in the memory of a few key people. In a fablab or community workshop, that can show up as machine access, safety training, inventory, maintenance, documentation, finances, governance, or cross-site projects.
+Keep this grounded. CSWG did not start from an abstract fascination with decentralization. It started from a familiar pattern: too much hidden coordination work, too much reliance on admins, too many brittle tools, too much lock-in, and too many important responsibilities living in the memory of a few key people. In a fablab or community makerspace, that can show up as machine access, safety training, inventory, maintenance, documentation, finances, governance, or cross-site projects.
 
 Slide 4
 
@@ -149,7 +149,7 @@ Visible copy
 
 Talk track
 
-This is the slide for technically curious people in the room. Keep it high-level and legible. WASI matters because distributed manufacturing will not run on one clean hardware footprint. Capability-based security matters because workshops need narrow, contextual permissions: inspect a machine log but do not change policy, start an approved workflow but do not gain full admin access, contribute to a job without inheriting every privilege. The recent wire-lab work is testing those ideas in more concrete ways: containerized agents exchanging exact messages over TCP, signed capability tokens, content-addressed storage, object transfer, peer sync, retention promises, and Git bridge experiments.
+This is the slide for technically curious people in the room. Keep it high-level and legible. WASI matters because distributed manufacturing will not run on one clean hardware footprint. Capability-based security matters because shops need narrow, contextual permissions: inspect a machine log but do not change policy, start an approved workflow but do not gain full admin access, contribute to a job without inheriting every privilege. The recent wire-lab work is testing those ideas in more concrete ways: containerized agents exchanging exact messages over TCP, signed capability tokens, content-addressed storage, object transfer, peer sync, retention promises, and Git bridge experiments.
 
 Slide 9
 
@@ -220,7 +220,7 @@ Visible copy
 
 Talk track
 
-End on an invitation rather than a hard sell. This is active work, not a finished manufacturing platform. The best outcome from FAB26 would be people who want to follow the journey, share grounded use cases, challenge the assumptions, and help test prototypes as they emerge. The communities in this room understand the difference between a clever systems idea and something that can survive a busy week in a workshop.
+End on an invitation rather than a hard sell. This is active work, not a finished manufacturing platform. The best outcome from FAB26 would be people who want to follow the journey, share grounded use cases, challenge the assumptions, and help test prototypes as they emerge. The communities in this room understand the difference between a clever systems idea and something that can survive a busy week in a shop.
 
 Positioning relative to the other presenters
 
@@ -234,7 +234,7 @@ Useful transitions
 - "What interests us is the layer underneath the visible production network."
 - "Once you try to run these systems in practice, coordination becomes the hard part."
 - "That is the gap CSWG has been exploring."
-- "Promise Theory gives us a useful vocabulary for coordination that already happens in workshops."
+- "Promise Theory gives us a useful vocabulary for coordination that already happens in a shop."
 - "ATP and CTP are familiar manufacturing examples of promise-shaped coordination."
 - "PromiseGrid is one technical answer to that question."
 - "To make this less abstract, it helps to look at what an actual message looks like."
