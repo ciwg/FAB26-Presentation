@@ -1,3 +1,3 @@
 # TODO
 
-- [x] 001 - Convert presentation draft to remark.js slides
+- [x] haduz - Convert presentation draft to remark.js slides
