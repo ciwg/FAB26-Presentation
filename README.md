@@ -2,6 +2,8 @@ class: center, middle
 
 # Toward Community-Owned Infrastructure for Distributed Manufacturing
 
+PromiseGrid
+
 Community Systems Working Group
 
 Show & Tell: Democratised, Decentralised & Distributed Manufacturing
@@ -26,8 +28,6 @@ Open by locating the talk in the workshop theme. This is a talk about the digita
 Use this slide to set expectations for the arc. Start with the manufacturing context, move into the coordination problem, introduce Promise Theory as the language for that problem, then show PromiseGrid as an infrastructure experiment. Close by tying the technical work back to what local production networks might gain if this becomes practical.
 
 ---
-
-class: center, middle
 
 # Distributed manufacturing already exists. The question is who can govern it.
 
