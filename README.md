@@ -2,8 +2,6 @@ class: center, middle
 
 # Toward Community-Owned Infrastructure for Distributed Manufacturing
 
-## PromiseGrid as an experiment in shared coordination
-
 Community Systems Working Group
 
 Show & Tell: Democratised, Decentralised & Distributed Manufacturing
