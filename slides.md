@@ -1,6 +1,35 @@
 class: center, middle
 
-<!-- Intent: Convert the approved 12-slide presentation draft into a single remark.js source deck with presenter notes. Source: DI-001-20260709-154911 -->
+# Distributed manufacturing needs distributed infrastructure
+
+## PromiseGrid as an experiment in shared coordination
+
+Community Systems Working Group
+
+Show & Tell: Democratised, Decentralised & Distributed Manufacturing
+
+???
+
+Open by locating the talk in the workshop theme. This is a talk about the digital and organizational infrastructure underneath distributed manufacturing: how communities coordinate work, share capacity, make commitments, and govern the systems they depend on.
+
+---
+
+# Outline
+
+- Why distributed manufacturing needs coordination infrastructure
+- The community infrastructure problem CSWG is addressing
+- Promise Theory as a practical coordination language
+- PromiseGrid's model for community-owned computation and governance
+- Current experiments and technical building blocks
+- What this could enable for local production networks
+
+???
+
+Use this slide to set expectations for the arc. Start with the manufacturing context, move into the coordination problem, introduce Promise Theory as the language for that problem, then show PromiseGrid as an infrastructure experiment. Close by tying the technical work back to what local production networks might gain if this becomes practical.
+
+---
+
+class: center, middle
 
 # Distributed manufacturing needs distributed infrastructure
 
