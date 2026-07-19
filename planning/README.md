@@ -114,6 +114,34 @@ The main principle:
 
 - Show coordination and trust becoming visible, not just another software UI.
 
+## Title Ideas To Revisit
+
+Selected title:
+
+- Toward Community-Owned Infrastructure for Distributed Manufacturing
+
+Other title ideas worth keeping:
+
+1. The Missing Infrastructure for Distributed Manufacturing
+2. Making Distributed Manufacturing Work for Small Fabs
+3. Infrastructure for a More Governable Manufacturing Network
+4. PromiseGrid: Open Infrastructure for Distributed Production
+5. From Global Supply Chains to Community-Owned Production Networks
+6. Coordination Infrastructure for the Next Manufacturing System
+7. Beyond Platforms: Community-Owned Infrastructure for Manufacturing
+8. The Coordination Layer for Decentralized Manufacturing
+9. Open Protocols for Distributed Manufacturing
+10. What Distributed Manufacturing Needs Beneath the Tools
+11. Building the Protocol Layer for Community Manufacturing
+12. Small Fabs Need Infrastructure They Can Govern
+13. PromiseGrid and the Future of Governable Production
+14. Making Decentralized Manufacturing Practicable
+15. The Infrastructure Gap in Distributed Manufacturing
+16. Rewiring Manufacturing Coordination
+17. Distributed Manufacturing Has a Coordination Problem
+18. Protocols, Promises, and Community Manufacturing
+19. From Shared Tools to Shared Infrastructure
+
 ## Verification Notes
 
 We attempted to run targeted Go tests in the most relevant PromiseGrid proof of
