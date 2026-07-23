@@ -42,7 +42,17 @@ This is where the Community Systems Working Group, or CSWG, enters the picture. 
 
 ## The Coordination Problem Underneath Production
 
-The important point is that distributed manufacturing does not fail only when a machine breaks or a part is unavailable. It also fails when coordination breaks down. A shop can have skilled people, useful machines, and active community interest, but still struggle because the operational layer is brittle. Who can reserve which machine and under what conditions. How are maintenance responsibilities tracked. How are shared inventories handled when different groups have different levels of access. How do several independent labs collaborate on production without one organization becoming the platform owner for everyone else. What happens when a key organizer steps back and tacit knowledge disappears with them. These are not secondary administrative issues. In many real communities, they are the main constraint.
+The important point is that distributed manufacturing does not fail only when a machine breaks or a part is unavailable. It also fails when coordination breaks down. A shop can have skilled people, useful machines, and active community interest, but still struggle because the operational layer is brittle.
+
+The questions are practical:
+
+- Who can reserve which machine, and under what conditions?
+- How are maintenance responsibilities tracked?
+- How are shared inventories handled when different groups have different levels of access?
+- How do several independent labs collaborate on production without one organization becoming the platform owner for everyone else?
+- What happens when a key organizer steps back and tacit knowledge disappears with them?
+
+These are not secondary administrative issues. In many communities, they are the main constraint.
 
 > Diagram placeholder: A layered view of distributed manufacturing showing physical production at the top, community process in the middle, and digital coordination infrastructure at the base.
 
@@ -50,7 +60,13 @@ The important point is that distributed manufacturing does not fail only when a 
 
 Traditional software infrastructure often reproduces the very concentrations of power and fragility that distributed manufacturing is trying to avoid. A centralized SaaS platform may be convenient at first, but it often creates lock-in, opaque governance, and dependence on the priorities of a vendor or host organization. A self-hosted tool stack can solve part of that problem, but it frequently shifts the burden onto a handful of administrators who become permanent operators, gatekeepers, or points of failure.
 
-For small fabs, the gap is also practical. Shop work is often coordinated through a patchwork of spreadsheets, calendars, chat threads, booking tools, file repositories, accounting systems, inventory lists, machine interfaces, and improvised approval processes. Larger manufacturing software such as ERP or MES systems can assume budgets, staffing, process uniformity, and administrative control that community workshops do not have. Machine ecosystems may expose limited or vendor-specific integration points. Permissions rarely travel cleanly across sites. Work-order state, machine capacity, maintenance status, inventory commitments, and evidence of completion often remain trapped in separate tools.
+For small fabs, the gap is also practical. Shop work is often coordinated through a patchwork of:
+
+- spreadsheets, calendars, chat threads, and booking tools,
+- file repositories, accounting systems, and inventory lists,
+- machine interfaces and improvised approval processes.
+
+Larger manufacturing software such as ERP or MES systems can assume budgets, staffing, process uniformity, and administrative control that community workshops do not have. Machine ecosystems may expose limited or vendor-specific integration points. Permissions rarely travel cleanly across sites. Work-order state, machine capacity, maintenance status, inventory commitments, and evidence of completion often remain trapped in separate tools.
 
 In this sense, the challenge is not merely to choose better apps. It is to rethink the computing and protocol layer underneath the apps, so that distributed manufacturing networks can coordinate without turning one organization, vendor, or exhausted local administrator into the de facto center.
 
@@ -112,7 +128,21 @@ In plain language, that payload says a sender is making a status promise about o
 
 ## Technical Direction in Plain Language
 
-For fablabs and decentralized production communities, the technical details matter only insofar as they support that larger design goal. In the current prototype architecture, a small installed `grid` bootstrap, or stage0, can fetch, verify, approve, and start a fetched local runtime layer, or stage1. Stage1 is where daemon roles, transport, CAS/VCS, parser/builders, capability checks, and app execution support can live. WASI/WASM remains one planned portable app/runtime profile under stage1, including WASM in browser tabs. That portability matters because distributed production networks are unlikely to run on one standardized hardware footprint. A system like this must be able to span laptops, servers, browser tabs, phones, and low-cost devices such as Raspberry Pis. The project also uses capability-based security, which is relevant because community production environments rarely fit cleanly into all-or-nothing permissions. In practice, a lab may need fine-grained, contextual access: one person can inspect a machine log but not modify policy, another can start an approved workflow but not any workflow, and a visiting collaborator can contribute to a production task without inheriting broad administrative power. A capability-oriented model is better suited to this kind of distributed trust than many conventional role structures.
+In the current prototype architecture:
+
+- Stage0 is a small installed `grid` bootstrap that can fetch, verify, approve, and start a fetched local runtime layer.
+- Stage1 provides daemon roles, transport, CAS/VCS, parser/builders, capability checks, and app execution support.
+- WASI/WASM remains one planned portable app/runtime profile under stage1, including WASM in browser tabs.
+
+That portability matters because distributed production networks are unlikely to run on one standardized hardware footprint. A system like this must be able to span laptops, servers, browser tabs, phones, and low-cost devices such as Raspberry Pis.
+
+The project also uses capability-based security, which is relevant because community production environments rarely fit cleanly into all-or-nothing permissions. In practice, a lab may need fine-grained, contextual access:
+
+- one person can inspect a machine log but not modify policy,
+- another can start an approved workflow but not any workflow,
+- a visiting collaborator can contribute to a production task without inheriting broad administrative power.
+
+A capability-oriented model is better suited to this kind of distributed trust than many conventional role structures.
 
 The deeper manufacturing vision is not only cross-organization messaging, but protocol-level coordination that can eventually reach closer to machines and workflows themselves. A CNC router, material store, inspection step, maintenance role, or logistics handoff may each need to participate in a chain of machine-readable commitments. That does not mean every device becomes politically autonomous. It means the infrastructure should be capable of representing scoped authority, operational state, and verifiable promises in ways that applications and devices can share without a single platform owning the whole workflow.
 
@@ -130,7 +160,16 @@ The work done by CSWG over the last couple of years can be understood as explora
 
 For FAB26, the most useful question is not whether PromiseGrid can already solve every operational challenge in a fablab. The better question is whether it points toward a class of infrastructure that distributed manufacturing will increasingly need. If local production networks grow more capable, more collaborative, and more interdependent, they will need ways to coordinate across organizations without falling back on a central operator. They will need digital systems that can support shared stewardship without requiring uniform ownership. They will need tools that work across uneven hardware conditions and mixed technical capacity. They will need software that assumes plural governance rather than pretending it does not exist. That is the direction in which PromiseGrid is interesting.
 
-There is also a practical reason to discuss this now, before the prototypes are mature. Fablabs and small manufacturing communities are well positioned to provide exactly the kind of grounded feedback that infrastructure projects usually receive too late. Communities like these understand what shared resource management actually feels like. They know the difference between a clever systems idea and a tool that would survive a busy week in a workshop. They can spot governance friction early. They can also articulate use cases that do not always appear in abstract technical discussions: temporary machine access for visiting collaborators, cross-lab job coordination, accountable maintenance workflows, shared design and production handoff, or low-overhead collaboration between semi-autonomous groups. If PromiseGrid is going to become useful for real communities, those realities need to shape it.
+This is worth discussing before the prototypes mature. Fablabs and small manufacturing communities can test the assumptions early.
+
+Communities like these can:
+
+- explain what shared resource management feels like in practice,
+- tell the difference between a promising systems idea and a tool that would survive a busy week in a workshop,
+- spot governance friction early,
+- articulate use cases that do not always appear in abstract technical discussions.
+
+Those use cases include temporary machine access for visiting collaborators, cross-lab job coordination, accountable maintenance workflows, shared design and production handoff, and low-overhead collaboration between semi-autonomous groups. If PromiseGrid is going to become useful for fablabs and production communities, those realities need to shape it.
 
 > Visual placeholder: A map or network sketch showing several fablabs or community workshops sharing selected resources and commitments without one central platform owner.
 
@@ -142,7 +181,14 @@ This is why open-source and community ownership are central rather than decorati
 
 ## ATP, CTP, and Promise-Shaped Coordination
 
-This is also the point where familiar supply-chain language such as Available to Promise and Capable to Promise becomes useful. Available to Promise, or ATP, is about whether inventory or supply is available to fulfill demand. Capable to Promise, or CTP, is about whether the production system actually has the capacity and capability to meet that demand under the required conditions. Promise Theory provides a larger frame around those concepts. ATP and CTP can be understood not only as internal planning calculations, but as structured commitments made visible across a network. In a distributed manufacturing ecosystem, the key question is not only whether one organization believes it can deliver. It is whether the relevant promises about stock, machine time, labor, certification, logistics, and follow-through can be made clearly, shared appropriately, and trusted locally by others in the network.
+Conventional supply-chain language such as Available to Promise and Capable to Promise is relevant:
+
+- Available to Promise, or ATP, is about whether inventory or supply is available to fulfill demand.
+- Capable to Promise, or CTP, is about whether the production system has the capacity and capability to meet that demand under the required conditions.
+
+Promise Theory provides a larger framework around those concepts. ATP and CTP can be understood not only as internal planning calculations, but as structured commitments made visible across a network.
+
+In a distributed manufacturing ecosystem, the key question is not only whether one organization believes it can deliver. It is whether the relevant promises can be made clearly, shared appropriately, and trusted locally by others in the network. Those promises may involve stock, machine time, labor, certification, logistics, and follow-through.
 
 Seen this way, PromiseGrid is not trying to replace manufacturing planning concepts with abstract philosophical language. It is trying to provide infrastructure where promise-shaped coordination becomes explicit at the protocol level. A material store can make an availability promise. A fabrication site can make a capacity promise. A machine or workshop role can make a capability promise scoped to certain jobs, tolerances, or time windows. A logistics role can promise pickup, shipment, or confirmation. Other participants can accept, decline, verify, or route around those promises without pretending that one central platform has total authority over the whole network. That is where the connection to ATP and CTP becomes practically useful for independent fabs: promises can cross organizational and machine boundaries without requiring one owner for the entire coordination system.
 

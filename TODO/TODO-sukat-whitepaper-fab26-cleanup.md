@@ -17,7 +17,7 @@ Affects: `whitepaper_draft.md`, `README.md`, `TODO/TODO.md`, `TODO/TODO-sukat-wh
   Replace broad "manufacturing audience" phrasing with wording aimed at fablabs, decentralized manufacturing, distributed production communities, makers, educators, artists, academics, industry experts, and policymakers where appropriate. Keep the focus on "Democratised, Decentralised & Distributed Manufacturing" and "Decentralized Manufacturing Working Group: People, Practices, and Infrastructure."
 - [x] sukat.2 Replace awkward "current direction" wording.
   Prefer "current prototype architecture" when describing stage0/stage1, and "recent proof-of-concept work points toward..." when grounding claims in wire-lab evidence.
-- [ ] sukat.3 Reduce the wall-of-text problem.
+- [x] sukat.3 Reduce the wall-of-text problem.
   Make the white paper less verbose and more scannable with shorter paragraphs, bullets, and other structure. Reduce jargon where possible, explain unavoidable terms plainly, and make the document feel more practical, participatory, and oriented toward learning, building, sharing, and local capacity.
 
 ## Technical Alignment
