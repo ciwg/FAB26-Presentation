@@ -13,7 +13,7 @@ Affects: `whitepaper_draft.md`, `README.md`, `TODO/TODO.md`, `TODO/TODO-sukat-wh
 
 ## Audience and Structure
 
-- [ ] sukat.1 Reframe generic "manufacturing audience" language.
+- [x] sukat.1 Reframe generic "manufacturing audience" language.
   Replace broad "manufacturing audience" phrasing with wording aimed at fablabs, decentralized manufacturing, distributed production communities, makers, educators, artists, academics, industry experts, and policymakers where appropriate. Keep the focus on "Democratised, Decentralised & Distributed Manufacturing" and "Decentralized Manufacturing Working Group: People, Practices, and Infrastructure."
 - [ ] sukat.2 Replace awkward "current direction" wording.
   Prefer "current prototype architecture" when describing stage0/stage1, and "recent proof-of-concept work points toward..." when grounding claims in wire-lab evidence.

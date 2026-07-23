@@ -15,7 +15,7 @@
 - [What This Could Mean for FAB26 and Beyond](#what-this-could-mean-for-fab26-and-beyond)
 - [PromiseGrid as Enabling Infrastructure](#promisegrid-as-enabling-infrastructure)
 - [ATP, CTP, and Promise-Shaped Coordination](#atp-ctp-and-promise-shaped-coordination)
-- [Tiny Demo Ideas for a Manufacturing Audience](#tiny-demo-ideas-for-a-manufacturing-audience)
+- [Tiny Demo Ideas for Fablabs and Distributed Production](#tiny-demo-ideas-for-fablabs-and-distributed-production)
 - [Why This Matters](#why-this-matters)
 - [Invitation](#invitation)
 - [Further Reading](#further-reading)
@@ -112,7 +112,7 @@ In plain language, that payload says a sender is making a status promise about o
 
 ## Technical Direction in Plain Language
 
-For a manufacturing audience, the technical details matter only insofar as they support that larger design goal. The current direction is a small installed `grid` bootstrap, or stage0, that can fetch, verify, approve, and start a fetched local runtime layer, or stage1. Stage1 is where daemon roles, transport, CAS/VCS, parser/builders, capability checks, and app execution support can live. WASI/WASM remains one planned portable app/runtime profile under stage1, including WASM in browser tabs. That portability matters because distributed production networks are unlikely to run on one standardized hardware footprint. A system like this must be able to span laptops, servers, browser tabs, phones, and low-cost devices such as Raspberry Pis. The project also uses capability-based security, which is relevant because community production environments rarely fit cleanly into all-or-nothing permissions. In practice, a lab may need fine-grained, contextual access: one person can inspect a machine log but not modify policy, another can start an approved workflow but not any workflow, and a visiting collaborator can contribute to a production task without inheriting broad administrative power. A capability-oriented model is better suited to this kind of distributed trust than many conventional role structures.
+For fablabs and decentralized production communities, the technical details matter only insofar as they support that larger design goal. The current direction is a small installed `grid` bootstrap, or stage0, that can fetch, verify, approve, and start a fetched local runtime layer, or stage1. Stage1 is where daemon roles, transport, CAS/VCS, parser/builders, capability checks, and app execution support can live. WASI/WASM remains one planned portable app/runtime profile under stage1, including WASM in browser tabs. That portability matters because distributed production networks are unlikely to run on one standardized hardware footprint. A system like this must be able to span laptops, servers, browser tabs, phones, and low-cost devices such as Raspberry Pis. The project also uses capability-based security, which is relevant because community production environments rarely fit cleanly into all-or-nothing permissions. In practice, a lab may need fine-grained, contextual access: one person can inspect a machine log but not modify policy, another can start an approved workflow but not any workflow, and a visiting collaborator can contribute to a production task without inheriting broad administrative power. A capability-oriented model is better suited to this kind of distributed trust than many conventional role structures.
 
 The deeper manufacturing vision is not only cross-organization messaging, but protocol-level coordination that can eventually reach closer to machines and workflows themselves. A CNC router, material store, inspection step, maintenance role, or logistics handoff may each need to participate in a chain of machine-readable commitments. That does not mean every device becomes politically autonomous. It means the infrastructure should be capable of representing scoped authority, operational state, and verifiable promises in ways that applications and devices can share without a single platform owning the whole workflow.
 
@@ -146,9 +146,9 @@ This is also the point where familiar supply-chain language such as Available to
 
 Seen this way, PromiseGrid is not trying to replace manufacturing planning concepts with abstract philosophical language. It is trying to provide infrastructure where promise-shaped coordination becomes explicit at the protocol level. A material store can make an availability promise. A fabrication site can make a capacity promise. A machine or workshop role can make a capability promise scoped to certain jobs, tolerances, or time windows. A logistics role can promise pickup, shipment, or confirmation. Other participants can accept, decline, verify, or route around those promises without pretending that one central platform has total authority over the whole network. That is where the connection to ATP and CTP becomes practically useful for independent fabs: promises can cross organizational and machine boundaries without requiring one owner for the entire coordination system.
 
-## Tiny Demo Ideas for a Manufacturing Audience
+## Tiny Demo Ideas for Fablabs and Distributed Production
 
-The demos we present alongside this white paper should therefore be tiny, concrete, and immediately legible to manufacturing practitioners. They should not try to prove the whole architecture. They should simply make the infrastructure question visible.
+The demos we present alongside this white paper should therefore be tiny, concrete, and immediately legible to fablab and distributed-production practitioners. They should not try to prove the whole architecture. They should simply make the infrastructure question visible.
 
 ### Distributed Machine Booking
 
