@@ -1,8 +1,8 @@
-# Toward Community-Owned Infrastructure for Distributed Manufacturing
+# Toward Community-Owned Infrastructure for Decentralized Manufacturing and Supply Chains
 
 ## Table of Contents
 
-- [CSWG, PromiseGrid, and the Infrastructure Gap in Distributed Manufacturing](#cswg-promisegrid-and-the-infrastructure-gap-in-distributed-manufacturing)
+- [CSWG, PromiseGrid, and the Infrastructure Gap in Distributed Manufacturing and Supply Chains](#cswg-promisegrid-and-the-infrastructure-gap-in-distributed-manufacturing-and-supply-chains)
 - [Distributed Manufacturing Already Exists at Industrial Scale](#distributed-manufacturing-already-exists-at-industrial-scale)
 - [Why CSWG Matters in This Context](#why-cswg-matters-in-this-context)
 - [The Coordination Problem Underneath Production](#the-coordination-problem-underneath-production)
@@ -12,33 +12,33 @@
 - [What a PromiseGrid Message Looks Like](#what-a-promisegrid-message-looks-like)
 - [Technical Direction in Plain Language](#technical-direction-in-plain-language)
 - [Governance, Stewardship, and Shared Resources](#governance-stewardship-and-shared-resources)
-- [What This Could Mean for FAB26 and Beyond](#what-this-could-mean-for-fab26-and-beyond)
+- [What This Could Mean for Decentralized Manufacturing and Supply Chains](#what-this-could-mean-for-decentralized-manufacturing-and-supply-chains)
 - [PromiseGrid as Enabling Infrastructure](#promisegrid-as-enabling-infrastructure)
 - [ATP, CTP, and Promise-Shaped Coordination](#atp-ctp-and-promise-shaped-coordination)
-- [Tiny Demo Ideas for Fablabs and Distributed Production](#tiny-demo-ideas-for-fablabs-and-distributed-production)
+- [Tiny Demo Ideas for Decentralized Manufacturing and Supply Chains](#tiny-demo-ideas-for-decentralized-manufacturing-and-supply-chains)
 - [Why This Matters](#why-this-matters)
 - [Invitation](#invitation)
 - [Further Reading](#further-reading)
 - [Suggested Companion Visuals and Diagrams](#suggested-companion-visuals-and-diagrams)
 - [Suggested Tiny Demos](#suggested-tiny-demos)
 
-## CSWG, PromiseGrid, and the Infrastructure Gap in Distributed Manufacturing
+## CSWG, PromiseGrid, and the Infrastructure Gap in Distributed Manufacturing and Supply Chains
 
 Working white paper by the Community Systems Working Group.
 
-This document was prepared in the context of the FAB26 Show & Tell on "Democratised, Decentralised & Distributed Manufacturing." We are writing for people working in fablabs, makerspaces, shared fabrication spaces, small manufacturing networks, and related projects who are asking how production can become more local, more collaborative, and less dependent on fragile centralized systems. Our purpose is not to claim that we have finished the answer. It is to explain the problem we have been working on, describe PromiseGrid as one emerging technical response, and invite others to follow the work, challenge it, and help test it as prototypes become available over the next couple of months.
+This white paper is for individuals and groups working in fablabs, makerspaces, shared fabrication spaces, small shops, small manufacturing networks, supply-chain experiments, and related projects. The question is how to scale down production and supply-chain coordination beyond what is already possible in large enterprises.  The goal is more local, more collaborative, and avoiding dependence on fragile centralized systems. Our purpose is not to claim that we have the one true answer. It is to explain the problem we have been working on and describe PromiseGrid as one emerging technical response.
 
 ## Distributed Manufacturing Already Exists at Industrial Scale
 
 Distributed manufacturing is not only a future aspiration. At industrial scale, it is already how much of the global economy works: long supply chains, specialized vendors, outsourced fabrication, contract manufacturing, logistics providers, and digital coordination across many sites.
 
-The hard part is scale. ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal supply-chain standards already exist, but they are often out of reach for individuals, fablabs, makerspaces, and most small businesses. They assume budgets, staffing, process maturity, and institutional weight that small actors usually do not have.
+The hard part is scale. ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal supply-chain standards already exist, but they are often out of reach for individuals, fablabs, makerspaces, small shops, and most small businesses. They assume budgets, staffing, process maturity, and institutional weight that small actors usually do not have.
 
 > Visual placeholder: A contrast diagram showing today's distributed supply-chain coordination on one side and community-owned distributed production infrastructure on the other. The key contrast should be not only where production happens, but who can govern the coordination layer.
 
 ## Why CSWG Matters in This Context
 
-This is where the Community Systems Working Group, or CSWG, enters the picture. CSWG describes its work as building open-source infrastructure for decentralized organizations and communities, including makerspaces, non-profits, open-source projects, and other small and medium enterprises looking for better ways to manage shared resources. Its public goals are practical and recognizable to anyone who has spent time keeping a community organization running: reduce the workload of infrastructure, increase resilience, avoid the up-front cost of conventional system buildout, reduce dependency on third-party platforms, and decrease the bottlenecks and burnout that accumulate around a few key people. Those goals matter in many domains, but they are especially relevant in small-scale manufacturing communities, where shared equipment, shared knowledge, shared scheduling, and shared stewardship are common realities rather than edge cases.
+This is where the Community Systems Working Group, or CSWG, enters the picture. CSWG builds open-source infrastructure for groups, communities, and organizations that need shared software, shared infrastructure, and shared decisions without handing control to one operator. Its public goals are practical and recognizable to anyone who has spent time keeping a community organization running: reduce the workload of infrastructure, increase resilience, avoid the up-front cost of conventional system buildout, reduce dependency on third-party platforms, and decrease the bottlenecks and burnout that accumulate around a few key people. Those goals matter in many domains, but they are especially relevant in small-scale manufacturing and supply-chain communities, where shared equipment, shared knowledge, shared scheduling, and shared stewardship are common realities rather than edge cases.
 
 ## The Coordination Problem Underneath Production
 
@@ -72,7 +72,7 @@ In this sense, the challenge is not merely to choose better apps. It is to rethi
 
 ## PromiseGrid as a Response
 
-PromiseGrid is one attempt to do that. We describe it as a consensus-based computing, communications, and governance system designed to address problems of collaborative work and leadership in organizations and communities.
+PromiseGrid is one attempt to do that. The project is an experimental decentralized computing and coordination architecture for groups, communities, organizations, and individuals that need shared software, shared infrastructure, and shared decisions without handing control to one operator.
 
 For this audience, the important point is that PromiseGrid is not another shop app and should not be presented as a finished manufacturing platform. It is an infrastructure experiment beneath applications: a way to explore community-owned computation, explicit promises, narrow capabilities, consensus, auditable handoffs, and shared governance as lower-level building blocks. In PromiseGrid's framing, consensus and governance are not bolt-on features. They are basic system functions exposed upward to applications and, ultimately, to users and communities. That means the same mechanisms used to manage the grid can also be used by the organizations on the grid to manage shared resources, decisions, and collaboration.
 
@@ -166,11 +166,11 @@ This is also where PromiseGrid intersects with a deeper governance problem that 
 
 The work done by CSWG over the last couple of years can be understood as exploratory infrastructure work in exactly this space. The public CSWG materials point to PromiseGrid and related projects as the main focus of effort. The emphasis, at least from the outside, appears to be on conceptual groundwork, architecture, proof-of-concept implementation, and learning how a more community-operated computing substrate might behave in practice. That is a sensible stage for the project. It would be a mistake to present this as a finished manufacturing platform. It is better understood as an infrastructure experiment: a serious attempt to align computing architecture with the actual needs of decentralized communities.
 
-## What This Could Mean for FAB26 and Beyond
+## What This Could Mean for Decentralized Manufacturing and Supply Chains
 
-For FAB26, the most useful question is not whether PromiseGrid can already solve every operational challenge in a fablab. The better question is whether it points toward a class of infrastructure that distributed manufacturing will increasingly need. If local production networks grow more capable, more collaborative, and more interdependent, they will need ways to coordinate across organizations without falling back on a central operator. They will need digital systems that can support shared stewardship without requiring uniform ownership. They will need tools that work across uneven hardware conditions and mixed technical capacity. They will need software that assumes plural governance rather than pretending it does not exist. That is the direction in which PromiseGrid is interesting.
+The most useful question is not whether PromiseGrid can already solve every operational challenge in a fablab, makerspace, small shop, or supply chain. The better question is whether it points toward a class of infrastructure that decentralized manufacturing will increasingly need. Enabling local production networks to grow more capable, more collaborative, and more interdependent should allow them to coordinate across organizations without falling back on a central operator. They will need digital systems that can support shared stewardship without requiring uniform ownership. They will need tools that work across uneven hardware conditions and mixed technical capacity. They will need software that assumes plural governance rather than pretending it does not exist. That is the direction in which PromiseGrid is interesting.
 
-This is worth discussing before the prototypes mature. Fablabs and small manufacturing communities can test the assumptions early.
+This is worth discussing before the prototypes mature. Fablabs, makerspaces, small shops, individuals, and small manufacturing communities can test the assumptions early.
 
 Communities like these can:
 
@@ -185,7 +185,7 @@ Those use cases include temporary machine access for visiting collaborators, cro
 
 ## PromiseGrid as Enabling Infrastructure
 
-One helpful way to think about PromiseGrid for this audience is as enabling infrastructure rather than end-user software. Its value, if it proves out, is not that it replaces every existing tool. Its value is that it could support a different way of composing tools, permissions, policies, and cooperative workflows across a distributed network. That matters for manufacturing because distributed production is rarely one workflow. It is many workflows crossing organizational boundaries: design files, inventory signals, training status, machine reservations, fabrication tasks, quality checks, shipping, documentation, and repair. Any digital substrate meant to support this world has to handle not just data exchange, but negotiated trust.
+One helpful way to think about PromiseGrid for this audience is as enabling infrastructure rather than end-user software. Its value, if it proves out, is not that it replaces every existing tool. Its value is that it could support a different way of composing tools, permissions, policies, and cooperative workflows across a distributed network. That matters for manufacturing and supply chains because distributed production is rarely one workflow. It is many workflows crossing organizational boundaries: design files, inventory signals, training status, machine reservations, fabrication tasks, quality checks, shipping, documentation, and repair. Any digital substrate meant to support this world has to handle not just data exchange, but negotiated trust.
 
 This is why open-source and community ownership are central rather than decorative. Small fabs should be able to inspect the rules they depend on, run infrastructure appropriate to their own scale, participate in shared protocols, and adapt governance to local realities. Without that kind of substrate, distributed manufacturing can remain technically distributed while still being coordinated through systems that communities do not meaningfully control.
 
@@ -202,9 +202,9 @@ In a distributed manufacturing ecosystem, the key question is not only whether o
 
 Seen this way, PromiseGrid is not trying to replace manufacturing planning concepts with abstract philosophical language. It is trying to provide infrastructure where promise-shaped coordination becomes explicit at the protocol level. A material store can make an availability promise. A fabrication site can make a capacity promise. A machine or lab role can make a capability promise scoped to certain jobs, tolerances, or time windows. A logistics role can promise pickup, shipment, or confirmation. Other participants can accept, decline, verify, or route around those promises without pretending that one central platform has total authority over the whole network. That is where the connection to ATP and CTP becomes practically useful for independent fabs: promises can cross organizational and machine boundaries without requiring one owner for the entire coordination system.
 
-## Tiny Demo Ideas for Fablabs and Distributed Production
+## Tiny Demo Ideas for Decentralized Manufacturing and Supply Chains
 
-The demos we present alongside this white paper should therefore be tiny, concrete, and immediately legible to fablab and distributed-production practitioners. They should not try to prove the whole architecture. They should simply make the infrastructure question visible.
+The demos we present alongside this white paper should therefore be tiny, concrete, and immediately legible to fablab, makerspace, small-shop, and supply-chain practitioners. They should not try to prove the whole architecture. They should simply make the infrastructure question visible.
 
 ### Distributed Machine Booking
 
@@ -212,7 +212,7 @@ One promising demo is a distributed machine booking scenario. Imagine two partne
 
 ### Maintenance and Stewardship
 
-Another strong demo is a maintenance and stewardship workflow. In many shared spaces, maintenance is everyone's responsibility in theory and no one's responsibility in practice. A tiny PromiseGrid-based example could show how a machine enters a maintenance-needed state, how restricted capabilities change automatically, how a task is offered to qualified stewards, and how restored availability depends on a transparent completion record rather than an informal message in chat. This would speak directly to the tragedy-of-the-commons framing in a context that FAB26 participants will immediately recognize.
+Another strong demo is a maintenance and stewardship workflow. In many shared spaces, maintenance is everyone's responsibility in theory and no one's responsibility in practice. A tiny PromiseGrid-based example could show how a machine enters a maintenance-needed state, how restricted capabilities change automatically, how a task is offered to qualified stewards, and how restored availability depends on a transparent completion record rather than an informal message in chat. This would speak directly to the tragedy-of-the-commons framing in a context that readers will immediately recognize.
 
 ### Shared Inventory
 
@@ -232,17 +232,19 @@ The broader implication of all this is that distributed manufacturing may succee
 
 ## Invitation
 
-That is the invitation behind this work. We hope people who encounter these ideas at FAB26, or later through this write-up, will stay close to the journey as prototypes emerge in the next couple of months. We hope some will share use cases, critiques, and design questions from their own fablabs or manufacturing communities. We hope others will want to user test early tools once they are ready. And we hope the conversation remains grounded in practice, because the real measure of this work is not whether the architecture sounds elegant. It is whether communities can use it to become more capable, more resilient, and more self-governing in the everyday work of making things together.
+We hope readers will follow the prototype work, share use cases, critiques, and design questions from their own fablabs, makerspaces, small shops, supply-chain work, or manufacturing communities.  The real measure of this work is not whether the architecture sounds elegant. It is whether communities and small actors can use it to become more capable, more resilient, and more self-governing in the everyday work of making things together.
 
 ## Further Reading
 
-For readers who want to go deeper, the accompanying presentation can be read alongside this paper as a shorter narrative overview. Readers may also want to explore:
+For readers who want to go deeper:
 
 1. Community Systems Working Group: <https://cswg.infrastructures.org/>
 2. PromiseGrid: <https://github.com/promisegrid/promisegrid>
 3. PromiseGrid wire-lab: <https://github.com/promisegrid/wire-lab>
-4. Wikipedia overview of Promise Theory: <https://en.wikipedia.org/wiki/Promise_theory>
-5. Mark Burgess Promise Theory FAQ: <https://markburgess.org/promiseFAQ.html>
+4. PromiseGrid developer guide: <https://github.com/ciwg/promisegrid-dev-guide>
+5. PromiseGrid examples: <https://github.com/ciwg/grid-examples>
+6. Wikipedia overview of Promise Theory: <https://en.wikipedia.org/wiki/Promise_theory>
+7. Mark Burgess Promise Theory FAQ: <https://markburgess.org/promiseFAQ.html>
 
 ## Suggested Companion Visuals and Diagrams
 

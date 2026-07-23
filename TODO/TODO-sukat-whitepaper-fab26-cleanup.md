@@ -18,6 +18,15 @@ Intent: Keep the next white paper edit narrow and reviewable after the broader s
 Constraints: Keep the diff minimal and reviewable; do not rewrite the outline; touch only the agreed white paper paragraphs, mechanical workshop-as-place fixes, and this TODO record.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-limib
+Date: 2026-07-23 14:52:03
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Break `sukat.9` into section-specific subtasks and align the white paper with the main PromiseGrid README.
+Intent: Make the white paper more generally about PromiseGrid in decentralized manufacturing and supply chains for fablabs, makerspaces, small shops, and individuals, while keeping edits minimal and traceable by section.
+Constraints: Keep changes section-local and reviewable; do not rewrite paragraphs that do not need README alignment or audience generalization; do not touch slides.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
@@ -43,8 +52,18 @@ Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
   Explain sparse CAS, versioned reference sets, local trust, continuous peer DAG sync, retention/storage promises, review promises, and Git as a bridge rather than native authority. Put this near `PromiseGrid as Enabling Infrastructure` or in the technical-direction section.
 - [ ] sukat.8 Add POC19's production-shaped direction carefully.
   POC19 is a design draft, not executable code or a production API. Phrase it as prototype or near-term production-shaped design work. Useful audience-facing points include `grid daemon`, `grid run <app-ref>`, apps/data as CAS/VCS objects, local approval of roots/capabilities, outputs as CIDs, and TCP/WebSocket carrying the same exact message bytes.
-- [ ] sukat.9 Bring the white paper closer to the main PromiseGrid README.
-  The main README frames PromiseGrid as experimental decentralized computing and coordination for groups that need shared software, infrastructure, and decisions without one operator. It also says current executable work is still prototype work and split across `wire-lab`, `promisegrid-dev-guide`, and `grid-examples`. Add that context and avoid implying prototypes will simply become available over the next couple of months.
+- [x] sukat.9 Bring the white paper closer to the main PromiseGrid README.
+  Align audience and README context via section-specific subtasks.
+- [x] sukat.9.1 Title and TOC: add supply-chain framing and update affected anchors only.
+- [x] sukat.9.2 Opening section: replace FAB26 event framing with general white paper framing.
+- [x] sukat.9.3 Industrial-scale section: keep scale framing and mention supply-chain systems only as needed.
+- [x] sukat.9.4 CSWG section: align with README language about shared software, infrastructure, and decisions without one operator.
+- [x] sukat.9.5 PromiseGrid response section: bring in README's experimental decentralized computing and coordination framing.
+- [x] sukat.9.6 Technical direction section: add minimal README prototype-status context.
+- [x] sukat.9.7 "What This Could Mean..." section: retitle away from FAB26 and generalize audience/use cases.
+- [x] sukat.9.8 Enabling infrastructure section: mention supply-chain coordination where it fits naturally.
+- [x] sukat.9.9 Demo section title/lead: make the audience generic without doing the larger `sukat.10` demo rewrite.
+- [x] sukat.9.10 Invitation/Further Reading: remove FAB26-specific invitation language and add the README repo split.
 
 ## Demos and Provenance
 
