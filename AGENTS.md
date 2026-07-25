@@ -152,6 +152,17 @@
 - This applies to `AGENTS.md`, slides, white papers, drafts, TODO files, code, and all other repo files.
 - For public prose artifacts, edits must be traceable to a concrete user request or locked decision, not general polish.
 
+## Public Prose Style
+- For white papers, course text, slide notes, and other public prose, prefer direct statements, concrete examples, and short paragraphs.
+- Prefer RFC-like prose for technical white papers: definitive, specific, and free of mush.
+- Use active voice and named actors such as Alice, Bob, and Carol when examples need to feel concrete.
+- Avoid positive/negative balance scaffolding and contrast chains. Make the direct point unless a contrast is technically necessary.
+- Avoid over-steering phrases such as `the important point`, `the better question`, `one helpful way`, and `this matters because`.
+- Cut filler and hedges such as `emerging`, `could`, `may`, `eventually`, `if it proves out`, and `in this sense` unless the uncertainty is substantive.
+- When borrowing from course, takeaway, or other external material, check technical accuracy first and avoid design regressions.
+- For white papers, wrap lines at 74 characters.
+
+
 ## Runtime Artifact Hygiene (Required)
 - Never put temporary test files, Go cache directories, build caches, or other runtime artifacts in this repo.
 - Runtime artifacts must go under `/tmp` subdirectories.

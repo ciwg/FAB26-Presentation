@@ -1,4 +1,4 @@
-# Toward Community-Owned Infrastructure for Decentralized Manufacturing
+# Community-Owned Infrastructure for Decentralized Manufacturing
 
 ```
 ######  ######     #    ####### #######
@@ -10,117 +10,131 @@
 ######  #     # #     # #          #
 ```
 
-## Table of Contents
 
-- [CSWG, PromiseGrid, and the Infrastructure Gap in Distributed Manufacturing](#cswg-promisegrid-and-the-infrastructure-gap-in-distributed-manufacturing)
-- [Distributed Manufacturing Already Exists at Industrial Scale](#distributed-manufacturing-already-exists-at-industrial-scale)
-- [Why CSWG Matters in This Context](#why-cswg-matters-in-this-context)
-- [The Coordination Problem Underneath Production](#the-coordination-problem-underneath-production)
-- [Why Existing Software Infrastructure Falls Short](#why-existing-software-infrastructure-falls-short)
-- [PromiseGrid as a Response](#promisegrid-as-a-response)
-- [Promise Theory as an Important Foundation](#promise-theory-as-an-important-foundation)
-- [What a PromiseGrid Message Looks Like](#what-a-promisegrid-message-looks-like)
-- [Technical Direction in Plain Language](#technical-direction-in-plain-language)
-- [Governance, Stewardship, and Shared Resources](#governance-stewardship-and-shared-resources)
-- [What This Could Mean for Decentralized Manufacturing](#what-this-could-mean-for-decentralized-manufacturing)
-- [PromiseGrid as Enabling Infrastructure](#promisegrid-as-enabling-infrastructure)
-- [ATP, CTP, and Promise-Shaped Coordination](#atp-ctp-and-promise-shaped-coordination)
-- [Tiny Demo Ideas for Distributed Production](#tiny-demo-ideas-for-distributed-production)
-- [Why This Matters](#why-this-matters)
-- [Invitation](#invitation)
-- [Further Reading](#further-reading)
-- [Suggested Companion Visuals and Diagrams](#suggested-companion-visuals-and-diagrams)
-- [Suggested Tiny Demos](#suggested-tiny-demos)
+## The Infrastructure Gap in Decentralized Manufacturing
 
-## CSWG, PromiseGrid, and the Infrastructure Gap in Distributed Manufacturing
+PromiseGrid is infrastructure for decentralized manufacturing: shared
+software, shared infrastructure, and shared decisions under local and
+shared control.
 
-Working white paper by the Community Systems Working Group.
-
-This white paper is for people working in fablabs, makerspaces, small shops, small manufacturing networks, and related projects. The question is how to scale down production coordination beyond what is already possible in large enterprises. The goal is more local, more collaborative, and avoiding dependence on fragile centralized systems. Our purpose is not to claim that we have the one true answer. It is to explain the problem we have been working on and describe PromiseGrid as one emerging technical response.
+In this paper, we use "distributed" and "decentralized" to refer to
+distinct concepts. Distributed production means work spread across
+many sites while a central company, platform, or controller
+coordinates the system. Decentralized production means mesh-like
+coordination: participants run local infrastructure, coordinate
+directly, and manage shared commitments locally.
 
 ## Distributed Manufacturing Already Exists at Industrial Scale
 
-Distributed manufacturing is not only a future aspiration. At industrial scale, it is already how much of the global economy works: long supply chains, specialized vendors, outsourced fabrication, contract manufacturing, logistics providers, and digital coordination across many sites.
+Distributed manufacturing already exists at industrial scale. The
+global economy runs through long supply chains, specialized vendors,
+outsourced fabrication, contract manufacturing, logistics providers,
+and digital coordination across many sites.
 
-The hard part is scale. ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal supply-chain standards already exist, but they are often out of reach below industrial scale. They assume budgets, staffing, process maturity, and institutional weight that smaller groups usually do not have.
+That model spreads work while authority stays central. A product can
+pass through five companies before it ships, while a buyer, platform,
+lead firm, or certification process still controls the data,
+approvals, and disputes.
 
-> Visual placeholder: A contrast diagram showing today's distributed supply-chain coordination on one side and community-owned distributed production infrastructure on the other. The key contrast should be not only where production happens, but who can govern the coordination layer.
+Decentralized manufacturing requires coordination systems that fit
+smaller budgets, smaller staffs, local authority, and uneven process
+maturity. ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal
+supply-chain standards already exist. They assume institutional weight
+beyond the reach of many individuals and small groups.
 
-## Why CSWG Matters in This Context
+> Visual placeholder: A diagram showing today's distributed
+> supply-chain coordination alongside community-owned decentralized
+> production infrastructure. Show where production happens and who
+> governs the coordination layer.
 
-This is where the Community Systems Working Group, or CSWG, enters the picture. CSWG builds open-source infrastructure for groups, communities, and organizations that need shared software, shared infrastructure, and shared decisions without handing control to one operator. Its public goals are practical and recognizable to anyone who has spent time keeping a community organization running: reduce the workload of infrastructure, increase resilience, avoid the up-front cost of conventional system buildout, reduce dependency on third-party platforms, and decrease the bottlenecks and burnout that accumulate around a few key people. Those goals matter in many domains, but they are especially relevant in small-scale production communities, where shared equipment, shared knowledge, shared scheduling, and shared stewardship are common realities rather than edge cases.
+## Community Systems Working Group (CSWG)
+
+CSWG builds open-source infrastructure for groups, communities, and
+organizations that need shared software, shared infrastructure, and
+shared decisions under shared control.
 
 ## The Coordination Problem Underneath Production
 
-The important point is that distributed manufacturing does not fail only when a machine breaks or a part is unavailable. It also fails when coordination breaks down. A shop can have skilled people, useful machines, and active community interest, but still struggle because the operational layer is brittle.
-
-The questions are practical:
+A production coordination system needs to answer quesitons like these:
 
 - Who can reserve which machine, and under what conditions?
 - How are maintenance responsibilities tracked?
-- How are shared inventories handled when different groups have different levels of access?
-- How do several independent labs collaborate on production without one organization becoming the platform owner for everyone else?
+- How are shared inventories handled?
+- How do independent sites share production while each keeps local authority?
 - What happens when a key organizer steps back and tacit knowledge disappears with them?
 
-These are not secondary administrative issues. In many communities, they are the main constraint.
-
-> Diagram placeholder: A layered view of distributed manufacturing showing physical production at the top, community process in the middle, and digital coordination infrastructure at the base.
+> Diagram placeholder: A layered view of decentralized manufacturing
+> showing physical production at the top, community process in the
+> middle, and digital coordination infrastructure at the base.
 
 ## Why Existing Software Infrastructure Falls Short
 
-Traditional software infrastructure often reproduces the very concentrations of power and fragility that distributed manufacturing is trying to avoid. A centralized SaaS platform may be convenient at first, but it often creates lock-in, opaque governance, and dependence on the priorities of a vendor or host organization. A self-hosted tool stack can solve part of that problem, but it frequently shifts the burden onto a handful of administrators who become permanent operators, gatekeepers, or points of failure.
+Traditional software often implements the center that decentralized
+manufacturing is trying to avoid.  Modeled after the needs of large
+companies, conventional ERP, MES, and QMS software assumptions
+include:
 
-For small fabs, the gap is also practical. Shop work is often coordinated through a patchwork of:
+- centralized authority, uniform processes, and a single administrative domain
+- large budgets, dedicated systems adminstration and operations staff
+- uniformity of process and data across sites that are often
+  wholly-owned subsidiaries 
 
+By contrast, small shops and indivuduals tend to coordinate using
+whatever tools are available quickly and cheaply. These tools include:
+
+XXX get rid of the commas and periods at the end of bullet points XXX
 - spreadsheets, calendars, chat threads, and booking tools,
-- file repositories, accounting systems, and inventory lists,
-- machine interfaces and improvised approval processes.
-
-Larger manufacturing software such as ERP or MES systems can assume budgets, staffing, process uniformity, and administrative control that shared community spaces do not have. Machine ecosystems may expose limited or vendor-specific integration points. Permissions rarely travel cleanly across sites. Work-order state, machine capacity, maintenance status, inventory commitments, and evidence of completion often remain trapped in separate tools.
-
-In this sense, the challenge is not merely to choose better apps. It is to rethink the computing and protocol layer underneath the apps, so that distributed manufacturing networks can coordinate without turning one organization, vendor, or exhausted local administrator into the de facto center.
+- consumer-oriented file sharing hosts
+- small-business accounting software that integrates poorly with
+  everything else
 
 ## PromiseGrid as a Response
 
-PromiseGrid is one attempt to do that. The project is an experimental decentralized computing and coordination architecture for groups and communities that need shared software, shared infrastructure, and shared decisions without handing control to one operator.
+PromiseGrid is experimental decentralized computing and coordination
+infrastructure for groups and communities that need shared software,
+shared infrastructure, and shared decisions under local and shared
+control.
 
-For this audience, the important point is that PromiseGrid is not another shop app and should not be presented as a finished manufacturing platform. It is an infrastructure experiment beneath applications: a way to explore community-owned computation, explicit promises, narrow capabilities, consensus, auditable handoffs, and shared governance as lower-level building blocks. In PromiseGrid's framing, consensus and governance are not bolt-on features. They are basic system functions exposed upward to applications and, ultimately, to users and communities. That means the same mechanisms used to manage the grid can also be used by the organizations on the grid to manage shared resources, decisions, and collaboration.
+PromiseGrid sits below applications. It defines lower-level building
+blocks for community-owned computation: explicit promises, narrow
+capabilities, consensus, and shared governance.
 
-> Visual placeholder: A concept image or lightweight architecture diagram showing PromiseGrid as a shared computing substrate between individuals, organizations, devices, and applications.
+> Visual placeholder: A concept image or lightweight architecture
+> diagram showing PromiseGrid as a shared computing substrate between
+> individuals, organizations, devices, and applications.
 
 ## Promise Theory as an Important Foundation
 
-[Promise Theory](https://en.wikipedia.org/wiki/Promise_theory), associated with Mark Burgess and collaborators, is one of the underpinning inspirations behind PromiseGrid. Promise Theory starts from a simple but powerful idea: an agent can only make promises about its own behavior. It cannot truly command another agent into reliability. Cooperation happens when different agents make and keep promises that others can observe, rely on, and respond to.
+PromiseGrid's design is based in part on [Promise
+Theory](https://en.wikipedia.org/wiki/Promise_theory), by Mark Burgess
+and collaborators. Promise Theory is based on principles of
+voluntary cooperation and local authority, such as:
 
-In practice, this means a person, machine, software service, shared space, or partner organization is best understood not simply as something to be controlled, but as a participant making certain commitments under certain conditions. That shift matters because distributed manufacturing rarely works through pure command. It works through negotiated cooperation across many semi-autonomous actors.
-
-Promise Theory also helps clarify several ideas that are easy to blur in ordinary operations language. A promise is not the same as a demand. A request is not the same as compliance. A refusal or non-commitment is not automatically a failure. Trust is not global and abstract; it is local, relational, and built from experience of which promises are kept, broken, declined, or renegotiated.
-
-This perspective provides practical models for manufacturing networks:
-A partner may promise fabrication capacity, but within limits. A
-machine in a fablab or makerspace may promise availability, but only
-for trained and certified members.  Certification is itself a promise
-that some sort of training has been accomplished. Promise Theory gives
-us language for describing these realities honestly instead of hiding
-them behind simplistic assumptions of centralized control.
+- An agent can only make promises about its own behavior. 
+- An agent cannot promise what another agent will do.
+- Trust is built over time from ability to keep promises.
+- Trust is local, not global. Each agent makes its own trust decisions.
+- Coordination is built on trust, not from authority or control.
 
 ## What a PromiseGrid Message Looks Like
 
-It is useful to make this concrete. PromiseGrid messages are not just generic packets moving around a network. They are structured envelopes that identify what protocol is being spoken and what kind of promise is being made.
+PromiseGrid messages are structured envelopes. Each envelope identifies the protocol being spoken and the promise being made.
 
-At a simple level, one active PromiseGrid pattern looks like this:
+XXX replace with pCID-defined arity XXX
+
+Compact form:
 
 ```text
 grid([42(pCID), payload])
 ```
 
-This is the compact form used in some constrained scenarios.
+This compact form is used in constrained scenarios.
 
 - `grid(...)`: says this is a PromiseGrid envelope
 - `42(pCID)`: identifies the protocol specification being used
 - `payload`: contains the actual message body defined by that protocol
 
-For more expressive cases, a fuller envelope shape looks like this:
+Fuller envelope:
 
 ```text
 grid([42(pCID), parents, payload, proof])
@@ -131,147 +145,92 @@ grid([42(pCID), parents, payload, proof])
 - `payload`: the content of the current promise
 - `proof`: the signature or other proof material used to verify it
 
-This matters because PromiseGrid is designed so that meaning is not hidden in a vague application layer. The protocol is explicit. The message shape is explicit. The relationship to earlier messages can be explicit. The proof can be explicit. That makes it easier to ask practical questions such as: who made this promise, what exactly was promised, what earlier commitment does this depend on, and what evidence supports it.
+The envelope identifies the protocol, payload, prior messages, and verification material. A receiver can determine who made the promise, what payload was promised, which earlier messages it depends on, and which proof verifies it.
 
-That protocol-level explicitness matters for manufacturing because many operational commitments need to be understood by tools, machines, people, and organizations at the same time. A machine access grant, a maintenance status change, a work-order handoff, an inventory reservation, or a capacity promise should not have to live only as an entry in one application's database or a message in one chat channel. The longer-term vision is infrastructure where these commitments can become portable, inspectable, and governed at a deeper layer.
+Tools, machines, people, and organizations must read the same manufacturing commitments. A machine access grant, maintenance status change, work-order handoff, inventory reservation, or capacity promise needs a life outside one application's database or one chat channel. PromiseGrid makes these commitments portable, inspectable, and governable outside any single app.
 
 The same `grid(...)` message bytes are also intended to be transport-agnostic. They can be carried by online transports such as TCP, HTTP, or WebSocket, and also by slower or more asynchronous paths such as version-control history, file transfer, or a thumb drive.
 
-One concrete example from current work is an order-status message used in a constrained device setting:
+Current constrained-device example:
 
 ```text
 grid([42(pCID), payload])
 payload = ["MSG", "gateway-bob", "m4-ivan", 1, "BT-1042", "created"]
 ```
 
-In plain language, that payload says a sender is making a status promise about order `BT-1042`. Another message might acknowledge that status update. The point is not the syntax by itself. The point is that the message structure makes the promise legible.
+Payload meaning: the sender promises status `created` for order `BT-1042`. A later message can acknowledge that status update. The syntax is the carrier; the message structure makes the promise legible.
 
-## Technical Direction in Plain Language
+## Technical Details in Plain Language
 
 In the current prototype architecture:
 
-- Stage0 is a small installed `grid` bootstrap that can fetch, verify, approve, and start a fetched local runtime layer.
-- Stage1 provides daemon roles, transport, CAS/VCS, parser/builders, capability checks, and app execution support.
-- WASI/WASM remains one planned portable app/runtime profile under stage1, including WASM in browser tabs.
+- Stage0 is a small installed `grid` bootstrap that can fetch, verify,
+  approve, and start a fetched local runtime layer.
+- Stage1 provides daemon roles, transport, CAS/VCS, parser/builders,
+  capability checks, and app execution support.
+- WASI/WASM remains one planned portable app/runtime profile under
+  stage1, including WASM in browser tabs.
 
-That portability matters because distributed production networks are unlikely to run on one standardized hardware footprint. A system like this must be able to span laptops, servers, browser tabs, phones, and low-cost devices such as Raspberry Pis.
+PromiseGrid uses capability-based security.
+Capability tokens match decentralized trust:
 
-The project also uses capability-based security, which is relevant because community production environments rarely fit cleanly into all-or-nothing permissions. In practice, a lab may need fine-grained, contextual access:
+- Carol can give Alice a capability token that allows her to read a
+  file, but not write it.
+- Ellen can give Bob a capability token that allows him to use machine
+  A, but not machine B.
 
-- one person can inspect a machine log but not modify policy,
-- another can start an approved workflow but not any workflow,
-- a visiting collaborator can contribute to a production task without inheriting broad administrative power.
+PromiseGrid messages can cross organization, machine, and workflow
+boundaries.
 
-A capability-oriented model is better suited to this kind of distributed trust than many conventional role structures.
+## Decentralized Manufacturing Requirements
 
-The deeper manufacturing vision is not only cross-organization messaging, but protocol-level coordination that can eventually reach closer to machines and workflows themselves. A CNC router, material store, inspection step, maintenance role, or logistics handoff may each need to participate in a chain of machine-readable commitments. That does not mean every device becomes politically autonomous. It means the infrastructure should be capable of representing scoped authority, operational state, and verifiable promises in ways that applications and devices can share without a single platform owning the whole workflow.
+For decentralized manufacturing to work, Alice's lab must coordinate
+with Bob's school, Carol's repair collective, and Dave's small shop
+while each keeps local authority. Shared stewardship must work across
+different owners. Software must run across laptops, phones, servers,
+browser tabs, and small devices. Governance must support multiple
+local authorities.
 
-Another important design choice is that PromiseGrid treats consensus, conflict resolution, and governance as system-level building blocks. This is where the project becomes more than distributed hosting. It moves toward what the project calls computational governance. The idea is not to automate community life into a rigid machine. The idea is to make coordination rules visible, inspectable, portable, and programmable enough that groups can share infrastructure without surrendering agency. In manufacturing terms, that could eventually mean that access to tools, task handoffs, maintenance obligations, approvals, or inventory commitments are not buried in email threads, private spreadsheets, or the memory of one coordinator. Instead, they can become part of a shared operational substrate that is understandable and adjustable by the community using it.
+A few messy cases:
 
-> Diagram placeholder: A flow showing `policy -> consensus -> application behavior -> visible community outcome` with a manufacturing example such as tool booking, job approval, or shared inventory reservation.
+- temporary machine access for visiting collaborators
+- site A printing a part for site B to assemble
+- accounting for usage and maintenance of shared machines
+- collaborative CAD/CAM tools that don't depend on a single cloud provider
 
-## Governance, Stewardship, and Shared Resources
+> Visual placeholder: A map or network sketch showing members of
+> several fablabs or makerspaces sharing selected resources and
+> commitments through local nodes and shared protocols.
 
-This is also where PromiseGrid intersects with a deeper governance problem that many communities experience as a tragedy-of-the-commons problem. Shared resources are vulnerable when incentives, visibility, and accountability are weak. In a fablab context, that may look like neglected maintenance, overbooked machines, missing materials, undocumented modifications, or uneven participation in the less glamorous work that keeps a space functional. PromiseGrid is aimed at these kinds of shared-resource failures. Whether or not it ultimately succeeds, that target is important. It acknowledges that resilient distributed production requires more than peer-to-peer connectivity. It requires mechanisms for stewardship.
+## PromiseGrid Is Infrastructure
 
-The work done by CSWG over the last couple of years can be understood as exploratory infrastructure work in exactly this space. The public CSWG materials point to PromiseGrid and related projects as the main focus of effort. The emphasis, at least from the outside, appears to be on conceptual groundwork, architecture, proof-of-concept implementation, and learning how a more community-operated computing substrate might behave in practice. That is a sensible stage for the project. It would be a mistake to present this as a finished manufacturing platform. It is better understood as an infrastructure experiment: a serious attempt to align computing architecture with the actual needs of decentralized communities.
-
-## What This Could Mean for Decentralized Manufacturing
-
-The most useful question is not whether PromiseGrid can already solve every operational challenge in a shared space or small production network. The better question is whether it points toward a class of infrastructure that decentralized manufacturing will increasingly need. If local production networks grow more capable, more collaborative, and more interdependent, they will need ways to coordinate across organizations without falling back on a central operator. They will need digital systems that can support shared stewardship without requiring uniform ownership. They will need tools that work across uneven hardware conditions and mixed technical capacity. They will need software that assumes plural governance rather than pretending it does not exist. That is the direction in which PromiseGrid is interesting.
-
-This is worth discussing before the prototypes mature. These groups can test the assumptions early.
-
-They can:
-
-- explain what shared resource management feels like in practice,
-- tell the difference between a promising systems idea and a tool that would survive a busy week in a shared space,
-- spot governance friction early,
-- articulate use cases that do not always appear in abstract technical discussions.
-
-Those use cases include temporary machine access for visiting collaborators, cross-lab job coordination, accountable maintenance workflows, shared design and production handoff, and low-overhead collaboration between semi-autonomous groups. If PromiseGrid is going to become useful for these communities, those realities need to shape it.
-
-> Visual placeholder: A map or network sketch showing several fablabs or makerspaces sharing selected resources and commitments without one central platform owner.
-
-## PromiseGrid as Enabling Infrastructure
-
-One helpful way to think about PromiseGrid for this audience is as enabling infrastructure rather than end-user software. Its value, if it proves out, is not that it replaces every existing tool. Its value is that it could support a different way of composing tools, permissions, policies, and cooperative workflows across a distributed network. That matters because distributed production is rarely one workflow. It is many workflows crossing organizational boundaries: design files, inventory signals, training status, machine reservations, fabrication tasks, quality checks, shipping, documentation, and repair. Any digital substrate meant to support this world has to handle not just data exchange, but negotiated trust.
-
-This is why open-source and community ownership are central rather than decorative. Small fabs should be able to inspect the rules they depend on, run infrastructure appropriate to their own scale, participate in shared protocols, and adapt governance to local realities. Without that kind of substrate, distributed manufacturing can remain technically distributed while still being coordinated through systems that communities do not meaningfully control.
+PromiseGrid is infrastructure beneath booking screens, inventory
+forms, and slicers. It carries tools, permissions, policies, and
+cooperative workflows across a decentralized network. Decentralized
+production joins design files, inventory signals, training status,
+machine reservations, fabrication tasks, quality checks, shipping,
+documentation, and repair across organizational boundaries. The
+substrate must carry data and negotiated trust.
 
 ## ATP, CTP, and Promise-Shaped Coordination
 
-Conventional supply-chain language such as Available to Promise and Capable to Promise is relevant:
+Supply chains already use some promise terms:
 
-- Available to Promise, or ATP, is about whether inventory or supply is available to fulfill demand.
-- Capable to Promise, or CTP, is about whether the production system has the capacity and capability to meet that demand under the required conditions.
+- ATP: inventory or supply available for demand.
+- CTP: capacity and capability available under the required conditions.
 
-Promise Theory provides a larger framework around those concepts. ATP and CTP can be understood not only as internal planning calculations, but as structured commitments made visible across a network.
+Promise Theory gives ATP and CTP a network form: structured
+commitments visible across organizations.
 
-In a distributed manufacturing ecosystem, the key question is not only whether one organization believes it can deliver. It is whether the relevant promises can be made clearly, shared appropriately, and trusted locally by others in the network. Those promises may involve stock, machine time, labor, certification, logistics, and follow-through.
+PromiseGrid gives those promises an open network protocol; rather than
+being locked into a single vendor's software, the commitments can be
+shared across organizations and applications.
 
-Seen this way, PromiseGrid is not trying to replace manufacturing planning concepts with abstract philosophical language. It is trying to provide infrastructure where promise-shaped coordination becomes explicit at the protocol level. A material store can make an availability promise. A fabrication site can make a capacity promise. A machine or lab role can make a capability promise scoped to certain jobs, tolerances, or time windows. A logistics role can promise pickup, shipment, or confirmation. Other participants can accept, decline, verify, or route around those promises without pretending that one central platform has total authority over the whole network. That is where the connection to ATP and CTP becomes practically useful for independent fabs: promises can cross organizational and machine boundaries without requiring one owner for the entire coordination system.
-
-## Tiny Demo Ideas for Distributed Production
-
-The demos we present alongside this white paper should therefore be tiny, concrete, and immediately legible to distributed-production practitioners. They should not try to prove the whole architecture. They should simply make the infrastructure question visible.
-
-### Distributed Machine Booking
-
-One promising demo is a distributed machine booking scenario. Imagine two partner labs sharing access to a CNC router and a laser cutter. Instead of one lab owning the booking platform, each site runs a small node. A shared policy determines who can reserve which resources, under what conditions, and how conflicts are resolved. The demo would show a booking request, a conflicting request from another node, and a visible resolution path that reflects shared rules rather than unilateral admin override.
-
-### Maintenance and Stewardship
-
-Another strong demo is a maintenance and stewardship workflow. In many shared spaces, maintenance is everyone's responsibility in theory and no one's responsibility in practice. A tiny PromiseGrid-based example could show how a machine enters a maintenance-needed state, how restricted capabilities change automatically, how a task is offered to qualified stewards, and how restored availability depends on a transparent completion record rather than an informal message in chat. This would speak directly to the tragedy-of-the-commons framing in a context that readers will immediately recognize.
-
-### Shared Inventory
-
-A third useful demo is shared inventory or material allocation across small sites. A group of labs might want to pool visibility into available stock for certain materials or components without giving one party full control over everyone's data or decisions. The demo could show lightweight commitments: one site marks a quantity as available, another requests a portion for a job, and the system records the promise, reservation, and fulfillment trail. The point is not warehouse optimization. The point is making inter-organizational coordination legible and governable.
-
-### Distributed Work-Order Handoff
-
-A fourth demo, if we want one that feels especially close to production-by-the-masses, is a distributed work order handoff. One site starts a small manufacturing task, discovers a capacity bottleneck, and passes a subtask to another site with the right machine, certification, or schedule window. What should travel with that handoff is not only a file, but also the permissions, commitments, and state needed for the receiving site to act without a long trail of ad hoc messages. Even a very small mockup of this idea could help the audience see why a computing and governance substrate matters.
-
-> Demo visual placeholder: A three-column comparison showing today's likely toolchain for one workflow, the coordination failures that commonly happen, and the same workflow reimagined with shared capabilities and consensus.
-
-If we include a code-based demo, it should remain minimal and explanatory. A good pattern would be a short example that declares a shared resource, grants a narrowly scoped capability, proposes a state change, and shows how consensus or conflict handling is surfaced. The code does not need to impress anyone with complexity. It needs to help technical participants see that governance is being treated as executable infrastructure rather than as an external management layer. If we include a visual demo instead, it should favor process clarity over UI polish.
-
-## Why This Matters
-
-The broader implication of all this is that distributed manufacturing may succeed or fail on the quality of its invisible systems as much as on the quality of its visible fabrication tools. Machines, materials, and designs matter, but so do the digital structures that let communities coordinate without burnout, lock-in, or loss of autonomy. If the next generation of local production networks is serious about resilience, shared ownership, and cooperation across many independent groups, then infrastructure projects like PromiseGrid deserve attention even in their early stages. They are asking a foundational question: what would it take for communities not only to make things together, but also to own and govern the systems that make that cooperation possible?
-
-## Invitation
-
-We hope readers will follow the prototype work, share use cases, critiques, and design questions from their own communities and production work. The real measure of this work is not whether the architecture sounds elegant. It is whether these communities can use it to become more capable, more resilient, and more self-governing in the everyday work of making things together.
-
-## Further Reading
-
-For readers who want to go deeper:
+## References
 
 1. Community Systems Working Group: <https://cswg.infrastructures.org/>
 2. PromiseGrid: <https://github.com/promisegrid/promisegrid>
 3. PromiseGrid wire-lab: <https://github.com/promisegrid/wire-lab>
-4. PromiseGrid developer guide: <https://github.com/ciwg/promisegrid-dev-guide>
 5. PromiseGrid examples: <https://github.com/ciwg/grid-examples>
 6. Wikipedia overview of Promise Theory: <https://en.wikipedia.org/wiki/Promise_theory>
 7. Mark Burgess Promise Theory FAQ: <https://markburgess.org/promiseFAQ.html>
-
-## Suggested Companion Visuals and Diagrams
-
-1. Existing distributed supply-chain coordination versus community-owned production infrastructure
-2. Layer diagram: physical production, community process, digital infrastructure
-3. PromiseGrid architecture concept for communities, applications, and devices
-4. Governance flow for a machine booking or maintenance example
-5. Multi-site fablab network sketch with shared but non-centralized coordination
-6. Message envelope explainer showing `grid([42(pCID), ...])` with labeled slots
-7. Collaboration flow sketch showing retrieval, review, and retention across several peers
-8. Demo comparison graphic: ad hoc workflow versus governable shared workflow
-
-## Suggested Tiny Demos
-
-1. Distributed machine booking with conflict resolution
-2. Maintenance stewardship workflow with changing machine availability
-3. Shared inventory reservation across two or more small sites
-4. Distributed work order handoff between partner labs
-5. Shared design and review flow across multiple sites
-6. Visitor or trainee capability grant with narrow time-bounded permissions

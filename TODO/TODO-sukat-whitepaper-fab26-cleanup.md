@@ -36,6 +36,69 @@ Intent: Keep the white paper generally about decentralized manufacturing while m
 Constraints: Keep edits small and section-local; do not rewrite the paper; do not touch slides, diagrams, references, or unrelated paragraphs.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-sifan
+Date: 2026-07-25 14:18:45
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Add public prose style rules and apply an incremental white paper tone cleanup.
+Intent: Reduce defensive rhythm, condescension, filler, and AI-sounding prose while preserving the white paper outline and current technical claims.
+Constraints: Keep edits section-local and reviewable; do not add graphics; do not touch slides; preserve stage0/stage1 and WASI/WASM wording.
+Affects: `AGENTS.md`, `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-napul
+Date: 2026-07-25 15:10:01
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Prefer "decentralized" over "distributed" for the white paper's target coordination model.
+Intent: Make the paper distinguish distributed production coordinated by a central controller from decentralized, mesh-like production coordination.
+Constraints: Keep industrial-scale distributed manufacturing language where it is the contrast case; keep edits minimal and section-local.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-dakog
+Date: 2026-07-25 15:18:15
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Replace stale terminology phrasing in current public prose guidance and the white paper terminology note.
+Intent: Keep the paper and prose rules direct, plain, and less AI-sounding.
+Constraints: Re-read the current white paper before editing; preserve manual edits; keep append-only DI history unchanged.
+Affects: `AGENTS.md`, `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-dogol
+Date: 2026-07-25 15:27:06
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Replace committee-style white paper passages with active, concrete prose.
+Intent: Make the white paper read less like third-party summary and more like a human explanation grounded in people, shared spaces, and real coordination failures.
+Constraints: Re-read the current white paper before editing; preserve technical stage0/stage1, WASI/WASM, and transport-agnostic message content; keep edits section-local and reviewable.
+Affects: `AGENTS.md`, `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-dijud
+Date: 2026-07-25 15:30:14
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Remove positive/negative balance scaffolding from the white paper style pass.
+Intent: Stop exhausting both-sided prose patterns and make each paragraph state the useful point directly.
+Constraints: Preserve current technical content; keep the edit focused on prose framing and the Promise Theory passage called out by the user.
+Affects: `AGENTS.md`, `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-vovab
+Date: 2026-07-25 15:32:46
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Use RFC-like prose for the next white paper style pass.
+Intent: Make the white paper definitive, specific, and to the point; remove mush while preserving the current technical content.
+Constraints: Keep the edit sentence-local where possible; avoid outline rewrites; preserve stage0/stage1, WASI/WASM, and transport-agnostic `grid(...)` content.
+Affects: `AGENTS.md`, `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-latal
+Date: 2026-07-25 15:37:03
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Move demo brainstorming out of the white paper.
+Intent: Keep the white paper focused on the core argument while preserving demo and visual ideas in a separate reviewable document.
+Constraints: Move content without rewriting it; create `demo-brainstorming.md`; leave a minimal pointer from the white paper.
+Affects: `whitepaper_draft.md`, `demo-brainstorming.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
@@ -43,17 +106,31 @@ Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 - [x] sukat.1 Reframe generic "manufacturing audience" language.
   Replace broad "manufacturing audience" phrasing with wording aimed at fablabs, decentralized manufacturing, distributed production communities, makers, educators, artists, academics, industry experts, and policymakers where appropriate. Keep the focus on "Democratised, Decentralised & Distributed Manufacturing" and "Decentralized Manufacturing Working Group: People, Practices, and Infrastructure."
 - [x] sukat.2 Replace awkward "current direction" wording.
-  Prefer "current prototype architecture" when describing stage0/stage1, and "recent proof-of-concept work points toward..." when grounding claims in wire-lab evidence.
+  Prefer "current prototype architecture" when describing stage0/stage1, and "recent proof-of-concept work points toward..." when grounding text in wire-lab evidence.
 - [x] sukat.3 Reduce the wall-of-text problem.
   Make the white paper less verbose and more scannable with shorter paragraphs, bullets, and other structure. Reduce jargon where possible, explain unavoidable terms plainly, and make the document feel more practical, participatory, and oriented toward learning, building, sharing, and local capacity.
 - [x] sukat.12 Make smaller white paper corrections.
   Correct the scale framing in the distributed-manufacturing section, replace third-person project-description wording, and add Promise Theory references without doing a broad style rewrite.
 - [x] sukat.13 Tighten repeated audience and supply-chain framing.
   Remove repeated "and Supply Chains" title/heading phrasing, define the audience once, and keep supply-chain wording only where it adds meaning.
+- [x] sukat.14 Reduce defensive and AI-sounding prose rhythm.
+  Add AGENTS guidance for public prose style and make a narrow white paper pass that prefers direct statements, concrete examples, shorter paragraphs, and course-takeaway rhythm where technically accurate.
+- [x] sukat.15 Clarify distributed versus decentralized terminology.
+  Prefer "decentralized" for the target PromiseGrid manufacturing model while preserving "distributed" where it describes existing industrial-scale coordination spread across many sites but still centrally controlled.
+- [x] sukat.16 Replace stale terminology phrasing in live prose.
+  Re-read the current white paper, preserve manual edits, and replace the wording in the terminology note and public prose guidance.
+- [x] sukat.17 Replace committee-style prose with human examples.
+  Re-read the white paper and make a focused pass that uses active voice, Alice/Bob/Carol examples, less contrived decentralized manufacturing scenarios, and durable prose-style guidance.
+- [x] sukat.18 Remove positive/negative balance scaffolding.
+  Replace the Promise Theory contrast chain and nearby both-sided prose with direct statements about promises, records, authority, and shared work.
+- [x] sukat.19 Make prose RFC-like.
+  Replace mushy white paper language with definitive, specific, to-the-point statements while preserving the technical content.
+- [x] sukat.20 Move demo brainstorming out of the white paper.
+  Move demo idea sections and visual brainstorming lists into `demo-brainstorming.md`, leaving only a pointer in the white paper.
 
 ## Technical Alignment
 
-- [x] sukat.4 Fix the WASI-centered technical claim.
+- [x] sukat.4 Fix the WASI-centered technical statement.
   `whitepaper_draft.md` no longer says PromiseGrid "is implemented as a WASI target." Commit `3d6cd39` replaced that with stage0/stage1 prototype framing and planned WASI/WASM support under stage1, including browser-tab WASM.
 - [ ] sukat.5 Update the "current work" paragraph to match the slide deck.
   The slide deck names workflows, devices, containers/TCP, CBOR `grid(...)`, CWT/COSE tokens, CAS, CAR transfer, peer sync, retention, and Git bridge experiments. Absorb that into the `whitepaper_draft.md` technical-direction section without overloading readers.
