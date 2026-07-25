@@ -1,6 +1,6 @@
 class: center, middle
 
-<!-- Slide 1 -->
+<!-- Slide 1. Locate the talk in the workshop theme. -->
 
 # Toward Community-Owned Infrastructure for Distributed Manufacturing
 
@@ -12,11 +12,11 @@ Show & Tell: Democratised, Decentralised & Distributed Manufacturing
 
 ???
 
-Open by locating the talk in the workshop theme. This is a talk about the digital and organizational infrastructure underneath distributed manufacturing: how communities coordinate work, share capacity, make commitments, and govern the systems they depend on.
+This is a talk about the digital and organizational infrastructure underneath distributed manufacturing: how communities coordinate work, share capacity, make commitments, and govern the systems they depend on.
 
 ---
 
-<!-- Slide 2 -->
+<!-- Slide 2. Set expectations for the talk arc. -->
 
 # Outline
 
@@ -29,11 +29,11 @@ Open by locating the talk in the workshop theme. This is a talk about the digita
 
 ???
 
-Use this slide to set expectations for the arc. Start with the manufacturing context, move into the coordination problem, introduce Promise Theory as the language for that problem, then show PromiseGrid as an infrastructure experiment. Close by tying the technical work back to what local production networks might gain if this becomes practical.
+I will start with the manufacturing context, move into the coordination problem, introduce Promise Theory as a language for that problem, then show PromiseGrid as an infrastructure experiment. I will close by tying the technical work back to what local production networks might gain if this becomes practical.
 
 ---
 
-<!-- Slide 3 -->
+<!-- Slide 3. Do not imply distributed manufacturing is not already happening. -->
 
 # Distributed manufacturing already exists. The question is who can govern it.
 
@@ -43,11 +43,11 @@ Use this slide to set expectations for the arc. Start with the manufacturing con
 
 ???
 
-Avoid implying that distributed manufacturing is not already happening. It is happening today through global supply chains, contract manufacturing, vendor platforms, logistics systems, and proprietary integrations. The question for fablabs and small production networks is different: what would let distributed manufacturing become more democratic, decentralized, and governable by the communities doing the work? It is about the less visible infrastructure that lets communities coordinate production, share resources, and govern systems together without recreating centralized dependencies. Fablabs already know that a lab is more than machines. It is schedules, training, maintenance, trust, access, handoffs, and the quiet work of keeping everything usable.
+Distributed manufacturing is already happening today through global supply chains, contract manufacturing, vendor platforms, logistics systems, and proprietary integrations. The question for fablabs and small production networks is different: what would let distributed manufacturing become more democratic, decentralized, and governable by the communities doing the work? That question is about the less visible infrastructure that lets communities coordinate production, share resources, and govern systems together without recreating centralized dependencies. Fablabs already know that a lab is more than machines. It is schedules, training, maintenance, trust, access, handoffs, and the quiet work of keeping everything usable.
 
 ---
 
-<!-- Slide 4 -->
+<!-- Slide 4. Connect the talk to the workshop framing and other presenters. -->
 
 # The missing layer is governable coordination
 
@@ -57,11 +57,11 @@ Avoid implying that distributed manufacturing is not already happening. It is ha
 
 ???
 
-This slide connects the talk to the workshop framing and to the other presenters. The visible production layer gets attention first: machines, files, materials, and skills. But underneath it is a coordination layer. In many small shops that layer is stitched together from tools that were not designed for shared governance across independent organizations. If that layer stays centralized, fragile, or dependent on one vendor or one exhausted organizer, then the network inherits the same weaknesses it was trying to move away from.
+The visible production layer gets attention first: machines, files, materials, and skills. But underneath it is a coordination layer. In many small shops that layer is stitched together from tools that were not designed for shared governance across independent organizations. If that layer stays centralized, fragile, or dependent on one vendor or one exhausted organizer, then the network inherits the same weaknesses it was trying to move away from.
 
 ---
 
-<!-- Slide 5 -->
+<!-- Slide 5. Based on CSWG About Us and Goals pages. Keep this grounded. -->
 
 # CSWG started with a simple problem: communities burn out on infrastructure
 
@@ -71,13 +71,11 @@ This slide connects the talk to the workshop framing and to the other presenters
 
 ???
 
-Source note: Based on CSWG About Us and Goals pages.
-
-Keep this grounded. CSWG did not start from an abstract fascination with decentralization. It started from a familiar pattern: too much hidden coordination work, too much reliance on admins, too many brittle tools, too much lock-in, and too many important responsibilities living in the memory of a few key people. In a fablab or community makerspace, that can show up as machine access, safety training, inventory, maintenance, documentation, finances, governance, or cross-site projects.
+CSWG did not start from an abstract fascination with decentralization. It started from a familiar pattern: too much hidden coordination work, too much reliance on admins, too many brittle tools, too much lock-in, and too many important responsibilities living in the memory of a few key people. In a fablab or community makerspace, that can show up as machine access, safety training, inventory, maintenance, documentation, finances, governance, or cross-site projects.
 
 ---
 
-<!-- Slide 6 -->
+<!-- Slide 6. Pivot from production capacity to coordination capacity. -->
 
 # The bottleneck is not just production capacity. It is coordination capacity.
 
@@ -88,7 +86,7 @@ Keep this grounded. CSWG did not start from an abstract fascination with decentr
 
 ???
 
-This is the pivot slide. A distributed manufacturing network can have skilled people and useful machines and still struggle because coordination is too fragile. Who can reserve which machine and under what conditions? Who is allowed to approve a job? Who promises maintenance? What happens when two labs depend on the same material stock? What happens when one site cannot complete a task and another site might be able to pick it up? These are operational questions, but they are also governance questions.
+A distributed manufacturing network can have skilled people and useful machines and still struggle because coordination is too fragile. Who can reserve which machine and under what conditions? Who is allowed to approve a job? Who promises maintenance? What happens when two labs depend on the same material stock? What happens when one site cannot complete a task and another site might be able to pick it up? These are operational questions, but they are also governance questions.
 
 ---
 
@@ -107,7 +105,7 @@ Promise Theory is useful here because it starts from a very practical observatio
 
 ---
 
-<!-- Slide 8 -->
+<!-- Slide 8. Bridge into manufacturing promise language. -->
 
 # ATP and CTP already make promises visible in manufacturing
 
@@ -117,11 +115,11 @@ Promise Theory is useful here because it starts from a very practical observatio
 
 ???
 
-This is the bridge into manufacturing language. Available to Promise, or ATP, asks whether inventory or supply can actually be committed to demand. Capable to Promise, or CTP, asks whether the production system has the capacity and capability to meet that demand under the required conditions. PromiseGrid is not trying to replace that language with something more abstract. It is asking what infrastructure would let these promise-shaped commitments become explicit, shareable, and locally trustworthy across a network of independent sites.
+Available to Promise, or ATP, asks whether inventory or supply can actually be committed to demand. Capable to Promise, or CTP, asks whether the production system has the capacity and capability to meet that demand under the required conditions. PromiseGrid is not trying to replace that language with something more abstract. It is asking what infrastructure would let these promise-shaped commitments become explicit, shareable, and locally trustworthy across a network of independent sites.
 
 ---
 
-<!-- Slide 9 -->
+<!-- Slide 9. Based on the original PromiseGrid README. Use the original framing carefully. -->
 
 # PromiseGrid is a decentralized computing infrastructure beneath the app layer
 
@@ -132,13 +130,11 @@ This is the bridge into manufacturing language. Available to Promise, or ATP, as
 
 ???
 
-Source note: Based on the original PromiseGrid README.
-
-Use the original PromiseGrid framing carefully: if the internet gave us decentralized communication, PromiseGrid asks what decentralized computation might look like. For this audience, the key point is not the slogan. The key point is ownership and governability. A fablab network should not have to choose between an easy centralized platform and an unmaintainable pile of local tools. PromiseGrid is one experiment in a third possibility: shared computation, communication, and governance infrastructure operated by the people and communities who rely on it.
+If the internet gave us decentralized communication, PromiseGrid asks what decentralized computation might look like. For this audience, the key point is not the slogan. The key point is ownership and governability. A fablab network should not have to choose between an easy centralized platform and an unmaintainable pile of local tools. PromiseGrid is one experiment in a third possibility: shared computation, communication, and governance infrastructure operated by the people and communities who rely on it.
 
 ---
 
-<!-- Slide 10 -->
+<!-- Slide 10. For technically curious people; keep it high-level and legible. -->
 
 # The technical model combines portability, capabilities, consensus, and local trust
 
@@ -149,11 +145,11 @@ Use the original PromiseGrid framing carefully: if the internet gave us decentra
 
 ???
 
-This is the slide for technically curious people in the room. Keep it high-level and legible. WASI matters because distributed manufacturing will not run on one clean hardware footprint. Capability-based security matters because shops need narrow, contextual permissions: inspect a machine log but do not change policy, start an approved workflow but not any workflow, contribute to a job without inheriting every privilege. The recent wire-lab work is testing those ideas in more concrete ways: containerized agents exchanging exact messages over TCP, signed capability tokens, content-addressed storage, object transfer, peer sync, retention promises, and Git bridge experiments.
+WASI matters because distributed manufacturing will not run on one clean hardware footprint. Capability-based security matters because shops need narrow, contextual permissions: inspect a machine log but do not change policy, start an approved workflow but not any workflow, contribute to a job without inheriting every privilege. The recent wire-lab work is testing those ideas in more concrete ways: containerized agents exchanging exact messages over TCP, signed capability tokens, content-addressed storage, object transfer, peer sync, retention promises, and Git bridge experiments.
 
 ---
 
-<!-- Slide 11 -->
+<!-- Slide 11. Keep the technical explainer tied to operations. -->
 
 # A PromiseGrid message is explicit about what is being promised
 
@@ -170,11 +166,11 @@ payload = ["MSG", "gateway-bob", "m4-ivan", 1, "BT-1042", "created"]
 
 ???
 
-This is the technical explainer slide, but keep it tied to operations. The message is not just a vague packet. The envelope says: this is a PromiseGrid message, this is the protocol being spoken, this is the promise content, and in richer cases this is the earlier context and proof material. In the example, one participant is making an order-status promise about order `BT-1042`. The important point is not the syntax by itself. It is the legibility of the commitment: who is saying what, under what protocol, with what context, and what evidence can be checked later. In a manufacturing setting, the same pattern could eventually apply to machine access, maintenance state, inventory reservation, capacity promises, or work-order handoffs.
+The message is not just a vague packet. The envelope says: this is a PromiseGrid message, this is the protocol being spoken, this is the promise content, and in richer cases this is the earlier context and proof material. In the example, one participant is making an order-status promise about order `BT-1042`. The important point is not the syntax by itself. It is the legibility of the commitment: who is saying what, under what protocol, with what context, and what evidence can be checked later. In a manufacturing setting, the same pattern could eventually apply to machine access, maintenance state, inventory reservation, capacity promises, or work-order handoffs.
 
 ---
 
-<!-- Slide 12 -->
+<!-- Slide 12. Summarize recent work without drowning people in proof-of-concept numbers. -->
 
 # Current experiments are testing workflows, devices, containers, sync, and collaboration
 
@@ -185,11 +181,11 @@ This is the technical explainer slide, but keep it tied to operations. The messa
 
 ???
 
-This is where you summarize the recent work without drowning people in proof-of-concept numbers. The project is still experimental, but the work has moved beyond broad architecture. It is testing production-adjacent coordination problems: how roles exchange evidence, how small devices participate, how peers retrieve and retain objects, how collaboration can happen without one site becoming the central authority, and how infrastructure can remain auditable after the fact.
+The project is still experimental, but the work has moved beyond broad architecture. It is testing production-adjacent coordination problems: how roles exchange evidence, how small devices participate, how peers retrieve and retain objects, how collaboration can happen without one site becoming the central authority, and how infrastructure can remain auditable after the fact.
 
 ---
 
-<!-- Slide 13 -->
+<!-- Slide 13. Link the talk back to the wider workshop. -->
 
 # If this works, local production networks gain more governable infrastructure
 
@@ -200,11 +196,11 @@ This is where you summarize the recent work without drowning people in proof-of-
 
 ???
 
-This slide links the talk back to the wider workshop. The goal is not decentralization for its own sake. The goal is governable resilience. Fablabs and small manufacturing networks need ways to share selected resources, commitments, and workflows without surrendering control to one platform owner. If PromiseGrid or something like it proves useful, it could become enabling infrastructure underneath many tools rather than a single app that replaces everything.
+The goal is not decentralization for its own sake. The goal is governable resilience. Fablabs and small manufacturing networks need ways to share selected resources, commitments, and workflows without surrendering control to one platform owner. If PromiseGrid or something like it proves useful, it could become enabling infrastructure underneath many tools rather than a single app that replaces everything.
 
 ---
 
-<!-- Slide 14 -->
+<!-- Slide 14. End on an invitation rather than a hard sell. -->
 
 # Can communities own the systems that make cooperation possible?
 
@@ -214,4 +210,4 @@ This slide links the talk back to the wider workshop. The goal is not decentrali
 
 ???
 
-End on an invitation rather than a hard sell. This is active work, not a finished manufacturing platform. The best outcome from FAB26 would be people who want to follow the journey, share grounded use cases, challenge the assumptions, and help test prototypes as they emerge. The communities in this room understand the difference between a clever systems idea and something that can survive a busy week in a shop. The closing question is what it would take for communities not only to make things together, but to own and govern the systems that make that cooperation possible.
+This is active work, not a finished manufacturing platform. The best outcome from FAB26 would be people who want to follow the journey, share grounded use cases, challenge the assumptions, and help test prototypes as they emerge. The communities in this room understand the difference between a clever systems idea and something that can survive a busy week in a shop. The closing question is what it would take for communities not only to make things together, but to own and govern the systems that make that cooperation possible.

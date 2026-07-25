@@ -26,6 +26,15 @@ Intent: Make each slide's source location immediately identifiable without chang
 Constraints: Use comments formatted exactly as `<!-- Slide N -->`; keep numbering in source order; leave `index.html`, `index.thtml`, and runtime code unchanged.
 Affects: `README.md`, `TODO/TODO-haduz-convert-presentation-to-remarkjs.md`
 
+ID: DI-zuvir
+Date: 2026-07-24 22:34:54
+Author: 43122154+donaldoalmazan@users.noreply.github.com (donaldoalmazan)
+Status: active
+Decision: Make `README.md` speaker notes read as light speaker script and move non-script presenter cues into the corresponding slide comments.
+Intent: Keep the FAB26 deck clean for presenter mode by separating what the speaker should say from private cues, source notes, and slide-handling instructions.
+Constraints: Preserve visible slide content; keep `README.md` as the canonical Remark slide-content source loaded by `index.thtml`; use manual scoped edits only; introduce no functions, variables, identifiers, or dynamic path IDs.
+Affects: `README.md`, `AGENTS.md`, `TODO/TODO-haduz-convert-presentation-to-remarkjs.md`
+
 ## Locked Decisions
 
 - DEC-001 Architecture: Create a single Markdown deck only; do not add an HTML shell, CSS, assets, scripts, or generated state.
@@ -42,6 +51,15 @@ Affects: `README.md`, `TODO/TODO-haduz-convert-presentation-to-remarkjs.md`
 - DEC-haduz-004 Function Naming: No function names are affected by this documentation-only migration.
 - DEC-haduz-005 Variable Naming: No variable names are affected by this documentation-only migration.
 - DEC-haduz-006 Paths: Rename `TODO/001-convert-presentation-to-remarkjs.md` to `TODO/TODO-haduz-convert-presentation-to-remarkjs.md`, update `TODO/TODO.md`, and leave slides and whitepaper files unchanged.
+
+## Notes Cleanup Locked Decisions
+
+- DEC-zuvir-001 Architecture: Keep the existing Remark Markdown deck structure in `README.md`; do not touch `index.html` or `index.thtml`.
+- DEC-zuvir-002 Design/Behavior: Notes become lightly edited speaker script, not a full rewrite.
+- DEC-zuvir-003 Implementation: Manually edit only note blocks and adjacent slide comments.
+- DEC-zuvir-004 Function Naming: No function names are affected by this documentation-only edit.
+- DEC-zuvir-005 Variable Naming: No variable names are affected by this documentation-only edit.
+- DEC-zuvir-006 Paths: Edit `README.md`, `AGENTS.md`, and this TODO file; no new durable files are created.
 
 # TODO haduz - Convert Presentation Draft To Remark.js Slides
 

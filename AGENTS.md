@@ -5,6 +5,9 @@
 - Keep planning artifacts in the root `TODO/` directory. Optional root `DR/` and `docs/thought-experiments/` directories hold DR and TE records when needed.
 - Do not commit local state files (for example `.grok`, `.grok.lock`) or generated binaries.
 
+## Presentation Source
+- The Remark presentation's slide content lives in `README.md`, which `index.thtml` loads directly. Source: DI-zuvir.
+
 ## Build, Test, and Development Commands
 - Run Go tests from the relevant tool module, for example `tools/mint-handle/`.
 - Keep Go code `gofmt`-clean.
