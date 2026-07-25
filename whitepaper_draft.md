@@ -60,8 +60,10 @@ A production coordination system needs to answer quesitons like these:
 - Who can reserve which machine, and under what conditions?
 - How are maintenance responsibilities tracked?
 - How are shared inventories handled?
-- How do independent sites share production while each keeps local authority?
-- What happens when a key organizer steps back and tacit knowledge disappears with them?
+- How do independent sites share production while each keeps local
+  authority?
+- What happens when a key organizer steps back and tacit knowledge
+  disappears with them?
 
 > Diagram placeholder: A layered view of decentralized manufacturing
 > showing physical production at the top, community process in the
@@ -74,7 +76,8 @@ manufacturing is trying to avoid.  Modeled after the needs of large
 companies, conventional ERP, MES, and QMS software assumptions
 include:
 
-- centralized authority, uniform processes, and a single administrative domain
+- centralized authority, uniform processes, and a single administrative
+  domain
 - large budgets, dedicated systems adminstration and operations staff
 - uniformity of process and data across sites that are often
   wholly-owned subsidiaries 
@@ -117,47 +120,50 @@ voluntary cooperation and local authority, such as:
 
 ## What a PromiseGrid Message Looks Like
 
-PromiseGrid messages are structured envelopes. Each envelope identifies the protocol being spoken and the promise being made.
+PromiseGrid messages are structured envelopes. The outer shape is:
 
-XXX replace with pCID-defined arity XXX
+```text
+grid([42(pCID), ...protocol-defined-slots])
+```
 
-Compact form:
+`grid(...)` is the CBOR PromiseGrid envelope. Slot 0 carries
+`42(pCID)`, a CID link to the protocol spec. The protocol spec defines
+the rest of the message: slot count, slot meanings, payload shape,
+signable bytes, and proof placement.
+
+A protocol spec document might define a compact message shaped like
+this:
 
 ```text
 grid([42(pCID), payload])
 ```
 
-This compact form is used in constrained scenarios.
-
-- `grid(...)`: says this is a PromiseGrid envelope
-- `42(pCID)`: identifies the protocol specification being used
-- `payload`: contains the actual message body defined by that protocol
-
-Fuller envelope:
+Another protocol might define:
 
 ```text
-grid([42(pCID), parents, payload, proof])
+grid([42(pCID), parents, payload, signature])
 ```
 
-- `42(pCID)`: the protocol identifier
-- `parents`: links to earlier related messages or objects
-- `payload`: the content of the current promise
-- `proof`: the signature or other proof material used to verify it
+Other protocols might carry COSE objects, CAR bytes, encrypted bytes, or
+nested pCID-owned structures. The selected protocol spec gives those
+slots their meaning.
 
-The envelope identifies the protocol, payload, prior messages, and verification material. A receiver can determine who made the promise, what payload was promised, which earlier messages it depends on, and which proof verifies it.
+Grid messages are transport-agnostic. The same `grid(...)` message
+might travel over TCP, HTTP, WebSocket, version-control history,
+file transfer, or a thumb drive. 
 
-Tools, machines, people, and organizations must read the same manufacturing commitments. A machine access grant, maintenance status change, work-order handoff, inventory reservation, or capacity promise needs a life outside one application's database or one chat channel. PromiseGrid makes these commitments portable, inspectable, and governable outside any single app.
-
-The same `grid(...)` message bytes are also intended to be transport-agnostic. They can be carried by online transports such as TCP, HTTP, or WebSocket, and also by slower or more asynchronous paths such as version-control history, file transfer, or a thumb drive.
-
-Current constrained-device example:
+An IoT device protocol might look like this example, taken from a
+current prototype application:
 
 ```text
 grid([42(pCID), payload])
-payload = ["MSG", "gateway-bob", "m4-ivan", 1, "BT-1042", "created"]
+payload = ["MSG", "gateway-bob", "m4-ivan", "BT-1042", "created"]
 ```
 
-Payload meaning: the sender promises status `created` for order `BT-1042`. A later message can acknowledge that status update. The syntax is the carrier; the message structure makes the promise legible.
+Here, Bob (a Raspberry Pi) promises Ivan (a Cortex-M4 microcontroller)
+that order BT-1042 has been created.  In the prototype app this
+message comes from, Ivan is a small device that travels with the order
+as it flows through production, tracking build status.
 
 ## Technical Details in Plain Language
 

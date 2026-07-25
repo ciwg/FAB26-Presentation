@@ -99,6 +99,15 @@ Intent: Keep the white paper focused on the core argument while preserving demo 
 Constraints: Move content without rewriting it; create `demo-brainstorming.md`; leave a minimal pointer from the white paper.
 Affects: `whitepaper_draft.md`, `demo-brainstorming.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-tavol
+Date: 2026-07-25 16:36:50
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Update the white paper message-shape section to use pCID-defined slot wording.
+Intent: Align the public explanation with current wire-lab POC16 and POC19 wording: slot 0 selects the protocol spec, and that spec defines the rest of the message.
+Constraints: Keep the edit local to the message-shape section and this TODO record; use direct positive wording; keep examples as examples.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
@@ -134,8 +143,8 @@ Affects: `whitepaper_draft.md`, `demo-brainstorming.md`, `TODO/TODO-sukat-whitep
   `whitepaper_draft.md` no longer says PromiseGrid "is implemented as a WASI target." Commit `3d6cd39` replaced that with stage0/stage1 prototype framing and planned WASI/WASM support under stage1, including browser-tab WASM.
 - [ ] sukat.5 Update the "current work" paragraph to match the slide deck.
   The slide deck names workflows, devices, containers/TCP, CBOR `grid(...)`, CWT/COSE tokens, CAS, CAR transfer, peer sync, retention, and Git bridge experiments. Absorb that into the `whitepaper_draft.md` technical-direction section without overloading readers.
-- [ ] sukat.6 Tighten the message-shape explanation.
-  `whitepaper_draft.md` presents compact and fuller forms cleanly, but POC16 is more precise: pCID owns arity, slot meaning, signable view, proof location, and payload interpretation. Say the shown forms are examples, not universal shapes. Mention COSE-as-payload and COSE-as-proof only if it helps the reader.
+- [x] sukat.6 Tighten the message-shape explanation.
+  `whitepaper_draft.md` now presents `grid([42(pCID), ...protocol-defined-slots])` as the outer shape. Slot 0 selects the protocol spec, and the spec defines slot count, slot meanings, payload shape, signable bytes, and proof placement.
 - [ ] sukat.7 Add the POC18 collaboration/CAS substrate.
   Explain sparse CAS, versioned reference sets, local trust, continuous peer DAG sync, retention/storage promises, review promises, and Git as a bridge rather than native authority. Put this near `PromiseGrid as Enabling Infrastructure` or in the technical-direction section.
 - [ ] sukat.8 Add POC19's production-shaped direction carefully.
