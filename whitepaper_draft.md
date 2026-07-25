@@ -82,8 +82,7 @@ include:
 By contrast, small shops and indivuduals tend to coordinate using
 whatever tools are available quickly and cheaply. These tools include:
 
-XXX get rid of the commas and periods at the end of bullet points XXX
-- spreadsheets, calendars, chat threads, and booking tools,
+- spreadsheets, calendars, chat threads, and booking tools
 - consumer-oriented file sharing hosts
 - small-business accounting software that integrates poorly with
   everything else
@@ -110,11 +109,11 @@ Theory](https://en.wikipedia.org/wiki/Promise_theory), by Mark Burgess
 and collaborators. Promise Theory is based on principles of
 voluntary cooperation and local authority, such as:
 
-- An agent can only make promises about its own behavior. 
-- An agent cannot promise what another agent will do.
-- Trust is built over time from ability to keep promises.
-- Trust is local, not global. Each agent makes its own trust decisions.
-- Coordination is built on trust, not from authority or control.
+- An agent can only make promises about its own behavior
+- An agent cannot promise what another agent will do
+- Trust is built over time from ability to keep promises
+- Trust is local, not global. Each agent makes its own trust decisions
+- Coordination is built on trust, not from authority or control
 
 ## What a PromiseGrid Message Looks Like
 
@@ -165,19 +164,19 @@ Payload meaning: the sender promises status `created` for order `BT-1042`. A lat
 In the current prototype architecture:
 
 - Stage0 is a small installed `grid` bootstrap that can fetch, verify,
-  approve, and start a fetched local runtime layer.
+  approve, and start a fetched local runtime layer
 - Stage1 provides daemon roles, transport, CAS/VCS, parser/builders,
-  capability checks, and app execution support.
+  capability checks, and app execution support
 - WASI/WASM remains one planned portable app/runtime profile under
-  stage1, including WASM in browser tabs.
+  stage1, including WASM in browser tabs
 
 PromiseGrid uses capability-based security.
 Capability tokens match decentralized trust:
 
 - Carol can give Alice a capability token that allows her to read a
-  file, but not write it.
+  file, but not write it
 - Ellen can give Bob a capability token that allows him to use machine
-  A, but not machine B.
+  A, but not machine B
 
 PromiseGrid messages can cross organization, machine, and workflow
 boundaries.
@@ -216,8 +215,8 @@ substrate must carry data and negotiated trust.
 
 Supply chains already use some promise terms:
 
-- ATP: inventory or supply available for demand.
-- CTP: capacity and capability available under the required conditions.
+- ATP: inventory or supply available for demand
+- CTP: capacity and capability available under the required conditions
 
 Promise Theory gives ATP and CTP a network form: structured
 commitments visible across organizations.
