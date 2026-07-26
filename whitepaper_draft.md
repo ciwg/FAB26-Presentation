@@ -36,11 +36,30 @@ pass through five companies before it ships, while a buyer, platform,
 lead firm, or certification process still controls the data,
 approvals, and disputes.
 
-Decentralized manufacturing requires coordination systems that fit
-smaller budgets, smaller staffs, local authority, and uneven process
-maturity. ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal
-supply-chain standards already exist. They assume institutional weight
-beyond the reach of many individuals and small groups.
+ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal supply-chain
+standards already exist, but they assume institutional budgets,
+dedicated staff, centralized administration, and heavyweight, mature
+processes.
+
+By contrast, decentralized manufacturing coordination systems must
+support:
+
+- lightweight, flexible processes
+- local operation by each participant
+- decentralized coordination across sites
+- partial trust between independent actors
+- offline or transport-independent data transfer
+- low administrative overhead
+
+The best efforts of most individuals and small shops today rely on:
+
+- cloud-hosted spreadsheets, docs, calendars
+- chat threads hosted on centralized platforms
+- consumer-oriented file sharing hosts
+- small-business accounting software that integrates poorly with
+  everything else
+- and lots and lots of email and phone calls to fill in the gaps and
+  glue it all together
 
 > Visual placeholder: A diagram showing today's distributed
 > supply-chain coordination alongside community-owned decentralized
@@ -53,49 +72,13 @@ CSWG builds open-source infrastructure for groups, communities, and
 organizations that need shared software, shared infrastructure, and
 shared decisions under shared control.
 
-## The Coordination Problem Underneath Production
 
-A production coordination system needs to answer questions like these:
 
-- Who can reserve which machine, and under what conditions?
-- How are maintenance responsibilities tracked?
-- How are shared inventories handled?
-- How do independent sites share production while each keeps local
-  authority?
-- What happens when a key organizer steps back and tacit knowledge
-  disappears with them?
-
-> Diagram placeholder: A layered view of decentralized manufacturing
-> showing physical production at the top, community process in the
-> middle, and digital coordination infrastructure at the base.
-
-## Why Existing Software Infrastructure Falls Short
-
-Traditional software often implements the center that decentralized
-manufacturing is trying to avoid.  Modeled after the needs of large
-companies, conventional ERP, MES, and QMS software assumptions
-include:
-
-- centralized authority, uniform processes, and a single administrative
-  domain
-- large budgets, dedicated systems administration and operations staff
-- uniformity of process and data across sites that are often
-  wholly-owned subsidiaries
-
-By contrast, small shops and individuals tend to coordinate using
-whatever tools are available quickly and cheaply. These tools include:
-
-- spreadsheets, calendars, chat threads, and booking tools
-- consumer-oriented file sharing hosts
-- small-business accounting software that integrates poorly with
-  everything else
-
-## PromiseGrid as a Response
+## PromiseGrid Architecture
 
 PromiseGrid is experimental decentralized computing and coordination
-infrastructure for groups and communities that need shared software,
-shared infrastructure, and shared decisions under local and shared
-control.
+infrastructure for apps that groups and communities can use to share
+software, data, and decisions under local control.
 
 PromiseGrid sits below applications. It defines lower-level building
 blocks for community-owned computation: explicit promises, narrow
@@ -105,7 +88,7 @@ capabilities, consensus, and shared governance.
 > diagram showing PromiseGrid as a shared computing substrate between
 > individuals, organizations, devices, and applications.
 
-## Promise Theory as an Important Foundation
+## Promise Theory
 
 PromiseGrid's design is based in part on [Promise
 Theory](https://en.wikipedia.org/wiki/Promise_theory), by Mark Burgess
@@ -165,7 +148,7 @@ that order BT-1042 has been created.  In the prototype app this
 message comes from, Ivan is a small device that travels with the order
 as it flows through production, tracking build status.
 
-## Technical Details in Plain Language
+## Prototype Architecture
 
 In the current prototype architecture:
 
