@@ -136,6 +136,15 @@ Constraints: Touch only `whitepaper_draft.md` citation syntax and this append-on
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 Supersedes: DI-tozok
 
+ID: DI-hobor
+Date: 2026-07-26 12:35:39
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Add public citations for industrial-scale coordination terms.
+Intent: Let readers inspect neutral or authoritative definitions for ERP, EDI, MES, QMS, and ISO 9000 without expanding the white paper prose.
+Constraints: Touch only the existing industrial-scale sentence, bottom reference definitions, and this append-only TODO DI entry; keep the visible-URL reference style; do not touch slides.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

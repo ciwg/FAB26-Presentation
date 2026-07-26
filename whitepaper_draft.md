@@ -36,10 +36,10 @@ pass through five companies before it ships, while a buyer, platform,
 lead firm, or certification process still controls the data,
 approvals, and disputes.
 
-ERP, EDI, MES, QMS, ISO 9000, vendor portals, and formal supply-chain
-standards already exist, but they assume institutional budgets,
-dedicated staff, centralized administration, and heavyweight, mature
-processes.
+ERP[^erp], EDI[^edi], MES[^mes], QMS[^qms], ISO 9000[^iso-9000],
+vendor portals, and formal supply-chain standards already exist, but
+they assume institutional budgets, dedicated staff, centralized
+administration, and heavyweight, mature processes.
 
 By contrast, decentralized manufacturing coordination systems must
 support:
@@ -271,6 +271,11 @@ shared across organizations and applications.
 [^grid-cbor-tag-spec]: PromiseGrid grid CBOR tag specification: [https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
 [^wire-lab]: PromiseGrid wire-lab: [https://github.com/promisegrid/wire-lab](https://github.com/promisegrid/wire-lab)
 [^grid-examples]: PromiseGrid examples: [https://github.com/ciwg/grid-examples](https://github.com/ciwg/grid-examples)
+[^erp]: Wikipedia, Enterprise resource planning: [https://en.wikipedia.org/wiki/Enterprise_resource_planning](https://en.wikipedia.org/wiki/Enterprise_resource_planning)
+[^edi]: Wikipedia, Electronic data interchange: [https://en.wikipedia.org/wiki/Electronic_data_interchange](https://en.wikipedia.org/wiki/Electronic_data_interchange)
+[^mes]: NIST CSRC glossary, Manufacturing Execution System: [https://csrc.nist.gov/glossary/term/manufacturing_execution_system](https://csrc.nist.gov/glossary/term/manufacturing_execution_system)
+[^qms]: Wikipedia, Quality management system: [https://en.wikipedia.org/wiki/Quality_management_system](https://en.wikipedia.org/wiki/Quality_management_system)
+[^iso-9000]: Wikipedia, ISO 9000 family: [https://en.wikipedia.org/wiki/ISO_9000_family](https://en.wikipedia.org/wiki/ISO_9000_family)
 [^promise-theory]: Wikipedia overview of Promise Theory: [https://en.wikipedia.org/wiki/Promise_theory](https://en.wikipedia.org/wiki/Promise_theory)
 [^promise-theory-faq]: Mark Burgess Promise Theory FAQ: [https://markburgess.org/promiseFAQ.html](https://markburgess.org/promiseFAQ.html)
 [^cid]: IPFS CID specification: [https://specs.ipfs.tech/cid/](https://specs.ipfs.tech/cid/)
