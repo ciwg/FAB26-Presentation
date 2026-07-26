@@ -227,29 +227,34 @@ shared across organizations and applications.
 
 ## Glossary
 
-- ATP: Available to Promise; supply available for demand
-- CAR: Content Addressable aRchive; a portable bundle of CAS objects
-- CAS: content-addressed storage; storage keyed by content identifiers
+- ATP: Available to Promise; supply available for demand; see [17]
+- CAR: Content Addressable aRchive; a portable bundle of CAS objects;
+  see [9]
+- CAS: content-addressed storage; storage keyed by content identifiers;
+  see [10]
 - CBOR: Concise Binary Object Representation; a compact binary data
-  format
+  format; see [11]
 - CID: Content Identifier; a content-addressed identifier for bytes or
-  structured content
+  structured content; see [8]
 - COSE: CBOR Object Signing and Encryption; standards for signing and
-  encrypting CBOR data
+  encrypting CBOR data; see [12]
 - CTP: Capable to Promise; capacity and capability available under
-  required conditions
-- CWT: CBOR Web Token; a compact token format carried in CBOR
-- `grid(...)`: diagnostic notation for the PromiseGrid CBOR envelope
-- IANA: Internet Assigned Numbers Authority; the organization that manages global protocol registries, IP addresses, port numbers, etc.
-- microkernel: a small, minimal kernel that provides only essential services, with other services running in user space
+  required conditions; see [17]
+- CWT: CBOR Web Token; a compact token format carried in CBOR; see [13]
+- `grid(...)`: diagnostic notation for the PromiseGrid CBOR envelope;
+  see [3]
+- IANA: Internet Assigned Numbers Authority; manages global protocol
+  registries and related technical identifiers; see [14]
+- microkernel: a small kernel that keeps only essential mechanisms in
+  kernel space; see [19]
 - pCID: Protocol CID; a CID for the protocol specification that
-  defines the remaining message slots
+  defines the remaining message slots; see [3]
 - Stage0: the small installed `grid` bootstrap
 - Stage1: fetched runtime layer that provides daemon roles, transport,
   CAS/VCS, parser/builders, capability checks, and app execution
-- VCS: version-control system
-- WASI: WebAssembly System Interface
-- WASM: WebAssembly
+- VCS: version-control system; see [18]
+- WASI: WebAssembly System Interface; see [16]
+- WASM: WebAssembly; see [15]
 
 ## References
 
@@ -260,3 +265,22 @@ shared across organizations and applications.
 5. PromiseGrid examples: <https://github.com/ciwg/grid-examples>
 6. Wikipedia overview of Promise Theory: <https://en.wikipedia.org/wiki/Promise_theory>
 7. Mark Burgess Promise Theory FAQ: <https://markburgess.org/promiseFAQ.html>
+8. IPFS CID specification: <https://specs.ipfs.tech/cid/>
+9. IPLD CAR specification: <https://ipld.io/specs/transport/car/>
+10. NIST glossary, Content Addressable Storage:
+    <https://csrc.nist.gov/glossary/term/content_addressable_storage>
+11. IETF RFC 8949, Concise Binary Object Representation:
+    <https://www.rfc-editor.org/info/rfc8949>
+12. IETF RFC 9052, CBOR Object Signing and Encryption:
+    <https://www.rfc-editor.org/rfc/rfc9052.html>
+13. IETF RFC 8392, CBOR Web Token:
+    <https://www.rfc-editor.org/info/rfc8392>
+14. IANA About: <https://www.iana.org/about>
+15. WebAssembly specifications: <https://webassembly.org/specs/>
+16. WASI.dev: <https://wasi.dev/>
+17. ASCM Supply Chain Dictionary:
+    <https://www.ascm.org/learning-development/certifications-credentials/dictionary/>
+18. Git Book, About Version Control:
+    <https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control>
+19. seL4 FAQ, microkernel:
+    <https://sel4.systems/About/FAQ.html>

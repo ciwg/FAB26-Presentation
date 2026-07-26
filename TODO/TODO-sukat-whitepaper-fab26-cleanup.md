@@ -117,6 +117,15 @@ Intent: Add concise public wording for CID wire/print discipline, pCID parser/bu
 Constraints: Keep edits local to the white paper technical sections, glossary, references, and this TODO record; preserve 74-column wrapping; do not create a new TODO file.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-tozok
+Date: 2026-07-25 18:00:23
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Add external glossary references to the white paper.
+Intent: Help readers find authoritative definitions for externally defined glossary terms while keeping the public prose and existing structure unchanged.
+Constraints: Touch only `whitepaper_draft.md` glossary/references and this TODO DI log; use numbered public references, not internal DI/DR/TODO/TE footnotes; avoid unrelated prose cleanup.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
