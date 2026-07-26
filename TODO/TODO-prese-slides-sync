@@ -1,0 +1,7 @@
+draft notes:
+
+- "WASM/WASI" is only one binary format -- we plan to also support native
+  binaries and containers 
+- message format slide needs to be updated with the "pCID determines
+  arity" info from the white paper
+
