@@ -163,6 +163,15 @@ Intent: Keep the URL validation script reviewable and reusable while preserving 
 Constraints: Add `tools/fab26-urlcheck.sh`; keep output under `/tmp`; keep the checker's reference coverage aligned with current white paper references.
 Affects: `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-kotil
+Date: 2026-07-26 16:07:26
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: State that CSWG develops PromiseGrid.
+Intent: Make the white paper explicit that PromiseGrid is a CSWG-developed infrastructure project.
+Constraints: Keep the edit local to the CSWG section and this append-only TODO DI entry; do not touch slides or unrelated white paper prose.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

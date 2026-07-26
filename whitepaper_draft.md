@@ -72,6 +72,8 @@ CSWG[^cswg] builds open-source infrastructure for groups, communities,
 and organizations that need shared software, shared infrastructure, and
 shared decisions under shared control.
 
+CSWG is developing PromiseGrid as part of that infrastructure work.
+
 CSWG started as a Nation of Makers working group.[^nom-cswg] Nation of
 Makers traces its roots to the White House Office of Science and
 Technology (OSTP) Nation of Makers initiative, launched in June 2014,
@@ -106,9 +108,9 @@ needing to be re-created for each individual application.
 
 ## PromiseGrid Architecture
 
-PromiseGrid is experimental decentralized computing and coordination
-infrastructure for apps that groups and communities can use to share
-software, data, and decisions under local control.
+PromiseGrid is CSWG's experimental decentralized computing and
+coordination infrastructure for apps that groups and communities can
+use to share software, data, and decisions under local control.
 
 PromiseGrid sits below applications. It defines lower-level building
 blocks for community-owned computation: explicit promises, narrow
