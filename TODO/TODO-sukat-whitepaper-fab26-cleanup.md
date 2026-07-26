@@ -172,6 +172,15 @@ Intent: Make the white paper explicit that PromiseGrid is a CSWG-developed infra
 Constraints: Keep the edit local to the CSWG section and this append-only TODO DI entry; do not touch slides or unrelated white paper prose.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-kimug
+Date: 2026-07-26 16:25:08
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Add citations for the PromiseGrid heritage paragraph.
+Intent: Let readers trace the named systems-management, grid-computing, infrastructure-architecture, and DevOps influences without expanding the heritage paragraph beyond the user's requested scope.
+Constraints: Touch only the heritage paragraph, bottom reference definitions, URL checker coverage, and this append-only TODO DI entry; prefer Wikipedia links where available.
+Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

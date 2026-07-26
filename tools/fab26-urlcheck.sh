@@ -93,6 +93,13 @@ check_url 27 'https://www.internetofproduction.org/openknowwhere' 'Open Know-Whe
 check_url 28 'https://www.nationofmakers.us/community-systems-working-group' 'Community Systems Working Group'
 check_url 29 'https://www.nationofmakers.us/history' 'Nation of Makers Initiative'
 check_url 30 'https://obamawhitehouse.archives.gov/blog/2016/06/16/kicking-2016-national-week-making' 'Office of Science and Technology Policy'
+check_url 31 'https://en.wikipedia.org/wiki/List_of_systems_management_systems' 'List of systems management systems'
+check_url 32 'https://en.wikipedia.org/wiki/ISconf' 'ISconf'
+check_url 33 'https://en.wikipedia.org/wiki/CFEngine' 'CFEngine'
+check_url 34 'https://ntrs.nasa.gov/citations/20000064597' 'Information Power Grid'
+check_url 35 'https://www.usenix.org/conference/lisa-98/bootstrapping-infrastructure' 'Bootstrapping an Infrastructure'
+check_url 36 'https://www.usenix.org/conference/lisa-02/why-order-matters-turing-equivalence-automated-systems-administration' 'Why Order Matters'
+check_url 37 'https://en.wikipedia.org/wiki/DevOps' 'DevOps'
 
 if [ "$failures" -eq 0 ]; then
   printf 'PASS all URL checks\n'

@@ -113,12 +113,15 @@ coordination infrastructure for apps that groups and communities can
 use to share software, data, and decisions under local control.
 
 PromiseGrid's heritage traces back to the early work of system
-administration automation in the 1990s, institutional grid
-supercomputing efforts, the development of Promise Theory in the
-2000s, and lessons learned from the DevOps movement in the 2010s. It
-is designed to support decentralized infrastructure, avoiding many of
-the pitfalls of the highly centralized systems infrastructure that
-DevOps enabled and that dominate the Internet today.
+administration automation in the 1990s
+[^systems-management-list][^isconf][^cfengine]
+[^bootstrapping-infrastructure][^why-order-matters]; institutional
+grid supercomputing efforts such as NASA's Information Power
+Grid;[^nasa-ipg] the development of Promise Theory in the 2000s; and
+lessons learned from the DevOps movement in the 2010s.[^devops] It is
+designed to support decentralized infrastructure, avoiding many of the
+pitfalls of the highly centralized systems infrastructure that
+dominate the Internet today.
 
 As with any operating system, PromiseGrid sits below applications. It
 defines lower-level building blocks for community-owned computation:
@@ -323,6 +326,13 @@ shared across organizations and applications.
 [^mes]: NIST CSRC glossary, Manufacturing Execution System: [https://csrc.nist.gov/glossary/term/manufacturing_execution_system](https://csrc.nist.gov/glossary/term/manufacturing_execution_system)
 [^qms]: Wikipedia, Quality management system: [https://en.wikipedia.org/wiki/Quality_management_system](https://en.wikipedia.org/wiki/Quality_management_system)
 [^iso-9000]: Wikipedia, ISO 9000 family: [https://en.wikipedia.org/wiki/ISO_9000_family](https://en.wikipedia.org/wiki/ISO_9000_family)
+[^systems-management-list]: Wikipedia, List of systems management systems: [https://en.wikipedia.org/wiki/List_of_systems_management_systems](https://en.wikipedia.org/wiki/List_of_systems_management_systems)
+[^isconf]: Wikipedia, ISconf: [https://en.wikipedia.org/wiki/ISconf](https://en.wikipedia.org/wiki/ISconf)
+[^cfengine]: Wikipedia, CFEngine: [https://en.wikipedia.org/wiki/CFEngine](https://en.wikipedia.org/wiki/CFEngine)
+[^nasa-ipg]: NASA NTRS, Information Power Grid: [https://ntrs.nasa.gov/citations/20000064597](https://ntrs.nasa.gov/citations/20000064597)
+[^bootstrapping-infrastructure]: USENIX, Bootstrapping an Infrastructure: [https://www.usenix.org/conference/lisa-98/bootstrapping-infrastructure](https://www.usenix.org/conference/lisa-98/bootstrapping-infrastructure)
+[^why-order-matters]: USENIX, Why Order Matters: [https://www.usenix.org/conference/lisa-02/why-order-matters-turing-equivalence-automated-systems-administration](https://www.usenix.org/conference/lisa-02/why-order-matters-turing-equivalence-automated-systems-administration)
+[^devops]: Wikipedia, DevOps: [https://en.wikipedia.org/wiki/DevOps](https://en.wikipedia.org/wiki/DevOps)
 [^promise-theory]: Wikipedia overview of Promise Theory: [https://en.wikipedia.org/wiki/Promise_theory](https://en.wikipedia.org/wiki/Promise_theory)
 [^promise-theory-faq]: Mark Burgess Promise Theory FAQ: [https://markburgess.org/promiseFAQ.html](https://markburgess.org/promiseFAQ.html)
 [^cid]: IPFS CID specification: [https://specs.ipfs.tech/cid/](https://specs.ipfs.tech/cid/)
