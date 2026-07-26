@@ -100,7 +100,7 @@ and trust in a way that provides a relatively standard and stable
 "single virtual machine" substrate for multiple applications to build
 and deploy on.  If an IoP-compliant application, for example, were
 written for or ported to the grid, the details of how the application
-is deployed, how it communicates, how data is stored, and how trust is
+is deployed, how it communicates, where data is stored, and how trust is
 established would be handled by the grid infrastructure rather than
 needing to be re-created for each individual application.
 

@@ -154,6 +154,10 @@
 - Do not rewrite files from scratch, arbitrarily rewrap lines, reorder unrelated sections, or normalize prose style unless the user explicitly asks for that cleanup.
 - This applies to `AGENTS.md`, slides, white papers, drafts, TODO files, code, and all other repo files.
 - For public prose artifacts, edits must be traceable to a concrete user request or locked decision, not general polish.
+- When user edits appear during a task, preserve them. Do not revert,
+  overwrite, stage, unstage, commit, or "clean up" user edits unless the
+  user explicitly asks for that exact action. If the edits affect the
+  current task, stop and ask how to proceed.
 
 ## Public Prose Style
 - For white papers, course text, slide notes, and other public prose, prefer direct statements, concrete examples, and short paragraphs.
