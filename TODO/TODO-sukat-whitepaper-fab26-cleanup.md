@@ -145,6 +145,24 @@ Intent: Let readers inspect neutral or authoritative definitions for ERP, EDI, M
 Constraints: Touch only the existing industrial-scale sentence, bottom reference definitions, and this append-only TODO DI entry; keep the visible-URL reference style; do not touch slides.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-rodos
+Date: 2026-07-26 15:39:09
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Credit Internet of Production and document CSWG lineage.
+Intent: Credit IoP's decentralized manufacturing standards work, distinguish PromiseGrid's coordination-infrastructure layer, and document CSWG's lineage through Nation of Makers and White House/OSTP maker organizing.
+Constraints: Touch only the new IoP section, the CSWG lineage paragraph, bottom reference definitions, and this append-only TODO DI entry; keep visible-URL reference style; do not touch slides.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-japit
+Date: 2026-07-26 15:46:56
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Move the white paper URL checker into repo tools.
+Intent: Keep the URL validation script reviewable and reusable while preserving `/tmp` for runtime outputs.
+Constraints: Add `tools/fab26-urlcheck.sh`; keep output under `/tmp`; keep the checker's reference coverage aligned with current white paper references.
+Affects: `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

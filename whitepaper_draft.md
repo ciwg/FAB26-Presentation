@@ -72,7 +72,37 @@ CSWG[^cswg] builds open-source infrastructure for groups, communities,
 and organizations that need shared software, shared infrastructure, and
 shared decisions under shared control.
 
+CSWG started as a Nation of Makers working group.[^nom-cswg] Nation of
+Makers traces its roots to the White House Office of Science and
+Technology (OSTP) Nation of Makers initiative, launched in June 2014,
+and to the organizing that followed through the 2016 National Week of
+Making and White House/OSTP
+meetings.[^nom-history][^whitehouse-making-2016]
 
+## Related Work: Internet of Production
+
+The Internet of Production (IoP) Alliance advances decentralized
+manufacturing based on shared knowledge.[^iop] Its standards include
+Open Know-How, an open data model for sharing hardware designs and
+documentation, and Open Know-Where, a mapping standard for manufacturing
+facilities and capabilities.[^open-know-how][^open-know-where]
+
+PromiseGrid operates at a different stack layer. IoP standards make
+designs, facilities, machines, and capabilities discoverable.
+PromiseGrid carries signed messages, local capabilities, promises,
+application code, content-addressed data, and peer sync between nodes
+that remain under local control.
+
+A rough analogy is that PromiseGrid is intended to act as a
+"decentralized operating system" for applications to run on top of.
+The grid abstracts away the details of network, transport, storage,
+and trust in a way that provides a relatively standard and stable
+"single virtual machine" substrate for multiple applications to build
+and deploy on.  If an IoP-compliant application, for example, were
+written for or ported to the grid, the details of how the application
+is deployed, how it communicates, how data is stored, and how trust is
+established would be handled by the grid infrastructure rather than
+needing to be re-created for each individual application.
 
 ## PromiseGrid Architecture
 
@@ -271,6 +301,12 @@ shared across organizations and applications.
 [^grid-cbor-tag-spec]: PromiseGrid grid CBOR tag specification: [https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
 [^wire-lab]: PromiseGrid wire-lab: [https://github.com/promisegrid/wire-lab](https://github.com/promisegrid/wire-lab)
 [^grid-examples]: PromiseGrid examples: [https://github.com/ciwg/grid-examples](https://github.com/ciwg/grid-examples)
+[^iop]: Internet of Production: [https://www.internetofproduction.org/](https://www.internetofproduction.org/)
+[^open-know-how]: Open Know-How: [https://www.internetofproduction.org/openknowhow](https://www.internetofproduction.org/openknowhow)
+[^open-know-where]: Open Know-Where: [https://www.internetofproduction.org/openknowwhere](https://www.internetofproduction.org/openknowwhere)
+[^nom-cswg]: Nation of Makers, Community Systems Working Group: [https://www.nationofmakers.us/community-systems-working-group](https://www.nationofmakers.us/community-systems-working-group)
+[^nom-history]: Nation of Makers history: [https://www.nationofmakers.us/history](https://www.nationofmakers.us/history)
+[^whitehouse-making-2016]: White House, Kicking Off the 2016 National Week of Making: [https://obamawhitehouse.archives.gov/blog/2016/06/16/kicking-2016-national-week-making](https://obamawhitehouse.archives.gov/blog/2016/06/16/kicking-2016-national-week-making)
 [^erp]: Wikipedia, Enterprise resource planning: [https://en.wikipedia.org/wiki/Enterprise_resource_planning](https://en.wikipedia.org/wiki/Enterprise_resource_planning)
 [^edi]: Wikipedia, Electronic data interchange: [https://en.wikipedia.org/wiki/Electronic_data_interchange](https://en.wikipedia.org/wiki/Electronic_data_interchange)
 [^mes]: NIST CSRC glossary, Manufacturing Execution System: [https://csrc.nist.gov/glossary/term/manufacturing_execution_system](https://csrc.nist.gov/glossary/term/manufacturing_execution_system)
