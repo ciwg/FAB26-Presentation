@@ -258,29 +258,22 @@ shared across organizations and applications.
 
 ## References
 
-1. Community Systems Working Group: <https://cswg.infrastructures.org/>
-2. PromiseGrid: <https://github.com/promisegrid/promisegrid>
-3. PromiseGrid grid CBOR tag specification: <https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md>
-4. PromiseGrid wire-lab: <https://github.com/promisegrid/wire-lab>
-5. PromiseGrid examples: <https://github.com/ciwg/grid-examples>
-6. Wikipedia overview of Promise Theory: <https://en.wikipedia.org/wiki/Promise_theory>
-7. Mark Burgess Promise Theory FAQ: <https://markburgess.org/promiseFAQ.html>
-8. IPFS CID specification: <https://specs.ipfs.tech/cid/>
-9. IPLD CAR specification: <https://ipld.io/specs/transport/car/>
-10. NIST glossary, Content Addressable Storage:
-    <https://csrc.nist.gov/glossary/term/content_addressable_storage>
-11. IETF RFC 8949, Concise Binary Object Representation:
-    <https://www.rfc-editor.org/info/rfc8949>
-12. IETF RFC 9052, CBOR Object Signing and Encryption:
-    <https://www.rfc-editor.org/rfc/rfc9052.html>
-13. IETF RFC 8392, CBOR Web Token:
-    <https://www.rfc-editor.org/info/rfc8392>
-14. IANA About: <https://www.iana.org/about>
-15. WebAssembly specifications: <https://webassembly.org/specs/>
-16. WASI.dev: <https://wasi.dev/>
-17. ASCM Supply Chain Dictionary:
-    <https://www.ascm.org/learning-development/certifications-credentials/dictionary/>
-18. Git Book, About Version Control:
-    <https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control>
-19. seL4 FAQ, microkernel:
-    <https://sel4.systems/About/FAQ.html>
+1. [Community Systems Working Group](https://cswg.infrastructures.org/)
+2. [PromiseGrid](https://github.com/promisegrid/promisegrid)
+3. [PromiseGrid grid CBOR tag specification](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
+4. [PromiseGrid wire-lab](https://github.com/promisegrid/wire-lab)
+5. [PromiseGrid examples](https://github.com/ciwg/grid-examples)
+6. [Wikipedia overview of Promise Theory](https://en.wikipedia.org/wiki/Promise_theory)
+7. [Mark Burgess Promise Theory FAQ](https://markburgess.org/promiseFAQ.html)
+8. [IPFS CID specification](https://specs.ipfs.tech/cid/)
+9. [IPLD CAR specification](https://ipld.io/specs/transport/car/)
+10. [NIST glossary, Content Addressable Storage](https://csrc.nist.gov/glossary/term/content_addressable_storage)
+11. [IETF RFC 8949, Concise Binary Object Representation](https://www.rfc-editor.org/info/rfc8949)
+12. [IETF RFC 9052, CBOR Object Signing and Encryption](https://www.rfc-editor.org/rfc/rfc9052.html)
+13. [IETF RFC 8392, CBOR Web Token](https://www.rfc-editor.org/info/rfc8392)
+14. [IANA About](https://www.iana.org/about)
+15. [WebAssembly specifications](https://webassembly.org/specs/)
+16. [WASI.dev](https://wasi.dev/)
+17. [ETH Zurich, Available-to-Promise and Capable-to-Promise](https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/)
+18. [Git Book, About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+19. [Wikipedia, Microkernel](https://en.wikipedia.org/wiki/Microkernel)
