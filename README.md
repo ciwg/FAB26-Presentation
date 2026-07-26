@@ -2,7 +2,7 @@ class: center, middle
 
 <!-- Slide 1. Locate the talk in the workshop theme. -->
 
-# Toward Community-Owned Infrastructure for Distributed Manufacturing
+# Toward Community-Owned Infrastructure for Decentralized Manufacturing
 
 PromiseGrid
 
@@ -12,7 +12,7 @@ Show & Tell: Democratised, Decentralised & Distributed Manufacturing
 
 ???
 
-This is a talk about the digital and organizational infrastructure underneath distributed manufacturing: how communities coordinate work, share capacity, make commitments, and govern the systems they depend on.
+This is a talk about the digital and organizational infrastructure underneath decentralized manufacturing: how communities coordinate work, share capacity, make commitments, and govern the systems they depend on.
 
 ---
 
@@ -20,7 +20,7 @@ This is a talk about the digital and organizational infrastructure underneath di
 
 # Outline
 
-- Why distributed manufacturing needs community-owned coordination infrastructure
+- Why decentralized manufacturing needs community-owned coordination infrastructure
 - The community infrastructure problem CSWG is addressing
 - Promise Theory as a practical coordination language
 - PromiseGrid's model for community-owned computation and governance
@@ -80,19 +80,19 @@ CSWG did not start from an abstract fascination with decentralization. It starte
 # The bottleneck is not just production capacity. It is coordination capacity.
 
 - Shared work depends on managing access, commitments, decisions, machine state, and conflict
-- Work orders, maintenance, inventory, permissions, and evidence of completion often live in separate tools
+- Work orders, maintenance, inventory, capability tokens, and completion records often live in separate tools
 - Traditional infrastructure creates silos, fragility, and dependence on a few key operators
 - In community production systems, those gaps become governance problems as much as technical ones
 
 ???
 
-A distributed manufacturing network can have skilled people and useful machines and still struggle because coordination is too fragile. Who can reserve which machine and under what conditions? Who is allowed to approve a job? Who promises maintenance? What happens when two labs depend on the same material stock? What happens when one site cannot complete a task and another site might be able to pick it up? These are operational questions, but they are also governance questions.
+A decentralized production network can have skilled people and useful machines and still struggle because coordination is too fragile. Who can reserve which machine and under what conditions? Who is allowed to approve a job? Who promises maintenance? What happens when two labs depend on the same material stock? What happens when one site cannot complete a task and another site might be able to pick it up? These are operational questions, but they are also governance questions.
 
 ---
 
 <!-- Slide 7 -->
 
-# Promise Theory gives language for distributed coordination
+# Promise Theory gives language for decentralized coordination
 
 - An agent can only promise its own behavior
 - Requests are not the same as compliance
@@ -101,7 +101,7 @@ A distributed manufacturing network can have skilled people and useful machines 
 
 ???
 
-Promise Theory is useful here because it starts from a very practical observation: in a distributed system, you cannot simply command reliability into existence. A person, lab, machine, software service, or partner organization can make promises about what it will do under certain conditions. Others can decide whether to rely on those promises based on experience. That sounds theoretical at first, but it is exactly how shared production already works. A machine steward promises to maintain a tool. A lab promises trained-member access. A supplier promises material availability. A partner site promises capacity for a certain kind of job, but not for every request.
+Promise Theory is useful here because it starts from a very practical observation: in a decentralized system, you cannot simply command reliability into existence. A person, lab, machine, software service, or partner organization can make promises about what it will do under certain conditions. Others can decide whether to rely on those promises based on experience. That sounds theoretical at first, but it is exactly how shared production already works. A machine steward promises to maintain a tool. A lab promises trained-member access. A supplier promises material availability. A partner site promises capacity for a certain kind of job, but not for every request.
 
 ---
 
@@ -111,7 +111,7 @@ Promise Theory is useful here because it starts from a very practical observatio
 
 - Available to Promise asks: what supply can actually be committed?
 - Capable to Promise asks: what production capacity can actually be committed?
-- Distributed production needs those commitments across stock, machines, labor, logistics, and collaboration
+- Decentralized production needs those commitments across stock, machines, labor, logistics, and collaboration
 
 ???
 
@@ -138,14 +138,15 @@ If the internet gave us decentralized communication, PromiseGrid asks what decen
 
 # The technical model combines portability, capabilities, consensus, and local trust
 
-- WASI helps code run across different devices and operating systems
-- Capability-based security supports scoped authority instead of all-or-nothing admin power
+- Stage0 fetches and verifies a local stage1 runtime from CAS
+- Stage1 can run native executables, containers, and WASI/WASM modules
+- Capability tokens express scoped local resource promises
 - Consensus and governance are treated as system-level building blocks
 - Current work tests containers, TCP exchange, CBOR `grid(...)` messages, CWT/COSE capability tokens, CAS, CAR transfer, peer sync, retention, and Git bridge experiments
 
 ???
 
-WASI matters because distributed manufacturing will not run on one clean hardware footprint. Capability-based security matters because shops need narrow, contextual permissions: inspect a machine log but do not change policy, start an approved workflow but not any workflow, contribute to a job without inheriting every privilege. The recent wire-lab work is testing those ideas in more concrete ways: containerized agents exchanging exact messages over TCP, signed capability tokens, content-addressed storage, object transfer, peer sync, retention promises, and Git bridge experiments.
+The prototype architecture starts with stage0: a small bootstrap that fetches and verifies a local stage1 runtime from CAS. Stage1 can run native executables, containers, and WASI/WASM modules. Capability-based security matters because shops need narrow local resource promises: inspect a machine log but do not change policy, start an approved workflow but not any workflow, contribute to a job without inheriting every privilege. The recent wire-lab work is testing those ideas in more concrete ways: containerized agents exchanging exact messages over TCP, signed capability tokens, content-addressed storage, object transfer, peer sync, retention promises, and Git bridge experiments.
 
 ---
 
@@ -153,20 +154,20 @@ WASI matters because distributed manufacturing will not run on one clean hardwar
 
 # A PromiseGrid message is explicit about what is being promised
 
-- Compact form: `grid([42(pCID), payload])`
-- Richer form: `grid([42(pCID), parents, payload, proof])`
-- `pCID` identifies the protocol
-- `payload` carries the promise content
-- `parents` and `proof` connect context, evidence, and verification
+- Envelope: `grid([42(pCID), ...protocol-defined-slots])`
+- `pCID` identifies the protocol spec
+- The protocol spec defines slot arity and meaning
+- Example compact form: `grid([42(pCID), payload])`
+- Example signed form: `grid([42(pCID), parents, payload, signature])`
 
 ```text
 grid([42(pCID), payload])
-payload = ["MSG", "gateway-bob", "m4-ivan", 1, "BT-1042", "created"]
+payload = ["MSG", "gateway-bob", "m4-ivan", "BT-1042", "created"]
 ```
 
 ???
 
-The message is not just a vague packet. The envelope says: this is a PromiseGrid message, this is the protocol being spoken, this is the promise content, and in richer cases this is the earlier context and proof material. In the example, one participant is making an order-status promise about order `BT-1042`. The important point is not the syntax by itself. It is the legibility of the commitment: who is saying what, under what protocol, with what context, and what evidence can be checked later. In a manufacturing setting, the same pattern could eventually apply to machine access, maintenance state, inventory reservation, capacity promises, or work-order handoffs.
+The message is not just a vague packet. The envelope says: this is a PromiseGrid message, and this pCID identifies the protocol spec. That spec defines the remaining slots: their count, their meaning, the payload shape, and any signature material. In the example, one participant is making an order-status promise about order `BT-1042`. The important point is not the syntax by itself. It is the legibility of the commitment: who is saying what, under what protocol, with what context, and what records can be verified later. In a manufacturing setting, the same pattern could eventually apply to machine access, maintenance state, inventory reservation, capacity promises, or work-order handoffs.
 
 ---
 
@@ -174,14 +175,14 @@ The message is not just a vague packet. The envelope says: this is a PromiseGrid
 
 # Current experiments are testing workflows, devices, containers, sync, and collaboration
 
-- Workflow experiments: shipping, accounting, device roles, evidence, and trust
+- Workflow experiments: shipping, accounting, device roles, event records, and trust
 - Device experiments: compact radio-visible messages, restart recovery, and constrained participation
 - Collaboration experiments: peer retrieval, sync, retention, storage promises, and Git bridge work
 - Runtime experiments: containers, TCP sessions, capability tokens, CAS stores, and CAR payload transfer
 
 ???
 
-The project is still experimental, but the work has moved beyond broad architecture. It is testing production-adjacent coordination problems: how roles exchange evidence, how small devices participate, how peers retrieve and retain objects, how collaboration can happen without one site becoming the central authority, and how infrastructure can remain auditable after the fact.
+The project is still experimental, but the work has moved beyond broad architecture. It is testing production-adjacent coordination problems: how roles exchange verifiable records, how small devices participate, how peers retrieve and retain objects, how collaboration can happen without one site becoming the central authority, and how infrastructure can remain auditable after the fact.
 
 ---
 
@@ -192,7 +193,7 @@ The project is still experimental, but the work has moved beyond broad architect
 - Less dependence on centralized SaaS and fragile gatekeepers
 - More resilient coordination across organizations, tools, and devices
 - Better support for community ownership, open protocols, shared stewardship, and adaptable governance
-- A stronger foundation for production ecosystems that are already distributed but not yet community-governable
+- A stronger foundation for decentralized production ecosystems that communities can govern
 
 ???
 
