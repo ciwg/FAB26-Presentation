@@ -126,6 +126,16 @@ Intent: Help readers find authoritative definitions for externally defined gloss
 Constraints: Touch only `whitepaper_draft.md` glossary/references and this TODO DI log; use numbered public references, not internal DI/DR/TODO/TE footnotes; avoid unrelated prose cleanup.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-zuzul
+Date: 2026-07-26 12:10:30
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Use GFM footnote citations for public white paper references.
+Intent: Let body text and glossary entries link to the bottom References section while keeping citation labels stable and readable.
+Constraints: Touch only `whitepaper_draft.md` citation syntax and this append-only TODO DI entry; keep prose changes minimal; preserve the existing reference targets; do not touch slides.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+Supersedes: DI-tozok
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

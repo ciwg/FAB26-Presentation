@@ -13,9 +13,9 @@
 
 ## The Infrastructure Gap in Decentralized Manufacturing
 
-PromiseGrid is infrastructure for decentralized manufacturing: shared
-software, shared infrastructure, and shared decisions under local and
-shared control.
+PromiseGrid[^promisegrid] is infrastructure for decentralized
+manufacturing: shared software, shared infrastructure, and shared
+decisions under local and shared control.
 
 In this paper, we use "distributed" and "decentralized" to refer to
 distinct concepts. Distributed production means work spread across
@@ -68,8 +68,8 @@ The best efforts of most individuals and small shops today rely on:
 
 ## Community Systems Working Group (CSWG)
 
-CSWG builds open-source infrastructure for groups, communities, and
-organizations that need shared software, shared infrastructure, and
+CSWG[^cswg] builds open-source infrastructure for groups, communities,
+and organizations that need shared software, shared infrastructure, and
 shared decisions under shared control.
 
 
@@ -90,10 +90,10 @@ capabilities, consensus, and shared governance.
 
 ## Promise Theory
 
-PromiseGrid's design is based in part on [Promise
-Theory](https://en.wikipedia.org/wiki/Promise_theory), by Mark Burgess
-and collaborators. Promise Theory is based on principles of
-voluntary cooperation and local authority, such as:
+PromiseGrid's design is based in part on Promise Theory[^promise-theory],
+by Mark Burgess[^promise-theory-faq] and collaborators. Promise Theory
+is based on principles of voluntary cooperation and local authority,
+such as:
 
 - An agent can only make promises about its own behavior
 - An agent cannot promise what another agent will do
@@ -103,18 +103,20 @@ voluntary cooperation and local authority, such as:
 
 ## What a PromiseGrid Message Looks Like
 
-PromiseGrid messages are structured envelopes. The outer shape is:
+PromiseGrid messages are structured envelopes[^grid-cbor-tag-spec]. The outer shape is:
 
 ```text
 grid([42(pCID), ...protocol-defined-slots])
 ```
 
-`grid(...)` is the CBOR PromiseGrid envelope. The IANA-registered
-PromiseGrid grid CBOR tag specification defines this envelope and the
-tag-42 pCID slot. Slot 0 carries `42(pCID)`, a CID link to the
-protocol spec. The protocol spec defines the rest of the message: slot
-count, slot meanings, payload shape, signable bytes, and proof
-placement. CIDs are binary on the wire and CIDv1 base32 when printed.
+`grid(...)` is the CBOR[^cbor] PromiseGrid
+envelope. The IANA[^iana]-registered PromiseGrid grid CBOR tag
+specification defines
+this envelope and the tag-42 pCID[^grid-cbor-tag-spec] slot. Slot 0
+carries `42(pCID)`, a CID[^cid] link to the protocol spec. The
+protocol spec defines the rest of the message: slot count, slot
+meanings, payload shape, signable bytes, and proof placement. CIDs are
+binary on the wire and CIDv1 base32 when printed.
 
 A protocol spec document might define a compact message shaped like
 this:
@@ -129,16 +131,16 @@ Another protocol might define:
 grid([42(pCID), parents, payload, signature])
 ```
 
-Other protocols might carry COSE objects, CAR bytes, encrypted bytes, or
-nested pCID-owned structures. The selected protocol spec gives those
-slots their meaning.
+Other protocols might carry COSE[^cose] objects, CAR[^car] bytes,
+encrypted bytes, or nested pCID-owned structures. The selected protocol
+spec gives those slots their meaning.
 
 Grid messages are transport-agnostic. The same `grid(...)` message
 might travel over TCP, HTTP, WebSocket, version-control history,
 file transfer, or a thumb drive.
 
 An IoT device protocol might look like this example, taken from a
-current prototype application:
+current prototype application:[^grid-examples]
 
 ```text
 grid([42(pCID), payload])
@@ -152,14 +154,18 @@ as it flows through production, tracking build status.
 
 ## Prototype Architecture
 
-The current prototype architecture is roughly based on a two-stage bootstrap model with a microkernel-like architecture:
+The current prototype architecture[^wire-lab] is roughly based on a
+two-stage bootstrap model with a microkernel-like
+architecture:[^microkernel]
 
 - Stage0 is a small installed `grid` bootstrap that can fetch, verify,
   approve, and start a fetched local runtime layer
-- Stage1 provides daemon roles, transport, CAS/VCS, parser/builders,
-  capability checks, and app execution support
-- Stage1 binaries are fetched and verified by stage0, cached in the CAS< then run under local control
-  - Stage1 binaries might be native executables, WASI/WASM, or other portable runtimes
+- Stage1 provides daemon roles, transport, CAS[^cas]/VCS[^vcs],
+  parser/builders, capability checks, and app execution support
+- Stage1 binaries are fetched and verified by stage0, cached in the CAS<
+  then run under local control
+  - Stage1 binaries might be native executables, WASI[^wasi]/WASM[^wasm],
+    or other portable runtimes
 
 PromiseGrid uses capability-based security.
 Capability tokens match decentralized trust:
@@ -169,7 +175,7 @@ Capability tokens match decentralized trust:
 - Ellen can give Bob a capability token that allows him to use machine
   A, but not machine B
 
-Current prototypes use CWT and COSE for signed capability tokens.
+Current prototypes use CWT[^cwt] and COSE for signed capability tokens.
 
 PromiseGrid messages can cross organization, machine, and workflow
 boundaries.
@@ -215,8 +221,9 @@ points.
 
 Supply chains already use some promise terms:
 
-- ATP: inventory or supply available for demand
-- CTP: capacity and capability available under the required conditions
+- ATP[^atp-ctp]: inventory or supply available for demand
+- CTP[^atp-ctp]: capacity and capability available under the required
+  conditions
 
 Promise Theory gives ATP and CTP a network form: structured
 commitments visible across organizations.
@@ -227,53 +234,53 @@ shared across organizations and applications.
 
 ## Glossary
 
-- ATP: Available to Promise; supply available for demand; see [17]
+- ATP: Available to Promise; supply available for demand; see [^atp-ctp]
 - CAR: Content Addressable aRchive; a portable bundle of CAS objects;
-  see [9]
+  see [^car]
 - CAS: content-addressed storage; storage keyed by content identifiers;
-  see [10]
+  see [^cas]
 - CBOR: Concise Binary Object Representation; a compact binary data
-  format; see [11]
+  format; see [^cbor]
 - CID: Content Identifier; a content-addressed identifier for bytes or
-  structured content; see [8]
+  structured content; see [^cid]
 - COSE: CBOR Object Signing and Encryption; standards for signing and
-  encrypting CBOR data; see [12]
+  encrypting CBOR data; see [^cose]
 - CTP: Capable to Promise; capacity and capability available under
-  required conditions; see [17]
-- CWT: CBOR Web Token; a compact token format carried in CBOR; see [13]
+  required conditions; see [^atp-ctp]
+- CWT: CBOR Web Token; a compact token format carried in CBOR; see [^cwt]
 - `grid(...)`: diagnostic notation for the PromiseGrid CBOR envelope;
-  see [3]
+  see [^grid-cbor-tag-spec]
 - IANA: Internet Assigned Numbers Authority; manages global protocol
-  registries and related technical identifiers; see [14]
+  registries and related technical identifiers; see [^iana]
 - microkernel: a small kernel that keeps only essential mechanisms in
-  kernel space; see [19]
+  kernel space; see [^microkernel]
 - pCID: Protocol CID; a CID for the protocol specification that
-  defines the remaining message slots; see [3]
+  defines the remaining message slots; see [^grid-cbor-tag-spec]
 - Stage0: the small installed `grid` bootstrap
 - Stage1: fetched runtime layer that provides daemon roles, transport,
   CAS/VCS, parser/builders, capability checks, and app execution
-- VCS: version-control system; see [18]
-- WASI: WebAssembly System Interface; see [16]
-- WASM: WebAssembly; see [15]
+- VCS: version-control system; see [^vcs]
+- WASI: WebAssembly System Interface; see [^wasi]
+- WASM: WebAssembly; see [^wasm]
 
 ## References
 
-1. [Community Systems Working Group](https://cswg.infrastructures.org/)
-2. [PromiseGrid](https://github.com/promisegrid/promisegrid)
-3. [PromiseGrid grid CBOR tag specification](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
-4. [PromiseGrid wire-lab](https://github.com/promisegrid/wire-lab)
-5. [PromiseGrid examples](https://github.com/ciwg/grid-examples)
-6. [Wikipedia overview of Promise Theory](https://en.wikipedia.org/wiki/Promise_theory)
-7. [Mark Burgess Promise Theory FAQ](https://markburgess.org/promiseFAQ.html)
-8. [IPFS CID specification](https://specs.ipfs.tech/cid/)
-9. [IPLD CAR specification](https://ipld.io/specs/transport/car/)
-10. [NIST glossary, Content Addressable Storage](https://csrc.nist.gov/glossary/term/content_addressable_storage)
-11. [IETF RFC 8949, Concise Binary Object Representation](https://www.rfc-editor.org/info/rfc8949)
-12. [IETF RFC 9052, CBOR Object Signing and Encryption](https://www.rfc-editor.org/rfc/rfc9052.html)
-13. [IETF RFC 8392, CBOR Web Token](https://www.rfc-editor.org/info/rfc8392)
-14. [IANA About](https://www.iana.org/about)
-15. [WebAssembly specifications](https://webassembly.org/specs/)
-16. [WASI.dev](https://wasi.dev/)
-17. [ETH Zurich, Available-to-Promise and Capable-to-Promise](https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/)
-18. [Git Book, About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
-19. [Wikipedia, Microkernel](https://en.wikipedia.org/wiki/Microkernel)
+[^cswg]: [Community Systems Working Group](https://cswg.infrastructures.org/)
+[^promisegrid]: [PromiseGrid](https://github.com/promisegrid/promisegrid)
+[^grid-cbor-tag-spec]: [PromiseGrid grid CBOR tag specification](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
+[^wire-lab]: [PromiseGrid wire-lab](https://github.com/promisegrid/wire-lab)
+[^grid-examples]: [PromiseGrid examples](https://github.com/ciwg/grid-examples)
+[^promise-theory]: [Wikipedia overview of Promise Theory](https://en.wikipedia.org/wiki/Promise_theory)
+[^promise-theory-faq]: [Mark Burgess Promise Theory FAQ](https://markburgess.org/promiseFAQ.html)
+[^cid]: [IPFS CID specification](https://specs.ipfs.tech/cid/)
+[^car]: [IPLD CAR specification](https://ipld.io/specs/transport/car/)
+[^cas]: [NIST glossary, Content Addressable Storage](https://csrc.nist.gov/glossary/term/content_addressable_storage)
+[^cbor]: [IETF RFC 8949, Concise Binary Object Representation](https://www.rfc-editor.org/info/rfc8949)
+[^cose]: [IETF RFC 9052, CBOR Object Signing and Encryption](https://www.rfc-editor.org/rfc/rfc9052.html)
+[^cwt]: [IETF RFC 8392, CBOR Web Token](https://www.rfc-editor.org/info/rfc8392)
+[^iana]: [IANA About](https://www.iana.org/about)
+[^wasm]: [WebAssembly specifications](https://webassembly.org/specs/)
+[^wasi]: [WASI.dev](https://wasi.dev/)
+[^atp-ctp]: [ETH Zurich, Available-to-Promise and Capable-to-Promise](https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/)
+[^vcs]: [Git Book, About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+[^microkernel]: [Wikipedia, Microkernel](https://en.wikipedia.org/wiki/Microkernel)
