@@ -103,7 +103,8 @@ such as:
 
 ## What a PromiseGrid Message Looks Like
 
-PromiseGrid messages are structured envelopes[^grid-cbor-tag-spec]. The outer shape is:
+PromiseGrid messages are structured envelopes[^grid-cbor-tag-spec]. The
+outer shape is:
 
 ```text
 grid([42(pCID), ...protocol-defined-slots])
@@ -265,22 +266,22 @@ shared across organizations and applications.
 
 ## References
 
-[^cswg]: [Community Systems Working Group](https://cswg.infrastructures.org/)
-[^promisegrid]: [PromiseGrid](https://github.com/promisegrid/promisegrid)
-[^grid-cbor-tag-spec]: [PromiseGrid grid CBOR tag specification](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
-[^wire-lab]: [PromiseGrid wire-lab](https://github.com/promisegrid/wire-lab)
-[^grid-examples]: [PromiseGrid examples](https://github.com/ciwg/grid-examples)
-[^promise-theory]: [Wikipedia overview of Promise Theory](https://en.wikipedia.org/wiki/Promise_theory)
-[^promise-theory-faq]: [Mark Burgess Promise Theory FAQ](https://markburgess.org/promiseFAQ.html)
-[^cid]: [IPFS CID specification](https://specs.ipfs.tech/cid/)
-[^car]: [IPLD CAR specification](https://ipld.io/specs/transport/car/)
-[^cas]: [NIST glossary, Content Addressable Storage](https://csrc.nist.gov/glossary/term/content_addressable_storage)
-[^cbor]: [IETF RFC 8949, Concise Binary Object Representation](https://www.rfc-editor.org/info/rfc8949)
-[^cose]: [IETF RFC 9052, CBOR Object Signing and Encryption](https://www.rfc-editor.org/rfc/rfc9052.html)
-[^cwt]: [IETF RFC 8392, CBOR Web Token](https://www.rfc-editor.org/info/rfc8392)
-[^iana]: [IANA About](https://www.iana.org/about)
-[^wasm]: [WebAssembly specifications](https://webassembly.org/specs/)
-[^wasi]: [WASI.dev](https://wasi.dev/)
-[^atp-ctp]: [ETH Zurich, Available-to-Promise and Capable-to-Promise](https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/)
-[^vcs]: [Git Book, About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
-[^microkernel]: [Wikipedia, Microkernel](https://en.wikipedia.org/wiki/Microkernel)
+[^cswg]: Community Systems Working Group: [https://cswg.infrastructures.org/](https://cswg.infrastructures.org/)
+[^promisegrid]: PromiseGrid: [https://github.com/promisegrid/promisegrid](https://github.com/promisegrid/promisegrid)
+[^grid-cbor-tag-spec]: PromiseGrid grid CBOR tag specification: [https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md](https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md)
+[^wire-lab]: PromiseGrid wire-lab: [https://github.com/promisegrid/wire-lab](https://github.com/promisegrid/wire-lab)
+[^grid-examples]: PromiseGrid examples: [https://github.com/ciwg/grid-examples](https://github.com/ciwg/grid-examples)
+[^promise-theory]: Wikipedia overview of Promise Theory: [https://en.wikipedia.org/wiki/Promise_theory](https://en.wikipedia.org/wiki/Promise_theory)
+[^promise-theory-faq]: Mark Burgess Promise Theory FAQ: [https://markburgess.org/promiseFAQ.html](https://markburgess.org/promiseFAQ.html)
+[^cid]: IPFS CID specification: [https://specs.ipfs.tech/cid/](https://specs.ipfs.tech/cid/)
+[^car]: IPLD CAR specification: [https://ipld.io/specs/transport/car/](https://ipld.io/specs/transport/car/)
+[^cas]: NIST glossary, Content Addressable Storage: [https://csrc.nist.gov/glossary/term/content_addressable_storage](https://csrc.nist.gov/glossary/term/content_addressable_storage)
+[^cbor]: IETF RFC 8949, Concise Binary Object Representation: [https://www.rfc-editor.org/info/rfc8949](https://www.rfc-editor.org/info/rfc8949)
+[^cose]: IETF RFC 9052, CBOR Object Signing and Encryption: [https://www.rfc-editor.org/rfc/rfc9052.html](https://www.rfc-editor.org/rfc/rfc9052.html)
+[^cwt]: IETF RFC 8392, CBOR Web Token: [https://www.rfc-editor.org/info/rfc8392](https://www.rfc-editor.org/info/rfc8392)
+[^iana]: IANA About: [https://www.iana.org/about](https://www.iana.org/about)
+[^wasm]: WebAssembly specifications: [https://webassembly.org/specs/](https://webassembly.org/specs/)
+[^wasi]: WASI.dev: [https://wasi.dev/](https://wasi.dev/)
+[^atp-ctp]: ETH Zurich, Available-to-Promise and Capable-to-Promise: [https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/](https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/)
+[^vcs]: Git Book, About Version Control: [https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+[^microkernel]: Wikipedia, Microkernel: [https://en.wikipedia.org/wiki/Microkernel](https://en.wikipedia.org/wiki/Microkernel)
