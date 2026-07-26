@@ -55,7 +55,7 @@ shared decisions under shared control.
 
 ## The Coordination Problem Underneath Production
 
-A production coordination system needs to answer quesitons like these:
+A production coordination system needs to answer questions like these:
 
 - Who can reserve which machine, and under what conditions?
 - How are maintenance responsibilities tracked?
@@ -78,11 +78,11 @@ include:
 
 - centralized authority, uniform processes, and a single administrative
   domain
-- large budgets, dedicated systems adminstration and operations staff
+- large budgets, dedicated systems administration and operations staff
 - uniformity of process and data across sites that are often
-  wholly-owned subsidiaries 
+  wholly-owned subsidiaries
 
-By contrast, small shops and indivuduals tend to coordinate using
+By contrast, small shops and individuals tend to coordinate using
 whatever tools are available quickly and cheaply. These tools include:
 
 - spreadsheets, calendars, chat threads, and booking tools
@@ -150,7 +150,7 @@ slots their meaning.
 
 Grid messages are transport-agnostic. The same `grid(...)` message
 might travel over TCP, HTTP, WebSocket, version-control history,
-file transfer, or a thumb drive. 
+file transfer, or a thumb drive.
 
 An IoT device protocol might look like this example, taken from a
 current prototype application:
