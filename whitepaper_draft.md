@@ -112,9 +112,18 @@ PromiseGrid is CSWG's experimental decentralized computing and
 coordination infrastructure for apps that groups and communities can
 use to share software, data, and decisions under local control.
 
-PromiseGrid sits below applications. It defines lower-level building
-blocks for community-owned computation: explicit promises, narrow
-capabilities, consensus, and shared governance.
+PromiseGrid's heritage traces back to the early work of system
+administration automation in the 1990s, institutional grid
+supercomputing efforts, the development of Promise Theory in the
+2000s, and lessons learned from the DevOps movement in the 2010s. It
+is designed to support decentralized infrastructure, avoiding many of
+the pitfalls of the highly centralized systems infrastructure that
+DevOps enabled and that dominate the Internet today.
+
+As with any operating system, PromiseGrid sits below applications. It
+defines lower-level building blocks for community-owned computation:
+explicit promises, narrow capabilities, consensus, and shared
+governance.
 
 > Visual placeholder: A concept image or lightweight architecture
 > diagram showing PromiseGrid as a shared computing substrate between
