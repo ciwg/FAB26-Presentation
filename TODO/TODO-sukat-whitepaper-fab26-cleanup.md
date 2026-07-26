@@ -108,6 +108,15 @@ Intent: Align the public explanation with current wire-lab POC16 and POC19 wordi
 Constraints: Keep the edit local to the message-shape section and this TODO record; use direct positive wording; keep examples as examples.
 Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-jopam
+Date: 2026-07-25 17:35:03
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Align the white paper with current PromiseGrid good-practice terminology.
+Intent: Add concise public wording for CID wire/print discipline, pCID parser/builder roles, CWT/COSE capability tokens, CAS/VCS substrate, glossary terms, and the grid CBOR tag reference without broad rewrites.
+Constraints: Keep edits local to the white paper technical sections, glossary, references, and this TODO record; preserve 74-column wrapping; do not create a new TODO file.
+Affects: `whitepaper_draft.md`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

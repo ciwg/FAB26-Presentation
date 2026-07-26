@@ -109,10 +109,12 @@ PromiseGrid messages are structured envelopes. The outer shape is:
 grid([42(pCID), ...protocol-defined-slots])
 ```
 
-`grid(...)` is the CBOR PromiseGrid envelope. Slot 0 carries
-`42(pCID)`, a CID link to the protocol spec. The protocol spec defines
-the rest of the message: slot count, slot meanings, payload shape,
-signable bytes, and proof placement.
+`grid(...)` is the CBOR PromiseGrid envelope. The IANA-registered
+PromiseGrid grid CBOR tag specification defines this envelope and the
+tag-42 pCID slot. Slot 0 carries `42(pCID)`, a CID link to the
+protocol spec. The protocol spec defines the rest of the message: slot
+count, slot meanings, payload shape, signable bytes, and proof
+placement. CIDs are binary on the wire and CIDv1 base32 when printed.
 
 A protocol spec document might define a compact message shaped like
 this:
@@ -150,14 +152,14 @@ as it flows through production, tracking build status.
 
 ## Prototype Architecture
 
-In the current prototype architecture:
+The current prototype architecture is roughly based on a two-stage bootstrap model with a microkernel-like architecture:
 
 - Stage0 is a small installed `grid` bootstrap that can fetch, verify,
   approve, and start a fetched local runtime layer
 - Stage1 provides daemon roles, transport, CAS/VCS, parser/builders,
   capability checks, and app execution support
-- WASI/WASM remains one planned portable app/runtime profile under
-  stage1, including WASM in browser tabs
+- Stage1 binaries are fetched and verified by stage0, cached in the CAS< then run under local control
+  - Stage1 binaries might be native executables, WASI/WASM, or other portable runtimes
 
 PromiseGrid uses capability-based security.
 Capability tokens match decentralized trust:
@@ -166,6 +168,8 @@ Capability tokens match decentralized trust:
   file, but not write it
 - Ellen can give Bob a capability token that allows him to use machine
   A, but not machine B
+
+Current prototypes use CWT and COSE for signed capability tokens.
 
 PromiseGrid messages can cross organization, machine, and workflow
 boundaries.
@@ -193,12 +197,19 @@ A few messy cases:
 ## PromiseGrid Is Infrastructure
 
 PromiseGrid is infrastructure beneath booking screens, inventory
-forms, and slicers. It carries tools, permissions, policies, and
-cooperative workflows across a decentralized network. Decentralized
-production joins design files, inventory signals, training status,
-machine reservations, fabrication tasks, quality checks, shipping,
-documentation, and repair across organizational boundaries. The
-substrate must carry data and negotiated trust.
+forms, and slicers. It carries tools, capability promises, local
+resource promises, and cooperative workflows across a decentralized
+network. Decentralized production joins design files, inventory
+signals, training status, machine reservations, fabrication tasks,
+quality checks, shipping, documentation, and repair across
+organizational boundaries. The substrate must carry data and
+negotiated trust.
+
+CAS is the durable substrate. Exact grid messages, app code, data
+objects, CAR bundles, and protocol specs are content-addressed. Each
+agent keeps a partial CAS view. Message CIDs and parent links form DAG
+histories. Reference sets serve as roots, tags, branches, and review
+points.
 
 ## ATP, CTP, and Promise-Shaped Coordination
 
@@ -214,11 +225,38 @@ PromiseGrid gives those promises an open network protocol; rather than
 being locked into a single vendor's software, the commitments can be
 shared across organizations and applications.
 
+## Glossary
+
+- ATP: Available to Promise; supply available for demand
+- CAR: Content Addressable aRchive; a portable bundle of CAS objects
+- CAS: content-addressed storage; storage keyed by content identifiers
+- CBOR: Concise Binary Object Representation; a compact binary data
+  format
+- CID: Content Identifier; a content-addressed identifier for bytes or
+  structured content
+- COSE: CBOR Object Signing and Encryption; standards for signing and
+  encrypting CBOR data
+- CTP: Capable to Promise; capacity and capability available under
+  required conditions
+- CWT: CBOR Web Token; a compact token format carried in CBOR
+- `grid(...)`: diagnostic notation for the PromiseGrid CBOR envelope
+- IANA: Internet Assigned Numbers Authority; the organization that manages global protocol registries, IP addresses, port numbers, etc.
+- microkernel: a small, minimal kernel that provides only essential services, with other services running in user space
+- pCID: Protocol CID; a CID for the protocol specification that
+  defines the remaining message slots
+- Stage0: the small installed `grid` bootstrap
+- Stage1: fetched runtime layer that provides daemon roles, transport,
+  CAS/VCS, parser/builders, capability checks, and app execution
+- VCS: version-control system
+- WASI: WebAssembly System Interface
+- WASM: WebAssembly
+
 ## References
 
 1. Community Systems Working Group: <https://cswg.infrastructures.org/>
 2. PromiseGrid: <https://github.com/promisegrid/promisegrid>
-3. PromiseGrid wire-lab: <https://github.com/promisegrid/wire-lab>
+3. PromiseGrid grid CBOR tag specification: <https://github.com/promisegrid/promisegrid/blob/main/docs/grid-cbor-tag-spec.md>
+4. PromiseGrid wire-lab: <https://github.com/promisegrid/wire-lab>
 5. PromiseGrid examples: <https://github.com/ciwg/grid-examples>
 6. Wikipedia overview of Promise Theory: <https://en.wikipedia.org/wiki/Promise_theory>
 7. Mark Burgess Promise Theory FAQ: <https://markburgess.org/promiseFAQ.html>
