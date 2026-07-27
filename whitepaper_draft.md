@@ -53,6 +53,12 @@ commitments can be shared across organizations and applications.
 
 ## Decentralized Manufacturing Needs Local Infrastructure
 
+A small shop today typically pays multiple large cloud-hosted
+platforms to mismanage core parts of the small business. The large
+platforms themselves have little incentive to ensure that the small
+shops' unique needs are met, so the small shop adapts its processes to
+the large platform's business model, rather than the other way around.
+
 Decentralized manufacturing coordination systems should support:
 
 - lightweight, flexible processes
@@ -62,19 +68,15 @@ Decentralized manufacturing coordination systems should support:
 - offline or transport-independent data transfer
 - low administrative overhead
 
-Instead, a small shop today typically pays multiple large cloud-hosted
-platforms to mismanage core parts of the small business. The large
-platforms themselves have little incentive to ensure that the small
-shops' unique needs are met, so the small shop adapts its processes to
-the large platform's business model, rather than the other way around. 
+The best efforts of most individuals and small shops instead rely on:
 
-The best efforts of most individuals and small shops today rely on:
-
+- inflexible processes that don't meet the shop's needs
 - small-business accounting software that integrates poorly with
   everything else
-- cloud-hosted e-commerce sites that control the shop's customer data
-  and sales processes
-- cloud-hosted spreadsheets, docs, calendars, file-sharing
+- systems that do not integrate or communicate with the systems used
+  by vendors or customers
+- cloud-hosted generic spreadsheet, doc, calendar, and file-sharing
+  services
 
 The results of this ad-hoc approach are:
 
