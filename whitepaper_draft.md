@@ -26,15 +26,11 @@ directly, and manage shared commitments locally.
 
 ## Distributed Manufacturing Already Exists at Industrial Scale
 
-Distributed manufacturing already exists at industrial scale. The
-global economy runs through long supply chains, specialized vendors,
-outsourced fabrication, contract manufacturing, logistics providers,
-and digital coordination across many sites.
-
-That model spreads work while authority stays central. A product can
-pass through five companies before it ships, while a buyer, platform,
-lead firm, or certification process still controls the data,
-approvals, and disputes.
+The global economy runs through long supply chains, specialized
+vendors, outsourced fabrication, contract manufacturing, logistics
+providers, and digital coordination across many sites. A final large
+assembler, platform, lead firm, or certification process typically
+controls the specification, quality, and final delivery.
 
 ERP[^erp], EDI[^edi], MES[^mes], QMS[^qms], ISO 9000[^iso-9000],
 vendor portals, and formal supply-chain standards already exist, but
@@ -43,9 +39,8 @@ administration, and heavyweight, mature processes.
 
 Supply chains already use some promise vocabulary:
 
-- ATP[^atp-ctp]: inventory or supply available for demand
-- CTP[^atp-ctp]: capacity and capability available under the required
-  conditions
+- ATP[^atp-ctp]: "Available to Promise"; inventory or supply available 
+- CTP[^atp-ctp]: "Capable to Promise"; capacity and capability available 
 
 PromiseGrid carries similar promises in an open network protocol;
 rather than being locked into a single vendor's software, the
