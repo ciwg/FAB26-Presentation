@@ -41,6 +41,16 @@ vendor portals, and formal supply-chain standards already exist, but
 they assume institutional budgets, dedicated staff, centralized
 administration, and heavyweight, mature processes.
 
+Supply chains already use some promise vocabulary:
+
+- ATP[^atp-ctp]: inventory or supply available for demand
+- CTP[^atp-ctp]: capacity and capability available under the required
+  conditions
+
+PromiseGrid carries similar promises in an open network protocol;
+rather than being locked into a single vendor's software, the
+commitments can be shared across organizations and applications.
+
 > Visual placeholder: A diagram showing today's distributed
 > supply-chain coordination alongside community-owned decentralized
 > production infrastructure. Show where production happens and who
@@ -85,21 +95,6 @@ The results of this ad-hoc approach are:
 > Visual placeholder: A map or network sketch showing members of
 > several fablabs or makerspaces sharing selected resources and
 > commitments through local nodes and shared protocols.
-
-## ATP, CTP, and Promise-Shaped Coordination
-
-Supply chains already use some promise terms:
-
-- ATP[^atp-ctp]: inventory or supply available for demand
-- CTP[^atp-ctp]: capacity and capability available under the required
-  conditions
-
-Promise Theory[^promise-theory] gives ATP and CTP a network form:
-structured commitments visible across organizations.
-
-PromiseGrid gives those promises an open network protocol; rather than
-being locked into a single vendor's software, the commitments can be
-shared across organizations and applications.
 
 ## Community Systems Working Group (CSWG)
 
