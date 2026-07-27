@@ -181,6 +181,15 @@ Intent: Let readers trace the named systems-management, grid-computing, infrastr
 Constraints: Touch only the heritage paragraph, bottom reference definitions, URL checker coverage, and this append-only TODO DI entry; prefer Wikipedia links where available.
 Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-fujid
+Date: 2026-07-26 21:34:26
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Replace NIST glossary references for MES and CAS.
+Intent: Use more reader-facing public references for Manufacturing Execution System and content-addressable storage while keeping the white paper prose and footnote keys stable.
+Constraints: Touch only the MES and CAS reference definitions, the matching URL checker entries, and this append-only TODO DI entry.
+Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
