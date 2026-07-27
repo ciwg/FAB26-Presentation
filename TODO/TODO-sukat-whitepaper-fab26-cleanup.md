@@ -199,6 +199,24 @@ Intent: Let the checker keep its deterministic fetch and marker checks while als
 Constraints: Keep fetched HTML, headers, extracted text, and review output under `/tmp/fab26-urlcheck`; do not commit fetched runtime artifacts; do not edit white paper prose or references in this change.
 Affects: `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-filun
+Date: 2026-07-27 11:34:18
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Add a DAG glossary entry and citation.
+Intent: Define DAG at first use in the CAS history discussion and give readers a visible external reference without rewriting nearby prose.
+Constraints: Touch only the first DAG use, the glossary, the reference list, the matching URL checker entry, and this append-only TODO DI entry.
+Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
+ID: DI-fisan
+Date: 2026-07-27 12:04:24
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Check and cover the reference-sets citation.
+Intent: Keep the user-added reference-sets citation and glossary entry, add matching URL checker coverage, and fix only blocking mechanical issues found during review.
+Constraints: Preserve the user's reference-sets wording except for typo and trailing-whitespace cleanup; do not rewrite surrounding prose.
+Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

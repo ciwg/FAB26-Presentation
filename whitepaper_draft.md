@@ -259,17 +259,19 @@ Current prototypes use CWT[^cwt] and COSE for signed capability tokens.
 
 CAS is the durable substrate. Exact grid messages, app code, data
 objects, CAR bundles, and protocol specs are content-addressed. Each
-agent keeps a partial CAS view. Message CIDs and parent links form DAG
-histories. Reference sets serve as roots, tags, branches, and review
-points.
+agent keeps its own timeline records in a partial view of the global
+CAS. Links to parent message CIDs form timeline histories in a
+DAG[^dag]. Reference sets[^reference-sets] serve as tags, timeline
+branches, and release points.
 
 ## Glossary
 
-- ATP: Available to Promise; supply available for demand; see [^atp-ctp]
+- ATP: Available to Promise; supply available for demand; see
+  [^atp-ctp]
 - CAR: Content Addressable aRchive; a portable bundle of CAS objects;
   see [^car]
-- CAS: content-addressed storage; storage keyed by content identifiers;
-  see [^cas]
+- CAS: content-addressed storage; storage keyed by content
+  identifiers; see [^cas]
 - CBOR: Concise Binary Object Representation; a compact binary data
   format; see [^cbor]
 - CID: Content Identifier; a content-addressed identifier for bytes or
@@ -278,7 +280,10 @@ points.
   encrypting CBOR data; see [^cose]
 - CTP: Capable to Promise; capacity and capability available under
   required conditions; see [^atp-ctp]
-- CWT: CBOR Web Token; a compact token format carried in CBOR; see [^cwt]
+- CWT: CBOR Web Token; a compact token format carried in CBOR; see
+  [^cwt]
+- DAG: directed acyclic graph; a directed graph with no directed
+  cycles; see [^dag]
 - `grid(...)`: diagnostic notation for the PromiseGrid CBOR envelope;
   see [^grid-cbor-tag-spec]
 - IANA: Internet Assigned Numbers Authority; manages global protocol
@@ -287,6 +292,9 @@ points.
   kernel space; see [^microkernel]
 - pCID: Protocol CID; a CID for the protocol specification that
   defines the remaining message slots; see [^grid-cbor-tag-spec]
+- Reference set: a set of CIDs that refer to objects in the CAS.
+  Similar to git tags but are a versioned vector rather than an
+  unversioned scalar; see [^reference-sets]
 - Stage0: the small installed `grid` bootstrap
 - Stage1: fetched runtime layer that provides daemon roles, transport,
   CAS/VCS, parser/builders, capability checks, and app execution
@@ -327,9 +335,11 @@ points.
 [^cbor]: IETF RFC 8949, Concise Binary Object Representation: [https://www.rfc-editor.org/info/rfc8949](https://www.rfc-editor.org/info/rfc8949)
 [^cose]: IETF RFC 9052, CBOR Object Signing and Encryption: [https://www.rfc-editor.org/rfc/rfc9052.html](https://www.rfc-editor.org/rfc/rfc9052.html)
 [^cwt]: IETF RFC 8392, CBOR Web Token: [https://www.rfc-editor.org/info/rfc8392](https://www.rfc-editor.org/info/rfc8392)
+[^dag]: Wikipedia, Directed acyclic graph: [https://en.wikipedia.org/wiki/Directed_acyclic_graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 [^iana]: IANA About: [https://www.iana.org/about](https://www.iana.org/about)
 [^wasm]: WebAssembly specifications: [https://webassembly.org/specs/](https://webassembly.org/specs/)
 [^wasi]: WASI.dev: [https://wasi.dev/](https://wasi.dev/)
 [^atp-ctp]: ETH Zurich, Available-to-Promise and Capable-to-Promise: [https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/](https://opess.ethz.ch/course/section-5-3/5-3-5-available-to-promise-atp-and-capable-to-promise-ctp/)
 [^vcs]: Git Book, About Version Control: [https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 [^microkernel]: Wikipedia, Microkernel: [https://en.wikipedia.org/wiki/Microkernel](https://en.wikipedia.org/wiki/Microkernel)
+[^reference-sets]: wire-lab POC18: [https://github.com/promisegrid/wire-lab/blob/main/docs/research/DN-rifir-poc18-versioned-reference-sets.md](https://github.com/promisegrid/wire-lab/blob/main/docs/research/DN-rifir-poc18-versioned-reference-sets.md)

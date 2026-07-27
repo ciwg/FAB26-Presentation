@@ -264,6 +264,8 @@ check_url 34 nasa-ipg 'NASA NTRS, Information Power Grid' 'https://ntrs.nasa.gov
 check_url 35 bootstrapping-infrastructure 'USENIX, Bootstrapping an Infrastructure' 'https://www.usenix.org/conference/lisa-98/bootstrapping-infrastructure' 'Bootstrapping an Infrastructure' 'Supports the infrastructure bootstrapping heritage reference.'
 check_url 36 why-order-matters 'USENIX, Why Order Matters' 'https://www.usenix.org/conference/lisa-02/why-order-matters-turing-equivalence-automated-systems-administration' 'Why Order Matters' 'Supports the order-of-operations heritage reference.'
 check_url 37 devops 'Wikipedia, DevOps' 'https://en.wikipedia.org/wiki/DevOps' 'DevOps' 'Supports the DevOps heritage reference.'
+check_url 38 dag 'Wikipedia, Directed acyclic graph' 'https://en.wikipedia.org/wiki/Directed_acyclic_graph' 'Directed acyclic graph' 'Defines DAG for the glossary and CAS history discussion.'
+check_url 39 reference-sets 'wire-lab POC18 reference sets design note' 'https://github.com/promisegrid/wire-lab/blob/main/docs/research/DN-rifir-poc18-versioned-reference-sets.md' 'Versioned Reference Sets' 'Defines reference sets for the glossary and CAS history discussion.'
 
 if [ "$failures" -eq 0 ]; then
   printf 'Review bundle: %s\n' "$review"
