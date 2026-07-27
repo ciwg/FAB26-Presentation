@@ -41,8 +41,14 @@ vendor portals, and formal supply-chain standards already exist, but
 they assume institutional budgets, dedicated staff, centralized
 administration, and heavyweight, mature processes.
 
-By contrast, decentralized manufacturing coordination systems must
-support:
+> Visual placeholder: A diagram showing today's distributed
+> supply-chain coordination alongside community-owned decentralized
+> production infrastructure. Show where production happens and who
+> governs the coordination layer.
+
+## Decentralized Manufacturing Needs Local Infrastructure
+
+Decentralized manufacturing coordination systems should support:
 
 - lightweight, flexible processes
 - local operation by each participant
@@ -51,20 +57,49 @@ support:
 - offline or transport-independent data transfer
 - low administrative overhead
 
+Instead, a small shop today typically pays multiple large cloud-hosted
+platforms to mismanage core parts of the small business. The large
+platforms themselves have little incentive to ensure that the small
+shops' unique needs are met, so the small shop adapts its processes to
+the large platform's business model, rather than the other way around. 
+
 The best efforts of most individuals and small shops today rely on:
 
-- cloud-hosted spreadsheets, docs, calendars
-- chat threads hosted on centralized platforms
-- consumer-oriented file sharing hosts
 - small-business accounting software that integrates poorly with
   everything else
-- and lots and lots of email and phone calls to fill in the gaps and
-  glue it all together
+- cloud-hosted e-commerce sites that control the shop's customer data
+  and sales processes
+- cloud-hosted spreadsheets, docs, calendars, file-sharing
 
-> Visual placeholder: A diagram showing today's distributed
-> supply-chain coordination alongside community-owned decentralized
-> production infrastructure. Show where production happens and who
-> governs the coordination layer.
+The results of this ad-hoc approach are:
+
+- dozens of logins on different platforms that don't talk to each
+  other
+- dependence on large platforms that change features at will
+- little influence over how each platform works or how well it meets
+  needs
+- ubiquitous workarounds to compensate for bad business fit
+- high administrative overhead -- time-intensive email and phone calls
+  to fill in the gaps and glue it all together
+
+> Visual placeholder: A map or network sketch showing members of
+> several fablabs or makerspaces sharing selected resources and
+> commitments through local nodes and shared protocols.
+
+## ATP, CTP, and Promise-Shaped Coordination
+
+Supply chains already use some promise terms:
+
+- ATP[^atp-ctp]: inventory or supply available for demand
+- CTP[^atp-ctp]: capacity and capability available under the required
+  conditions
+
+Promise Theory[^promise-theory] gives ATP and CTP a network form:
+structured commitments visible across organizations.
+
+PromiseGrid gives those promises an open network protocol; rather than
+being locked into a single vendor's software, the commitments can be
+shared across organizations and applications.
 
 ## Community Systems Working Group (CSWG)
 
@@ -222,60 +257,11 @@ Capability tokens match decentralized trust:
 
 Current prototypes use CWT[^cwt] and COSE for signed capability tokens.
 
-PromiseGrid messages can cross organization, machine, and workflow
-boundaries.
-
-## Decentralized Manufacturing Requirements
-
-For decentralized manufacturing to work, Alice's lab must coordinate
-with Bob's school, Carol's repair collective, and Dave's small shop
-while each keeps local authority. Shared stewardship must work across
-different owners. Software must run across laptops, phones, servers,
-browser tabs, and small devices. Governance must support multiple
-local authorities.
-
-A few messy cases:
-
-- temporary machine access for visiting collaborators
-- site A printing a part for site B to assemble
-- accounting for usage and maintenance of shared machines
-- collaborative CAD/CAM tools that don't depend on a single cloud provider
-
-> Visual placeholder: A map or network sketch showing members of
-> several fablabs or makerspaces sharing selected resources and
-> commitments through local nodes and shared protocols.
-
-## PromiseGrid Is Infrastructure
-
-PromiseGrid is infrastructure beneath booking screens, inventory
-forms, and slicers. It carries tools, capability promises, local
-resource promises, and cooperative workflows across a decentralized
-network. Decentralized production joins design files, inventory
-signals, training status, machine reservations, fabrication tasks,
-quality checks, shipping, documentation, and repair across
-organizational boundaries. The substrate must carry data and
-negotiated trust.
-
 CAS is the durable substrate. Exact grid messages, app code, data
 objects, CAR bundles, and protocol specs are content-addressed. Each
 agent keeps a partial CAS view. Message CIDs and parent links form DAG
 histories. Reference sets serve as roots, tags, branches, and review
 points.
-
-## ATP, CTP, and Promise-Shaped Coordination
-
-Supply chains already use some promise terms:
-
-- ATP[^atp-ctp]: inventory or supply available for demand
-- CTP[^atp-ctp]: capacity and capability available under the required
-  conditions
-
-Promise Theory gives ATP and CTP a network form: structured
-commitments visible across organizations.
-
-PromiseGrid gives those promises an open network protocol; rather than
-being locked into a single vendor's software, the commitments can be
-shared across organizations and applications.
 
 ## Glossary
 

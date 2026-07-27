@@ -190,6 +190,15 @@ Intent: Use more reader-facing public references for Manufacturing Execution Sys
 Constraints: Touch only the MES and CAS reference definitions, the matching URL checker entries, and this append-only TODO DI entry.
 Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-vujop
+Date: 2026-07-27 09:57:24
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Extend the white paper URL checker to emit LLM review artifacts.
+Intent: Let the checker keep its deterministic fetch and marker checks while also producing a review index that points an LLM or human at full fetched pages, extracted text, headers, citation keys, and expected support statements.
+Constraints: Keep fetched HTML, headers, extracted text, and review output under `/tmp/fab26-urlcheck`; do not commit fetched runtime artifacts; do not edit white paper prose or references in this change.
+Affects: `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
