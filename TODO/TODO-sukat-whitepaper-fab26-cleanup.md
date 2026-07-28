@@ -235,6 +235,15 @@ Intent: Keep the white paper's Markdown image references clean while preventing 
 Constraints: Touch only the SVG root dimensions and this append-only TODO DI entry; preserve each existing `viewBox`; do not wrap images in tables or replace Markdown image references with raw HTML.
 Affects: `figures/*.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-zuvuh
+Date: 2026-07-27 22:24:38
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Add five more white paper SVG figures and review their geometry.
+Intent: Make the white paper easier to scan by adding technical diagrams for the IoP/PromiseGrid stack layer, grid message shape, stage0/stage1 bootstrap, capability tokens, and CAS timeline/reference-set substrate.
+Constraints: Keep prose edits to Markdown image insertions; keep SVG labels free of DI/DR/TODO/TE identifiers; review line endpoints, draw order, overlaps, and label placement before handoff.
+Affects: `whitepaper_draft.md`, `figures/*.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

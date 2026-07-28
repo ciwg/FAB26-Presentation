@@ -121,6 +121,10 @@ PromiseGrid carries signed messages, local capabilities, promises,
 application code, content-addressed data, and peer sync between nodes
 that remain under local control.
 
+![IoP and PromiseGrid stack][fig-iop-grid]
+
+[fig-iop-grid]: figures/iop-promisegrid-stack.svg
+
 A rough analogy is that PromiseGrid is intended to act as a
 "decentralized operating system" for applications to run on top of.
 The grid abstracts away the details of network, transport, storage,
@@ -210,6 +214,10 @@ Grid messages are transport-agnostic. The same `grid(...)` message
 might travel over TCP, HTTP, WebSocket, version-control history,
 file transfer, or a thumb drive.
 
+![Grid message shape][fig-grid-message]
+
+[fig-grid-message]: figures/grid-message-shape.svg
+
 An IoT device protocol might look like this example, taken from a
 current prototype application:[^grid-examples]
 
@@ -238,6 +246,10 @@ architecture:[^microkernel]
   - Stage1 binaries might be native executables, WASI[^wasi]/WASM[^wasm],
     or other portable runtimes
 
+![Stage0 and stage1 bootstrap][fig-stage-bootstrap]
+
+[fig-stage-bootstrap]: figures/stage0-stage1-bootstrap.svg
+
 PromiseGrid uses capability-based security.
 Capability tokens match decentralized trust:
 
@@ -245,6 +257,10 @@ Capability tokens match decentralized trust:
   file, but not write it
 - Ellen can give Bob a capability token that allows him to use machine
   A, but not machine B
+
+![Capability tokens][fig-cap-tokens]
+
+[fig-cap-tokens]: figures/capability-tokens.svg
 
 Current prototypes use CWT[^cwt] and COSE for signed capability tokens.
 
@@ -254,6 +270,10 @@ agent keeps its own timeline records in a partial view of the global
 CAS. Links to parent message CIDs form timeline histories in a
 DAG[^dag]. Reference sets[^reference-sets] serve as tags, timeline
 branches, and release points.
+
+![CAS timeline and reference sets][fig-cas-refs]
+
+[fig-cas-refs]: figures/cas-timeline-reference-sets.svg
 
 ## Glossary
 

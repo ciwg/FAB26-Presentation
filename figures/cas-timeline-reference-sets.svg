@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="900" height="540" role="img" aria-labelledby="title desc">
+  <title id="title">CAS timelines and reference sets</title>
+  <desc id="desc">Content-addressed objects form timeline DAGs. Reference sets name release and review points while peers sync partial local views.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4c6673"/>
+    </marker>
+    <style>
+      .title { font: 700 30px sans-serif; fill: #1f2a30; }
+      .subtitle { font: 500 17px sans-serif; fill: #607076; }
+      .panel { fill: #f7f8f6; stroke: #c8d0cb; stroke-width: 2; rx: 18; }
+      .object { fill: #eef5ff; stroke: #426c9d; stroke-width: 2; rx: 12; }
+      .cid { fill: #f5fbf7; stroke: #2b7a4b; stroke-width: 2.5; }
+      .ref { fill: #fff4df; stroke: #ba6b18; stroke-width: 2; rx: 12; }
+      .peer { fill: #ffffff; stroke: #7aa68a; stroke-width: 2; rx: 12; }
+      .label { font: 700 18px sans-serif; fill: #263238; }
+      .small { font: 600 15px sans-serif; fill: #3f4f56; }
+      .muted { font: 500 14px sans-serif; fill: #61737a; }
+      .link { fill: none; stroke: #4c6673; stroke-width: 2.2; marker-end: url(#arrow); }
+      .sync { fill: none; stroke: #2b7a4b; stroke-width: 2.2; stroke-dasharray: 7 7; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text class="title" x="60" y="62">CAS, timelines, reference sets, and peer sync</text>
+  <text class="subtitle" x="60" y="93">Objects are addressed by CID. Timelines and refs are local views over the CAS.</text>
+
+  <rect class="panel" x="52" y="124" width="270" height="430"/>
+  <text class="label" x="90" y="164">CAS objects</text>
+  <rect class="object" x="86" y="206" width="200" height="54"/>
+  <text class="small" x="130" y="239">grid message</text>
+  <rect class="object" x="86" y="286" width="200" height="54"/>
+  <text class="small" x="135" y="319">app code</text>
+  <rect class="object" x="86" y="366" width="200" height="54"/>
+  <text class="small" x="132" y="399">data object</text>
+  <rect class="object" x="86" y="446" width="200" height="54"/>
+  <text class="small" x="123" y="479">protocol spec</text>
+
+  <rect class="panel" x="372" y="124" width="420" height="430"/>
+  <text class="label" x="500" y="164">timeline DAG</text>
+  <circle class="cid" cx="522" cy="226" r="34"/>
+  <text class="small" x="496" y="232">CID A</text>
+  <circle class="cid" cx="632" cy="320" r="34"/>
+  <text class="small" x="606" y="326">CID B</text>
+  <circle class="cid" cx="510" cy="430" r="34"/>
+  <text class="small" x="484" y="436">CID C</text>
+  <circle class="cid" cx="708" cy="438" r="34"/>
+  <text class="small" x="682" y="444">CID D</text>
+
+  <rect class="panel" x="842" y="124" width="306" height="430"/>
+  <text class="label" x="898" y="164">reference sets</text>
+  <rect class="ref" x="894" y="204" width="180" height="52"/>
+  <text class="small" x="944" y="236">release</text>
+  <rect class="ref" x="894" y="298" width="180" height="52"/>
+  <text class="small" x="949" y="330">review</text>
+  <rect class="ref" x="894" y="392" width="180" height="52"/>
+  <text class="small" x="935" y="424">branch head</text>
+
+  <rect class="peer" x="236" y="612" width="150" height="52"/>
+  <text class="small" x="273" y="644">Alice view</text>
+  <rect class="peer" x="524" y="612" width="150" height="52"/>
+  <text class="small" x="566" y="644">Bob view</text>
+  <rect class="peer" x="812" y="612" width="150" height="52"/>
+  <text class="small" x="846" y="644">Carol view</text>
+
+  <path class="link" d="M286 233 L488 226"/>
+  <path class="link" d="M286 313 L598 320"/>
+  <path class="link" d="M286 393 L476 430"/>
+  <path class="link" d="M286 473 L674 438"/>
+  <path class="link" d="M606 298 L548 248"/>
+  <path class="link" d="M535 407 L607 343"/>
+  <path class="link" d="M690 409 L650 349"/>
+  <path class="link" d="M894 230 L742 438"/>
+  <path class="link" d="M894 324 L742 438"/>
+  <path class="link" d="M894 418 L666 320"/>
+  <path class="sync" d="M386 638 L524 638"/>
+  <path class="sync" d="M674 638 L812 638"/>
+</svg>
