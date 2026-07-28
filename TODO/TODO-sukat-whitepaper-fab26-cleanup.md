@@ -253,6 +253,15 @@ Intent: Show the protocol spec as CID A, and show one `current state` reference 
 Constraints: Touch only the CAS SVG and this append-only TODO DI entry; keep the figure free of DI/DR/TODO/TE identifiers; review line endpoints before handoff.
 Affects: `figures/cas-timeline-reference-sets.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-ginok
+Date: 2026-07-27 22:44:20
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Simplify the stage0/stage1 bootstrap figure.
+Intent: Keep the diagram focused on stage0 fetching stage1 and stage1 directly providing subsidiary services, without verify/approve boxes or an unlabeled intermediate fan-out point.
+Constraints: Touch only the stage0/stage1 SVG and this append-only TODO DI entry; keep the figure free of DI/DR/TODO/TE identifiers; review line endpoints before handoff.
+Affects: `figures/stage0-stage1-bootstrap.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

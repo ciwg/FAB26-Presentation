@@ -1,17 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="900" height="540" role="img" aria-labelledby="title desc">
-  <title id="title">Stage0 and stage1 bootstrap</title>
-  <desc id="desc">Installed stage0 fetches, verifies, approves, and starts a stage1 runtime that provides PromiseGrid services.</desc>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#4c6673"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 720"
+   width="900"
+   height="540"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg75"
+   sodipodi:docname="stage0-stage1-bootstrap.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview77"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.4855556"
+     inkscape:cx="450"
+     inkscape:cy="270.26926"
+     inkscape:window-width="1918"
+     inkscape:window-height="1078"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg75" />
+  <title
+     id="title">Stage0 and stage1 bootstrap</title>
+  <desc
+     id="desc">Installed stage0 fetches and starts a stage1 runtime that directly provides PromiseGrid services.</desc>
+  <defs
+     id="defs9">
+    <marker
+       id="arrow"
+       markerWidth="10"
+       markerHeight="10"
+       refX="8"
+       refY="3"
+       orient="auto"
+       markerUnits="strokeWidth">
+      <path
+         d="M0,0 L0,6 L9,3 z"
+         fill="#4c6673"
+         id="path4" />
     </marker>
-    <style>
+    <style
+       id="style7">
       .title { font: 700 30px sans-serif; fill: #1f2a30; }
       .subtitle { font: 500 17px sans-serif; fill: #607076; }
       .stage0 { fill: #fff4df; stroke: #ba6b18; stroke-width: 2.5; rx: 18; }
       .stage1 { fill: #f5fbf7; stroke: #2b7a4b; stroke-width: 2.5; rx: 18; }
       .store { fill: #eef5ff; stroke: #426c9d; stroke-width: 2; rx: 14; }
-      .step { fill: #ffffff; stroke: #4c6673; stroke-width: 2; rx: 12; }
       .service { fill: #ffffff; stroke: #7aa68a; stroke-width: 2; rx: 12; }
       .label { font: 700 18px sans-serif; fill: #263238; }
       .small { font: 600 15px sans-serif; fill: #3f4f56; }
@@ -19,53 +64,176 @@
       .link { fill: none; stroke: #4c6673; stroke-width: 2.2; marker-end: url(#arrow); }
     </style>
   </defs>
-
-  <rect width="1200" height="720" fill="#ffffff"/>
-  <text class="title" x="60" y="62">Stage0 fetches and starts stage1</text>
-  <text class="subtitle" x="60" y="93">The installed bootstrap stays small. Runtime services arrive through approved roots.</text>
-
-  <rect class="store" x="452" y="126" width="296" height="86"/>
-  <text class="label" x="506" y="160">CAS/VCS app roots</text>
-  <text class="muted" x="500" y="188">stage1, apps, data, specs</text>
-
-  <rect class="stage0" x="78" y="244" width="220" height="108"/>
-  <text class="label" x="137" y="286">stage0</text>
-  <text class="small" x="120" y="314">installed grid</text>
-
-  <rect class="step" x="362" y="262" width="110" height="70"/>
-  <text class="label" x="390" y="304">fetch</text>
-  <rect class="step" x="510" y="262" width="110" height="70"/>
-  <text class="label" x="533" y="304">verify</text>
-  <rect class="step" x="658" y="262" width="120" height="70"/>
-  <text class="label" x="688" y="304">approve</text>
-
-  <rect class="stage1" x="860" y="244" width="250" height="108"/>
-  <text class="label" x="931" y="286">stage1</text>
-  <text class="small" x="910" y="314">local runtime</text>
-
-  <rect class="service" x="86" y="492" width="150" height="58"/>
-  <text class="small" x="119" y="526">daemon roles</text>
-  <rect class="service" x="266" y="492" width="130" height="58"/>
-  <text class="small" x="299" y="526">transport</text>
-  <rect class="service" x="426" y="492" width="130" height="58"/>
-  <text class="small" x="463" y="526">CAS/VCS</text>
-  <rect class="service" x="586" y="492" width="160" height="58"/>
-  <text class="small" x="614" y="526">parser/builders</text>
-  <rect class="service" x="776" y="492" width="150" height="58"/>
-  <text class="small" x="807" y="526">capability</text>
-  <rect class="service" x="956" y="492" width="160" height="58"/>
-  <text class="small" x="990" y="526">app execution</text>
-
-  <path class="link" d="M298 298 L362 298"/>
-  <path class="link" d="M472 298 L510 298"/>
-  <path class="link" d="M620 298 L658 298"/>
-  <path class="link" d="M778 298 L860 298"/>
-  <path class="link" d="M600 212 L417 262"/>
-  <path class="link" d="M985 352 L985 422"/>
-  <path class="link" d="M985 422 L161 492"/>
-  <path class="link" d="M985 422 L331 492"/>
-  <path class="link" d="M985 422 L491 492"/>
-  <path class="link" d="M985 422 L666 492"/>
-  <path class="link" d="M985 422 L851 492"/>
-  <path class="link" d="M985 422 L1036 492"/>
+  <rect
+     width="1200"
+     height="720"
+     fill="#ffffff"
+     id="rect11" />
+  <text
+     class="title"
+     x="60"
+     y="62"
+     id="text13">Stage0 fetches and starts stage1</text>
+  <text
+     class="subtitle"
+     x="60"
+     y="93"
+     id="text15">The installed bootstrap stays small. Stage1 provides the local runtime services.</text>
+  <rect
+     class="store"
+     x="452"
+     y="126"
+     width="296"
+     height="86"
+     id="rect17" />
+  <text
+     class="label"
+     x="506"
+     y="160"
+     id="text19">CAS/VCS app roots</text>
+  <text
+     class="muted"
+     x="500"
+     y="188"
+     id="text21">stage1, apps, data, specs</text>
+  <rect
+     class="stage0"
+     x="78"
+     y="244"
+     width="220"
+     height="108"
+     id="rect23" />
+  <text
+     class="label"
+     x="137"
+     y="286"
+     id="text25">stage0</text>
+  <text
+     class="small"
+     x="120"
+     y="314"
+     id="text27"
+     style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:15px;line-height:normal;font-family:sans-serif">'grid' executable</text>
+  <rect
+     class="stage1"
+     x="860"
+     y="244"
+     width="250"
+     height="108"
+     id="rect29" />
+  <text
+     class="label"
+     x="931"
+     y="286"
+     id="text31">stage1</text>
+  <text
+     class="small"
+     x="910"
+     y="314"
+     id="text33"
+     style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:15px;line-height:normal;font-family:sans-serif">fetched runtime</text>
+  <rect
+     class="service"
+     x="86"
+     y="492"
+     width="150"
+     height="58"
+     id="rect35" />
+  <text
+     class="small"
+     x="119"
+     y="526"
+     id="text37">daemon roles</text>
+  <rect
+     class="service"
+     x="266"
+     y="492"
+     width="130"
+     height="58"
+     id="rect39" />
+  <text
+     class="small"
+     x="299"
+     y="526"
+     id="text41">transport</text>
+  <rect
+     class="service"
+     x="426"
+     y="492"
+     width="130"
+     height="58"
+     id="rect43" />
+  <text
+     class="small"
+     x="463"
+     y="526"
+     id="text45">CAS/VCS</text>
+  <rect
+     class="service"
+     x="586"
+     y="492"
+     width="160"
+     height="58"
+     id="rect47" />
+  <text
+     class="small"
+     x="614"
+     y="526"
+     id="text49">parser/builders</text>
+  <rect
+     class="service"
+     x="776"
+     y="492"
+     width="150"
+     height="58"
+     id="rect51" />
+  <text
+     class="small"
+     x="807"
+     y="526"
+     id="text53">capability</text>
+  <rect
+     class="service"
+     x="956"
+     y="492"
+     width="160"
+     height="58"
+     id="rect55" />
+  <text
+     class="small"
+     x="990"
+     y="526"
+     id="text57">app execution</text>
+  <path
+     class="link"
+     d="M600 212 C528 266 420 296 298 298"
+     id="path59" />
+  <path
+     class="link"
+     d="M298 298 L860 298"
+     id="path61" />
+  <path
+     class="link"
+     d="M910 352 L161 492"
+     id="path63" />
+  <path
+     class="link"
+     d="M940 352 L331 492"
+     id="path65" />
+  <path
+     class="link"
+     d="M970 352 L491 492"
+     id="path67" />
+  <path
+     class="link"
+     d="M1000 352 L666 492"
+     id="path69" />
+  <path
+     class="link"
+     d="M1030 352 L851 492"
+     id="path71" />
+  <path
+     class="link"
+     d="M1060 352 L1036 492"
+     id="path73" />
 </svg>
