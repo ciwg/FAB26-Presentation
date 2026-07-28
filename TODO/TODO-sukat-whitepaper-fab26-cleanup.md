@@ -244,6 +244,15 @@ Intent: Make the white paper easier to scan by adding technical diagrams for the
 Constraints: Keep prose edits to Markdown image insertions; keep SVG labels free of DI/DR/TODO/TE identifiers; review line endpoints, draw order, overlaps, and label placement before handoff.
 Affects: `whitepaper_draft.md`, `figures/*.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-gajok
+Date: 2026-07-27 22:40:27
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Correct the CAS figure's protocol and reference-set semantics.
+Intent: Show the protocol spec as CID A, and show one `current state` reference set pointing to the latest executable and data CIDs.
+Constraints: Touch only the CAS SVG and this append-only TODO DI entry; keep the figure free of DI/DR/TODO/TE identifiers; review line endpoints before handoff.
+Affects: `figures/cas-timeline-reference-sets.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="900" height="450" role="img" aria-labelledby="title desc">
   <title id="title">CAS timelines and reference sets</title>
-  <desc id="desc">Content-addressed objects form timeline DAGs. Reference sets name release and review points.</desc>
+  <desc id="desc">Protocol spec is CID A. A current state reference set points to the latest executable and data CIDs.</desc>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L0,6 L9,3 z" fill="#4c6673"/>
@@ -21,18 +21,18 @@
 
   <rect width="1200" height="600" fill="#ffffff"/>
   <text class="title" x="60" y="62">CAS, timelines, and reference sets</text>
-  <text class="subtitle" x="60" y="93">Objects are addressed by CID. Timelines and refs name CAS state.</text>
+  <text class="subtitle" x="60" y="93">Protocol, executable, data, and refs are CIDs in the CAS.</text>
 
   <rect class="panel" x="52" y="124" width="270" height="430"/>
   <text class="label" x="90" y="164">CAS objects</text>
   <rect class="object" x="86" y="206" width="200" height="54"/>
-  <text class="small" x="130" y="239">grid message</text>
+  <text class="small" x="123" y="239">protocol spec</text>
   <rect class="object" x="86" y="286" width="200" height="54"/>
-  <text class="small" x="135" y="319">app code</text>
+  <text class="small" x="130" y="319">grid message</text>
   <rect class="object" x="86" y="366" width="200" height="54"/>
-  <text class="small" x="132" y="399">data object</text>
+  <text class="small" x="132" y="399">executable</text>
   <rect class="object" x="86" y="446" width="200" height="54"/>
-  <text class="small" x="123" y="479">protocol spec</text>
+  <text class="small" x="132" y="479">data object</text>
 
   <rect class="panel" x="372" y="124" width="420" height="430"/>
   <text class="label" x="500" y="164">timeline DAG</text>
@@ -47,12 +47,8 @@
 
   <rect class="panel" x="842" y="124" width="306" height="430"/>
   <text class="label" x="898" y="164">reference sets</text>
-  <rect class="ref" x="894" y="204" width="180" height="52"/>
-  <text class="small" x="944" y="236">release</text>
-  <rect class="ref" x="894" y="298" width="180" height="52"/>
-  <text class="small" x="949" y="330">review</text>
-  <rect class="ref" x="894" y="392" width="180" height="52"/>
-  <text class="small" x="935" y="424">branch head</text>
+  <rect class="ref" x="894" y="298" width="180" height="58"/>
+  <text class="small" x="932" y="333">current state</text>
 
   <path class="link" d="M286 233 L488 226"/>
   <path class="link" d="M286 313 L598 320"/>
@@ -61,7 +57,6 @@
   <path class="link" d="M606 298 L548 248"/>
   <path class="link" d="M535 407 L607 343"/>
   <path class="link" d="M690 409 L650 349"/>
-  <path class="link" d="M894 230 L742 438"/>
-  <path class="link" d="M894 324 L742 438"/>
-  <path class="link" d="M894 418 L666 320"/>
+  <path class="link" d="M894 318 C790 318 650 398 544 430"/>
+  <path class="link" d="M894 344 C840 410 792 438 742 438"/>
 </svg>
