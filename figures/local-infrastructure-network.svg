@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Local infrastructure network</title>
+  <desc id="desc">Independent local sites share selected resources and commitments through local nodes.</desc>
+  <defs>
+    <style>
+      .title { font: 700 30px sans-serif; fill: #1f2a30; }
+      .subtitle { font: 500 17px sans-serif; fill: #607076; }
+      .site { fill: #ffffff; stroke: #4c6673; stroke-width: 2.4; rx: 16; }
+      .site-title { font: 700 18px sans-serif; fill: #263238; }
+      .site-text { font: 500 14px sans-serif; fill: #4a5b62; }
+      .token { fill: #f5fbf7; stroke: #2b7a4b; stroke-width: 2; rx: 18; }
+      .token-text { font: 600 15px sans-serif; fill: #245c39; }
+      .link { fill: none; stroke: #3f6f59; stroke-width: 2.2; stroke-dasharray: 7 7; }
+      .ring { fill: none; stroke: #d5dfd9; stroke-width: 26; }
+      .center { fill: #fff4df; stroke: #ba6b18; stroke-width: 2.5; rx: 20; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="680" fill="#ffffff"/>
+  <text class="title" x="60" y="62">Local infrastructure for decentralized manufacturing</text>
+  <text class="subtitle" x="60" y="93">Each site keeps local authority and shares only selected commitments.</text>
+
+  <circle class="ring" cx="600" cy="360" r="214"/>
+  <path class="link" d="M310 194 C410 210 470 250 515 300"/>
+  <path class="link" d="M600 210 C600 240 600 265 600 292"/>
+  <path class="link" d="M890 194 C790 210 730 250 685 300"/>
+  <path class="link" d="M380 546 C450 500 505 450 545 418"/>
+  <path class="link" d="M830 546 C760 500 695 450 655 418"/>
+  <path class="link" d="M274 340 C360 335 420 340 454 352"/>
+  <path class="link" d="M462 416 C500 405 525 395 545 382"/>
+  <path class="link" d="M748 416 C705 405 680 395 655 382"/>
+  <path class="link" d="M930 340 C838 335 780 340 746 352"/>
+  <rect class="center" x="454" y="292" width="292" height="126"/>
+  <text class="site-title" x="516" y="330">shared protocol layer</text>
+  <text class="site-text" x="491" y="360">promises, capability tokens,</text>
+  <text class="site-text" x="494" y="383">CAS objects, review records</text>
+
+  <rect class="site" x="120" y="148" width="190" height="92"/>
+  <text class="site-title" x="178" y="184">Fablab</text>
+  <text class="site-text" x="153" y="212">machines and mentors</text>
+
+  <rect class="site" x="500" y="118" width="200" height="92"/>
+  <text class="site-title" x="564" y="154">School</text>
+  <text class="site-text" x="537" y="182">students and projects</text>
+
+  <rect class="site" x="890" y="148" width="190" height="92"/>
+  <text class="site-title" x="945" y="184">Small shop</text>
+  <text class="site-text" x="927" y="212">orders and customers</text>
+
+  <rect class="site" x="170" y="500" width="210" height="92"/>
+  <text class="site-title" x="226" y="536">Repair group</text>
+  <text class="site-text" x="206" y="564">parts and maintenance</text>
+
+  <rect class="site" x="830" y="500" width="220" height="92"/>
+  <text class="site-title" x="884" y="536">Makerspace</text>
+  <text class="site-text" x="873" y="564">members and tool access</text>
+
+  <rect class="token" x="96" y="318" width="178" height="44"/>
+  <text class="token-text" x="122" y="346">machine access</text>
+  <rect class="token" x="304" y="394" width="158" height="44"/>
+  <text class="token-text" x="339" y="422">part build</text>
+  <rect class="token" x="748" y="394" width="190" height="44"/>
+  <text class="token-text" x="780" y="422">design review</text>
+  <rect class="token" x="930" y="318" width="190" height="44"/>
+  <text class="token-text" x="960" y="346">maintenance log</text>
+</svg>

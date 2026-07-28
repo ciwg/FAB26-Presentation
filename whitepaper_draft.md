@@ -46,10 +46,9 @@ PromiseGrid carries similar promises in an open network protocol;
 rather than being locked into a single vendor's software, the
 commitments can be shared across organizations and applications.
 
-> Visual placeholder: A diagram showing today's distributed
-> supply-chain coordination alongside community-owned decentralized
-> production infrastructure. Show where production happens and who
-> governs the coordination layer.
+![Distributed and decentralized manufacturing][fig-dist-decent]
+
+[fig-dist-decent]: figures/distributed-vs-decentralized.svg
 
 ## Decentralized Manufacturing Needs Local Infrastructure
 
@@ -89,9 +88,9 @@ The results of this ad-hoc approach are:
 - high administrative overhead -- time-intensive email and phone calls
   to fill in the gaps and glue it all together
 
-> Visual placeholder: A map or network sketch showing members of
-> several fablabs or makerspaces sharing selected resources and
-> commitments through local nodes and shared protocols.
+![Local infrastructure network][fig-local-network]
+
+[fig-local-network]: figures/local-infrastructure-network.svg
 
 ## Community Systems Working Group (CSWG)
 
@@ -155,9 +154,9 @@ defines lower-level building blocks for community-owned computation:
 explicit promises, narrow capabilities, consensus, and shared
 governance.
 
-> Visual placeholder: A concept image or lightweight architecture
-> diagram showing PromiseGrid as a shared computing substrate between
-> individuals, organizations, devices, and applications.
+![PromiseGrid architecture][fig-promisegrid-architecture]
+
+[fig-promisegrid-architecture]: figures/promisegrid-architecture.svg
 
 ## Promise Theory
 

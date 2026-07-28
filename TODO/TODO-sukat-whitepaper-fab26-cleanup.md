@@ -217,6 +217,15 @@ Intent: Keep the user-added reference-sets citation and glossary entry, add matc
 Constraints: Preserve the user's reference-sets wording except for typo and trailing-whitespace cleanup; do not rewrite surrounding prose.
 Affects: `whitepaper_draft.md`, `tools/fab26-urlcheck.sh`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-tatar
+Date: 2026-07-27 15:17:11
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Replace white paper visual placeholders with SVG figures.
+Intent: Make the white paper easier to scan by adding reviewable technical diagrams for distributed versus decentralized production, local infrastructure, and the PromiseGrid architecture.
+Constraints: Keep figures as committed text SVG files with no raster or external assets; keep public figures free of DI/DR/TODO/TE identifiers; avoid rewriting unrelated prose.
+Affects: `whitepaper_draft.md`, `figures/*.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
