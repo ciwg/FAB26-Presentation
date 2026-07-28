@@ -226,6 +226,15 @@ Intent: Make the white paper easier to scan by adding reviewable technical diagr
 Constraints: Keep figures as committed text SVG files with no raster or external assets; keep public figures free of DI/DR/TODO/TE identifiers; avoid rewriting unrelated prose.
 Affects: `whitepaper_draft.md`, `figures/*.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
 
+ID: DI-kidif
+Date: 2026-07-27 22:17:07
+Author: stevegt@t7a.org (Steve Traugott)
+Status: active
+Decision: Give white paper SVG figures intrinsic display dimensions.
+Intent: Keep the white paper's Markdown image references clean while preventing large SVG figures from rendering at full available width.
+Constraints: Touch only the SVG root dimensions and this append-only TODO DI entry; preserve each existing `viewBox`; do not wrap images in tables or replace Markdown image references with raw HTML.
+Affects: `figures/*.svg`, `TODO/TODO-sukat-whitepaper-fab26-cleanup.md`
+
 # TODO sukat - Clean Up FAB26 White Paper
 
 ## Audience and Structure
